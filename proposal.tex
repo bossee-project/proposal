@@ -1,0 +1,172 @@
+\providecommand{\classoptions}{keys}
+\documentclass[noworkareas,deliverables,svgnames,\classoptions]{euproposal}       % for writing
+%\documentclass[submit,noworkareas,deliverables]{euproposal}        % for submission
+%\documentclass[submit,public,noworkareas,deliverables]{euproposal} % for public version
+
+\usepackage[utf8]{inputenc}
+%\usepackage{minitoc}
+
+\usepackage{float}  % used to suppress floating of tables in Resources section.
+\usetikzlibrary{calc,fit,positioning,shapes,arrows,snakes}
+
+\addbibresource{bibliography.bib}
+% temporary fix due to http://tex.stackexchange.com/questions/311426/bibliography-error-use-of-blxbblverbaddi-doesnt-match-its-definition-ve
+\makeatletter\def\blx@maxline{77}\makeatother
+
+\input{WApersons} % Some sections of the included files depend on this.
+\input{preamble}
+\usepackage{framed}
+
+\begin{document}
+\begin{proposal}[
+  % These PM numbers (person months) are for the coordinator to help planning
+  % Participants should not change these, but add PM numbers in the CVS in
+  % the site descriptions at CVs/*.tex
+  % TODO: Nicolas needs to update these numbers from the (requested ones)
+  site=PS, %paris sud
+  site=SR, % Simula
+  site=XFEL, % European XFEL GmbH
+  % alternative: (can be combined)
+    coordinator=minrk,
+  coordinatorsite=SR,
+  acronym={BOSSEE},
+  acrolong={BOSSEE},
+  proposalnumber={...},
+  title=Building Open Science Services\\ on European E-infrastructure,
+  callname=Topic: Prototyping innovative services,
+  callid=INFRAEOSC-02-2019,
+  % TODO: consistency with provided template
+  % CALL: H2020-EINFRA-2015-1
+  % TOPIC: e-Infrastructures for Virtual Research Environments (VRE)
+  % Instrument: e-Infrastructures
+  keywords={reproducibility, Jupyter, Binder, open science},
+  % computational mathematics,
+  % GAP, Linbox, PARI, Sage, Singular, IPython, Jupyter, SageMathCloud, LMFDB, MathHub
+  % Virtual research environments, MPIR, /GP
+  % open source, free software, number theory, abstract algebra, notebooks
+  instrument= Call: INFRAEOSC-02-2019, %Call: H2020-EINFRA-2015-1, 3 Topic 9-2015
+  challengeid = TODO,
+  %challenge = {N/A},
+  %objectiveid={N/A},
+  %objective = TODO,
+  %outcomeid = N/A,
+  %outcome = N/A,
+  months=48,
+  compactht]
+\newcommand{\TheProject}{\pn}% \pn is defined automatically
+% \input{grantagreement-history}
+\ifgrantagreement
+\else
+\clearpage
+\input{abstract}
+\fi
+\ifsubmit\else\setcounter{tocdepth}{4}\fi
+\tableofcontents
+
+\include{outline}
+
+% ---------------------------------------------------------------------------
+%  Section 1: Excellence
+% ---------------------------------------------------------------------------
+
+\section{Excellence}
+\input{excellence.tex}
+
+\subsection{Objectives}
+\label{sect:objectives}
+\input{objectives}
+\clearpage
+
+\draftpage
+% ---------------------------------------------------------------------------
+%  Section 1.2: Relation to the work programme
+% ---------------------------------------------------------------------------
+\input{relation_to_the_work_programme.tex}
+
+\draftpage
+% ---------------------------------------------------------------------------
+%  Section 1.3: Concept and Approach
+% ---------------------------------------------------------------------------
+\input{concept.tex}
+
+\draftpage
+% ---------------------------------------------------------------------------
+%  Section 1.4: Ambition
+% ---------------------------------------------------------------------------
+\input{ambition.tex}
+
+\draftpage
+% ---------------------------------------------------------------------------
+%  Section 2: Impact
+% ---------------------------------------------------------------------------
+\input{impact.tex}
+
+\clearpage
+
+% ---------------------------------------------------------------------------
+%  Section 3: Implementation
+% ---------------------------------------------------------------------------
+
+\section{Implementation}
+\COMMENT{Typical granularity: 5-8 work packages with 3-5 tasks and one
+  deliverable per task; 10 milestones}
+
+\subsection{Work Plan --- Work packages, deliverables and milestones}
+\label{sect:workplan}
+\input{workplan}
+\newpage
+
+\subsection{Management Structure and Procedures}
+% \input{management_structure_and_procedures.tex}
+
+\draftpage
+\subsection{Consortium as a Whole}
+\input{consortium.tex}
+\draftpage
+
+\subsection{Resources to be Committed}\label{sec:resources}
+% \input{resources}
+
+% ---------------------------------------------------------------------------
+%  Section 4: Members of the Consortium
+% ---------------------------------------------------------------------------
+
+\newpage
+
+\eucommentary{This section is not covered by the page limit.\\
+The information provided here will be used to judge the operational capacity.}
+
+\section{Members of the Consortium}
+\input{members}
+
+% ---------------------------------------------------------------------------
+%  Section 5: Ethics and Security
+% ---------------------------------------------------------------------------
+
+\newpage
+
+\section{Ethics and Security}
+\input{ethics_security}
+\end{proposal}
+\TOWRITE{ALL}{Search through final.pdf ('make final') and look for questions marks ?? and XX and YY and XYZ as place holders where people intended to later add a link, or where a link is broken.}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
+%  LocalWords:  sud logilab urich Simula thiery acrolong igital esearch nvironments pn wp
+%  LocalWords:  athematics pnlong callname callid challengeid objectiveid outcomeid emph
+%  LocalWords:  compactht newcommand tableofcontents Linbox IPython textbf eucommentary
+%  LocalWords:  vre TOWRITE citability Cython Laboratoire Recherche Informatique devs WPs
+%  LocalWords:  clearpage draftpage programme workplan subsubsection pdatacount wplist sc
+%  LocalWords:  WPref dissem pageref newpage sssec hline ganttchart xscale makeatletter
+%  LocalWords:  makeatother wpfigstyle footnotesize tabcolsep wpfig inputdelivs mgt smc
+%  LocalWords:  mathsoftware mathdb mathknowledge jupyter silesia pythran Pythran ldots
+%  LocalWords:  Simulagora stigmatisation compactenum planetmath.org Univ botupPM Gnuplot
+%  LocalWords:  boxedminipage textwidth compactitem fangohr providecommand classoptions
+%  LocalWords:  ifsubmit setcounter tocdepth neighbouring incentivesed Gowers analyse hpc
+%  LocalWords:  incentivised Ebay taskref structdocs taskref minimising parallelisation
+%  LocalWords:  dksbases decisionmaking oommf-nb-evaluation gantttaskchart yscale Belabas
+%  LocalWords:  Boussicault endeavours github isocial-decisionmaking enlargethispage

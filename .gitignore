@@ -12,6 +12,11 @@
 *.cb2
 .*.lb
 
+# proposal:
+*.delivs
+*.pdata
+*.deliverables
+
 ## Intermediate documents:
 *.dvi
 *.xdv
