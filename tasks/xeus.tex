@@ -1,0 +1,166 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[title=Interactive C++ in Jupyter with XEUS,
+  id=xeus-cpp,
+  lead=QS,
+  PM=12,
+  wphases={0-48},
+  partners={QS,UPSUD}
+]
+\hypertarget{interactive-computing-with-interpreter-c}{%
+\section{Interactive Computing with Interpreter
+C++}\label{interactive-computing-with-interpreter-c}}
+
+\begin{compactenum}
+\item
+  cling \& xeus-cling
+
+  \begin{compactenum}
+  \item
+    further development of xeus \& xeus-cling for a fully-fledged
+    \textbf{Jupyter} experience with the C++ programming language.
+  \item
+    improved \textbf{packaging} of cling and related packages for conda
+    and other package managers, including full \textbf{windows} support.
+  \item
+    continued development of C++ \textbf{interactive widgets} and
+    backends for ipyvolume, bqplot, ipyleaflet (xvolume, xplot,
+    xleaflet), and better testing for the feature parity with
+    ipywidgets.
+  \item
+    production of \textbf{teaching material} for C++ with xeus-cling and
+    interactive widgets.
+  \item
+    integration with read-only notebook viewers such as
+    \href{https://github.com/QuantStack/voila}{\textbf{voila}} to
+    produce a fully compiled binary from a notebook interacting with the
+    Jupyter frontend components such as widgets.
+  \item
+    enable different levels of \textbf{compiler optimization} for code
+    interpreted by cling.
+  \item
+    improve the \textbf{magics} plugin system to simplify authoring of
+    custom magics for xeus-cling.
+  \end{compactenum}
+\item
+  core xeus library
+
+  \begin{compactenum}
+  \item
+    improve language bindings for the C++ interactive widgets to enable
+    interactive widgets in all xeus-based kernels.
+  \item
+    enable pluggable history managers, with specialized implementations
+    for both sqlite-based history and in-memory history.
+  \end{compactenum}
+\item
+  cling support for common C++ scientific computing packages
+
+  \begin{compactenum}
+  \item
+    cling offers the possibility to automatically load the runtime of
+    libraries upon the inclusion of its headers using special pragmas.
+    Several libraries such as \texttt{xtensor}, and \texttt{symengine}
+    are now making use of these pragmas. We propose to generalize this
+    approach to the main C++ libraries for scientific computing that may
+    accept such pragmas to be included upstream.
+  \end{compactenum}
+\end{compactenum}
+
+Scientists, educators and engineers not only use programming languages
+to build software systems, but also in \textbf{interactive workflows},
+using the tools at hand to explore and reason about problems.
+
+Running some code, looking at a visualization, loading data, and running
+more code. Quick iteration is especially important during the
+exploratory phase of a project.
+
+While C++ is ubiquitous in scientific computing for close-to-the-metal
+performance number crunching, \emph{we lack a good story for interactive
+computing in C++.} This hurts the productivity of C++ developers:
+
+\begin{itemize}
+\item
+  Most of the progress made in software projects comes from
+  \textbf{incrementalism}. Obstacles to fast iteration hinder progress.
+\item
+  his also makes C++ more \textbf{difficult to teach}. The first hours
+  of a C++ class are rarely rewarding as the students must learn how to
+  set up a small project before writing any code. And then, a lot more
+  time is required before their work can result in any visual outcome.
+\end{itemize}
+
+The cling interpreter fills the gap of interactivity for the C++
+programming language, and its use at scale in at LHC proves that C++ can
+be a language for interactive scientific computing.
+
+\textbf{The xeus-cling kernel}
+
+The goal of the xeus-cling porject is to improve the Jupyter integration
+with Project Jupyter and make C++ a \textbf{first-class citizen} of the
+Jupyter ecosystem.
+
+By leveraging the rich ecosystem of tools built upon Project Jupyter,
+which is language agnostic, we can lift C++ from a language reserved to
+high-performance performance computing to a high-level language of data
+science like Python, R and Julia.
+
+\textbf{Teaching the C++ programming language}
+
+Since September 2017, the 400 first-year students at Paris-Sud
+University who take the ``Info 111: Introduction to Computer Science''
+class write their first lines of C++ in a Jupyter notebook, with the
+xeus-cling kernel.
+
+The use of project Jupyter for teaching C++ is especially useful for the
+first classes where student can focus on the syntax of the language
+without distractions such as compiling and linking a program.
+
+The availability of \textbf{Jupyter interactive widgets} in that
+environment offers a simple means to create a \textbf{visual outcome} in
+a few lines of code, for a more \textbf{rewarding learning experience}.
+It is also not typical for the C++ programming language.
+
+FInally, the \textbf{cloud hosting} of the environment removes the
+hurdle of installing a development environment on a large variety of
+student's machines.
+
+\textbf{C++ as a common denominator}
+
+The fragmentation of the ecosystem between the main languages of data
+science causes a lot of duplication of work and harms sustainability in
+the long run. Often, implementation of standard protocols, file formats,
+and reference implementations of numerical methods are duplicated in
+each language.
+
+A common denominator of the three main languages of data Science (Julia,
+Python, R, forming the Jupyter name) is their ability to call into
+natively built libraries. All three interpreters have a clean C API that
+can also be used from the C++ programming language.
+
+However, a solid C++ implementation can always be exposed to Julia,
+Python and R, making the common implementation more sustainable in the
+long run. Te static typing of the language may make the initial
+implementation less immediate, but for greater stability.
+
+For this reason, we strive to provide solid C++ implementation of
+
+\begin{compactenum}
+\item
+  standard protocols, such as the Jupyter kernel protocol (with xeus),
+  now used to make other kernels than the C++ kernel.
+\item
+  standard in-memory and file formats such as apache arrow, FITS,
+  NetCDF, HDF5.
+\item
+  data structures, such as N-D arrays and dataframes
+\item
+  reference implementation of numerical methods.
+\end{compactenum}
+
+Reference scientific Python projects such as Sympy have moved their core
+to a solid C++ engine (such as symengine), which has then been exposed
+to Julia and R.
+
+\end{task}
