@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: blang/latex:ubuntu
+    steps:
+      - checkout
+
+      - run:
+          name: build draft
+          command: |
+            make draft
+            test -f draft.pdf
+
+      - store_artifacts:
+          path: draft.pdf
+          destination: draft.pdf
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - build
