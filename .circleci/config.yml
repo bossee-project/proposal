@@ -2,9 +2,29 @@ version: 2
 jobs:
   build:
     docker:
-      - image: blang/latex:ubuntu
+      - image: ubuntu:18.04
     steps:
       - checkout
+      - run:
+         name: install tex
+         command: |
+          apt-get update && apt-get -y install \
+            --no-install-recommends \
+            ca-certificates \
+            make \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-bibtex-extra \
+            git
+
+
+      - run:
+          name: finish cloning submodules
+          command: |
+            git submodule init
+            git submodule update
 
       - run:
           name: build draft
