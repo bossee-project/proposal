@@ -139,3 +139,7 @@ diff:	allinone.tex
 	# make PROPOSAL=diff.tex all
 
 	# To view the differences in the tables: use diffpdf, set pages as 31-36,38    vs 32-37,38  , export
+
+LaTeX-proposal/base/proposal.cls:
+	@# not a real target, but if this file is missing, we need to get the git submodule
+	git submodule init; git submodule update
