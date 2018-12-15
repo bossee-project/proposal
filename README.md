@@ -3,11 +3,8 @@
 A proposal for [INFRAEOSC-02-2019](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/infraeosc-02-2019)
 started by participants in OpenDreamKit.
 
-brainstorm docs: https://hackmd.io/fNJQFqgYQaCDGx-BFgz4XQ
-
-Tentative aims:
-
-https://github.com/bossee-project/proposal/blob/35544191b746e915ae2bb0ec73c3c08b0f87688c/objectives.tex#L12-L26
+- [brainstorm notes on hackmd](https://hackmd.io/fNJQFqgYQaCDGx-BFgz4XQ)
+- [Tentative aims](https://github.com/bossee-project/proposal/blob/master/objectives.tex#L12)
 
 [![CI builds](https://circleci.com/gh/bossee-project/proposal/tree/master.svg?style=svg)](https://circleci.com/gh/bossee-project/proposal/tree/master)
 
