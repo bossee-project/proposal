@@ -1,0 +1,60 @@
+#+TITLE: INFRAEOSC-02-2019: Prototyping new innovative services
+
+Source: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/infraeosc-02-2019;freeTextSearchKeyword=;typeCodes=1;statusCodes=31094501,31094502;programCode=null;programDivisionCode=null;focusAreaCode=null;crossCuttingPriorityCode=null;callCode=31088643;sortQuery=deadline;orderBy=asc;onlyTenders=false
+
+Also on page 4 of http://ec.europa.eu/research/participants/data/ref/h2020/wp/2018-2020/main/h2020-wp1820-infrastructures_en.pdf
+
+* Specific Challenge:
+
+Develop an agile, fit-for-purpose and sustainable service offering
+accessible through the EOSC hub that can satisfy the evolving needs of
+the scientific community by stimulating the design and prototyping of
+novel innovative digital services. Innovative models of collaboration
+that genuinely include incentive mechanisms for a user oriented open
+science approach should be considered.
+
+* Scope:
+Research and Innovation Actions that target gaps in the service
+offering of the EOSC hub and develop innovative services that address
+relevant aspects of the research data cycle (from inception to
+publication, curation, preservation and reuse), for example allowing
+implementation of new scientific data-related developments and
+intelligent linking and discovering of all research artefacts.
+
+Whereas initially the new services would have to respond to specific
+needs of particular scientific communities by the end of the project
+they should be leveraged to foster interdisciplinary research, serving
+a wider remit of research needs, as well as new users like industry
+and the public sector. Scalability of the new solution should be
+tested by user communities from different disciplines during the
+project lifetime. These services should be based on systems and
+technologies that have reached TRL 6 before the start of the project
+and will be brought to at least TRL 8 by the end of the
+project. Proposals should demonstrate how the resulting services
+complement, enrich and could potentially be integrated into the EOSC
+hub. Proposals retained for funding under this topic should take due
+consideration of any accessibility requirements set under the projects
+funded under EINFRA-12-2017 topic that may be available at the time
+the call will be open, in view of their integration into the
+mainstream services of the EOSC hub.
+
+Consortia are encouraged to include SMEs that are willing to develop
+or contribute to the development of new innovative interdisciplinary
+services with a view of future integration in the EOSC hub.
+
+The Commission considers that proposals requesting a contribution from
+the EU of between EUR 5 and 6 million would allow this challenge to be
+addressed appropriately. Nonetheless, this does not preclude
+submission and selection of proposals requesting other amounts.
+
+* Expected Impact:
+- Integrating co-design into research and development of new services to better support scientific, industrial and societal applications benefiting from a strong user orientation;
+- Supporting the objectives of Open Science by improving access to content and resources, and facilitating interdisciplinary collaborations;
+- Fostering the innovation potential by opening up the EOSC ecosystem of e-infrastructure service providers to new innovative actors.
+
+Cross-cutting Priorities:
+- Open Science
+
+* Type of Action:
+
+Research and Innovation action
