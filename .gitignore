@@ -26,6 +26,9 @@
 # *.eps
 # *.pdf
 
+# exclude pdfs in root
+/*.pdf
+
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
 
