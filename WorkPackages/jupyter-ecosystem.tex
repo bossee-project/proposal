@@ -13,7 +13,8 @@ once completed)}
 \end{draft}
 
 \begin{workpackage}[id=ecosystem,wphases=0-48,swsites,
-  title=Developing the Jupyter Ecosystem,short=Ecosystem,
+  title=Developing the Jupyter Ecosystem,
+  short=Ecosystem,
   lead=QS,
   SRLRM=4,
   UPSUDRM=4,
@@ -21,13 +22,41 @@ once completed)}
 ]
 \begin{wpobjectives}
  \begin{compactitem}
-   \item objective...
+   \item develop projects for creating open science services built out of Jupyter components and exploring new models for such services
+   \item develop tools for interactive visualization in Jupyter
+   \item develop workflows for data science using Jupyter software
  \end{compactitem}
 \end{wpobjectives}
 
 \begin{wpdescription}
 
-Description of the work package
+Open source software in general, and Jupyter in particular,
+is developed not as a monolithic application,
+but rather as a collection of related components,
+which can be assembled in numerous combinations to meet diverse needs.
+The Jupyter community is no different.
+Jupyter itself is composed of several projects,
+but there are even more projects that build on top of Jupyter to create
+things like cloud services or data pipelines.
+The goal of \TheProject is to facilitate open science through Jupyter,
+and this includes working with projects all around the Jupyter ecosystem.
+We will focus this work package on developing
+Jupyter ecosystem projects with an emphasis on open science.
+
+repo2docker is a project for creating
+reproducible environments in which Jupyter notebooks can be run. BinderHub is software for operating a web service using repo2docker, which enables sharing of interactive and reproducible Jupyter (and Rstudio) environments on the web with a single link. We will develop repo2docker and BinderHub further to meet the needs of the open science community.
+
+Widgets are an extension to Jupyter, which can define new kinds of interactivity.
+3D visualisation of data is important to many kinds of science,
+and there is lots of room for development of the 3D visualisation landscape in Jupyter.
+
+In addition to the interactive aspects of Jupyter,
+notebooks can be used in a "workflows" style,
+where job systems run analyses and produce reports,
+either on a scheduled basis or triggered by events.
+There is a great deal of interest in using notebooks in this way,
+and much room for development of tools supporting workflows in data-driven open science.
+
 \end{wpdescription}
 
 \begin{tasklist}
