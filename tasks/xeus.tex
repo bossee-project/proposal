@@ -34,8 +34,8 @@
   \item
     integration with read-only notebook viewers such as
     \href{https://github.com/QuantStack/voila}{\textbf{voila}} to
-    produce a fully compiled binary from a notebook interacting with the
-    Jupyter frontend components such as widgets.
+    produce a fully compiled application from a notebook interacting with
+    Jupyter frontend components such as interactive widgets.
   \item
     enable different levels of \textbf{compiler optimization} for code
     interpreted by cling.
@@ -52,7 +52,7 @@
     interactive widgets in all xeus-based kernels.
   \item
     enable pluggable history managers, with specialized implementations
-    for both sqlite-based history and in-memory history.
+    for both SQLite-based history and in-memory history.
   \end{compactenum}
 \item
   cling support for common C++ scientific computing packages
@@ -62,13 +62,13 @@
     cling offers the possibility to automatically load the runtime of
     libraries upon the inclusion of its headers using special pragmas.
     Several libraries such as \texttt{xtensor}, and \texttt{symengine}
-    are now making use of these pragmas. We propose to generalize this
+    now make use of this possibility. We propose to generalize this
     approach to the main C++ libraries for scientific computing that may
     accept such pragmas to be included upstream.
   \end{compactenum}
 \end{compactenum}
 
-Scientists, educators and engineers not only use programming languages
+Scientists, educators, and engineers not only use programming languages
 to build software systems, but also in \textbf{interactive workflows},
 using the tools at hand to explore and reason about problems.
 
@@ -82,7 +82,7 @@ computing in C++.} This hurts the productivity of C++ developers:
 
 \begin{itemize}
 \item
-  Most of the progress made in software projects comes from
+  Progress in software projects often comes from
   \textbf{incrementalism}. Obstacles to fast iteration hinder progress.
 \item
   his also makes C++ more \textbf{difficult to teach}. The first hours
@@ -92,19 +92,19 @@ computing in C++.} This hurts the productivity of C++ developers:
 \end{itemize}
 
 The cling interpreter fills the gap of interactivity for the C++
-programming language, and its use at scale in at LHC proves that C++ can
+programming language and its use at scale in at LHC proves that C++ can
 be a language for interactive scientific computing.
 
 \textbf{The xeus-cling kernel}
 
-The goal of the xeus-cling porject is to improve the Jupyter integration
-with Project Jupyter and make C++ a \textbf{first-class citizen} of the
-Jupyter ecosystem.
+The goal of the xeus-cling project is to improve the integration with
+Project Jupyter and make C++ a \textbf{first-class citizen} of the
+ecosystem.
 
 By leveraging the rich ecosystem of tools built upon Project Jupyter,
 which is language agnostic, we can lift C++ from a language reserved to
 high-performance performance computing to a high-level language of data
-science like Python, R and Julia.
+science like Python, R, or Julia.
 
 \textbf{Teaching the C++ programming language}
 
@@ -114,15 +114,15 @@ class write their first lines of C++ in a Jupyter notebook, with the
 xeus-cling kernel.
 
 The use of project Jupyter for teaching C++ is especially useful for the
-first classes where student can focus on the syntax of the language
+first classes where students can focus on the syntax of the language
 without distractions such as compiling and linking a program.
 
 The availability of \textbf{Jupyter interactive widgets} in that
-environment offers a simple means to create a \textbf{visual outcome} in
+environment offers a simple means to obtain a \textbf{visual outcome} in
 a few lines of code, for a more \textbf{rewarding learning experience}.
 It is also not typical for the C++ programming language.
 
-FInally, the \textbf{cloud hosting} of the environment removes the
+Finally, the \textbf{cloud hosting} of the environment removes the
 hurdle of installing a development environment on a large variety of
 student's machines.
 
@@ -141,7 +141,7 @@ can also be used from the C++ programming language.
 
 However, a solid C++ implementation can always be exposed to Julia,
 Python and R, making the common implementation more sustainable in the
-long run. Te static typing of the language may make the initial
+long run. The static typing of the language may make the initial
 implementation less immediate, but for greater stability.
 
 For this reason, we strive to provide solid C++ implementation of
