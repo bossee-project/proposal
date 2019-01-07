@@ -1,0 +1,46 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[title=Archiving software for reproducible workflows,
+  id=reproducibility,
+  lead=XFEL,
+  PM=36,
+  wphases={0-48},
+  partners={}
+]
+  By combining explanation with code and output, Jupyter notebooks are
+  valuable tools for making scientific computing more reproducible.
+  Reproducible research can inspire greater confidence in scientific results,
+  and make it easier for future research to build on those results.
+  However, the code in a notebook invariably relies on external code: libraries
+  and programs which are not saved as part of the notebook.
+  This task concerns ways to record the versions of these tools in use, and to
+  make sure them available for practical reproduction of the computation.
+
+  The task includes the following activities:
+  \begin{compactitem}
+  \item Facilitating reproducible creation and long-term archiving of container
+    images. Container technologies, such as Docker, offer exciting possibilities
+    for capturing a computational environment, but much of the development of
+    these tools is focused on short-term operational uses, not long-term
+    preservation. We will develop tools and guidelines for building containers
+    for scientific computing purposes so that they remain useful in the longer
+    term, building on existing technology such as repo2docker wherever possible.
+
+    There is a trade-off between preserving binary container images,
+    and preserving the source code and instructions to build a container.
+    Preserving sources is more transparent, and makes it easier to modify the
+    code to explore a result, but without special care, the instructions may not
+    continue to work in the future, or may not build an equivalent container.
+    We will explore both approaches, with a particular interest in how to
+    make build instructions that can still work many years in the future.
+    (\delivref{workpackage}{deliv-id})
+  \end{compactitem}
+  \begin{compactitem}
+  \item ...
+    (\delivref{workpackage}{deliv-id})
+  \end{compactitem}
+
+  This techology will be developed with a real scientific use case at European
+  XFEL (see WP3).
+\end{task}
