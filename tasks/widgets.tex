@@ -1,16 +1,62 @@
-% template for a task
-% each task should be added to exactly one workpackage
-% in the workpackage task list
-\begin{task}[title=Task title,
-  id=task-id,
-  lead=XXX,
+\begin{task}[title=Jupyter Interactive Widgets,
+  id=jupyter-widgets,
+  lead=QS,
   PM=48,
   wphases={0-48},
-  partners={XFEL,QS}
+  partners={QS}
 ]
-  The task includes the following activities
-  \begin{compactitem}
-  \item ...
-    (\delivref{workpackage}{deliv-id})
-  \end{compactitem}
+
+The task includes the following activities:
+
+\begin{compactenum}
+\item
+  Improvements to the core Jupyter Widgets package
+
+  \begin{compactenum}
+  \item
+    Improve the testing tools for Widget libraries, including means to
+    test messaging, schemas, and actual rendering of widgets with a headless
+    browser.
+  \item
+    Modernize of the \emph{@jupyter-widgets\/base} JavaScript package:
+    drop \emph{backbone.js} and adopt a more modern MVC framework, support
+    streaming of widgets messages to multiple frontends for future support of
+    live collaboration.
+  \item
+    Iterate on the core \emph{@jupyter-widgets\/controls} package. This may
+    involve the adoption of a modern framework such as \emph{React.js} for
+    the widget view implementation, rather than the current custom implementation.
+  \item
+    Create new controls for the core Jupyter widgets package such as token
+    inputs, typeahead, and tree views. These common controls tend to be implemented
+    in several downstream packages, which causes unnecessary duplication of work
+    and harms sustainability.
+  \end{compactenum}
+
+\item
+  Dealing with large widget state
+
+  \begin{compactenum}
+  \item Create a generic mechanism for widgets to refer to external data services
+  or companion files rather than storing their state entirely in the notebook format
+  for offline view.
+  \end{compactenum}
+
+\item
+  Simplify the authoring of complex GUIs with Jupyter widgets.
+
+  \begin{compactenum}
+  \item
+    Provide pre-defined Jupyter widget layouts based on the recently
+    introduced CSS Grid Layout, with named areas to which widgets can be
+    assigned, such as a centra area, left and right tab bars, footer and
+    headers, or layouts including areas for logging results on long-running
+    tasks.
+  \item
+    Experiment with the generation of a Jupyter-widgets based GUI from
+    a declarative configuration file, or by introspecting a configuration object.
+  \end{compactenum}
+
+\end{compactenum}
+
 \end{task}
