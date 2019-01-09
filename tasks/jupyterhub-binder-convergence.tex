@@ -1,0 +1,28 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[title=JupyterHub / Binder convergence,
+  id=task-id,
+  lead=,%X/Tim
+  PM=1,
+  wphases={0-48}, % synchronize with the deliverable deadline
+  partners={X,Tim}]
+  % Lead: Loic
+
+  Motivation: \TODO{reuse material from the blog post:
+  \url{https://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence/}}
+\TODO{reuse material from the hackmd notes with Tim:
+https://hackmd.io/0DLDCXcmRzC_dOwjEak3hg#}
+  \begin{compactitem}
+  \item Interoperability with more authentication standards (OIDC,
+    ...)
+  \item Credential management
+  \item Customizable persistence (admin configuration, api, UI)
+  \item Choice of container registry
+  \item Support for authenticated git repo for repo2docker?
+  \item Resource configuration
+  \end{compactitem}
+
+  \TODO{Deliverable: report on the JupyterHub/Binder convergence, M18?
+    M36? Sooner is better, but only if really feasible.}
+\end{task}
