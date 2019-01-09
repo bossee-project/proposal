@@ -1,8 +1,81 @@
-\TOWRITE{ALL}{why are we excellent?}
+In most applied scientific disciplines, researchers often rely on
+heterogeneous tools and technologies to collect data, run simulations,
+visualize the outcome, explore the input data sets, and share their
+result with peers or a with a larger audience.
 
+For simple data sets, processes remain manageable, but when dealing
+with larger and more complex use cases, or with super-computing resources,
+the complexity makes iteration cycles slower for the the researchers, which
+is especially harmful in scientific software engineering where most innovation
+is achieved through \emph{incrementalism}. It also makes research results more
+difficult to reproduce.
+
+\emph{Project Jupyter}, which has grown increasingly popular in the scientific
+computing community, has become the \emph{lingua franca} of interactive
+computing in both academia and industry. The main goal of Project Jupyter
+project is to provide a consistent set of tools to improve researchers'
+workflows from the exploratory phase of the analysis to the communication
+of the results.
+
+Started in 2014 from the \emph{IPython Project}, Jupyter has grown in
+popularity and adoption both in the industry and academia. We estimate the user
+base of the Jupyter notebook to be of several millions. Users range from data
+scientists to educators and students, or even journalists. In 2017, the Jupyter
+team was awarded the \emph{ACM Software System Award}, an annual award that
+honors people or an organization "for developing a software system that had a
+lasting influence". Prior recipients include \emph{Unix}, \emph{TCP/IP}, and
+the \emph{World Wide Web}.
+
+In this proposal, core team developers of the project, including a number of
+recipients of the ACM award, and key contributors to the open source scientific
+computing ecosystem detail improvements to the capabilities of Project Jupyter.
+The goal is to improve the accessibility of EOSC resources to researchers and
+the general public, and improve the accessibility, interactivity, and
+reproducibility of computational research.
+
+Proposed improvements concern core components of Jupyter:
+
+\TOWRITE{Extend list of topics below}
+
+\begin{itemize}
+\item The \emph{Notebook} is a development environment in the form of an
+interactive document including executable code, rich text, interactive data
+visualization and GUI components.
+\item The \emph{Binder Project} is a tool allowing the execution of such
+notebooks with tailored computational environment. It is key to reproducibility
+of research results and often not well addressed as it makes it possible for
+users to make use of these environment without installing anything locally.
+Improvements will concern packages underlying the binder infrastructure such
+as \emph{repo2docker}, \emph{BinderHub}, and \emph{JupyterHub}.
+\item The \emph{Jupyter Interactive Widgets}, which are used to include GUI
+components and interactive visualizations in notebooks. This includes with 2-D
+and 3-D interactive plotting, geographic data visualization and much more.
+\end{itemize}
+
+As well as downstream packaging making use of Jupyter for better scientific
+workflows:
+
+\begin{itemize}
+\item The \emph{Voila} package, built upon Jupyter components, which enable the
+sharing of notebook-based interactive dashboards for non-technical users.
+\item The \emph{Xeus} kernel instrastructure, and more specifically, the
+\emph{xeus-cling} C++ kernel, built upon CERN's C++ interpreter, "cling",
+which has a lot of adoption in the High-Energy-Physics community. The
+xeus-based C++ kernel is already in use for the teaching of the C++ programming
+language.
+\item The \emph{ipyvolume} and \emph{k3d} packages, which enable interactive
+3-D visualization in the Jupyter ecosystem, including the EOSC.
+\end{itemize}
+
+Beyond the improvement to the software stack, we plan on 
+
+\begin{itemize}
+\item Operating a \emph{European Binder Service} with the goal of running on EOSC.
+\item Producing \emph{training and education material} in the ability to do
+reproducible computational science using the tools we develop, among others.
+\end{itemize}
 
 \clearpage
-
 
 %%% Local Variables:
 %%% mode: latex
