@@ -1,8 +1,116 @@
-\TOWRITE{ALL}{why are we excellent?}
+\subsection{Context and motivation}
 
+In many scientific disciplines, it is common for researchers to rely on
+heterogeneous computational tools and technologies to collect data,
+explore the input data sets, run simulations, visualise the outcome,
+and share their result with peers or a with a larger audience. Often,
+such data analysis cycles are iteratively refined.
+
+For simple data sets, processes may remain manageable. However, when
+dealing with larger and more complex use cases, including big data
+from research facilities or High Performance Computing resources, the
+complexity makes iteration cycles slower for the researchers. A
+complex iteration cycle also makes research results more difficult to
+reproduce. Results that are reproducible, can much more easily be
+re-used in future work.
+
+This situation is exacerbated by the expected increase of the amount
+of scientific data being available, including the data becoming
+accessible through the EOSC-Hub.
+
+
+%%HF: the following seemed to be to specialised to list in the opening
+%%pararaphs?
+%
+%which
+%is especially harmful in scientific software engineering where most innovation
+%is achieved through \emph{incrementalism}.
+
+\subsection{Project Jupyter}
+
+\emph{Project Jupyter}, which has grown increasingly popular in the scientific
+computing community, has become the \emph{lingua franca} of interactive
+computing in both academia and industry. The main goal of Project Jupyter
+project is to provide a consistent set of tools to improve researchers'
+workflows from the exploratory phase of the analysis to the communication
+of the results.
+
+Started in 2014 from the \emph{IPython Project}, Jupyter has grown in
+popularity and adoption both in the industry and academia. We estimate the user
+base of the Jupyter notebook to be of several millions. Users range from data
+scientists to researchers, educators and students from many fields,
+including journalists and librarians. In 2017, the Jupyter
+team was awarded the \emph{ACM Software System Award}, an annual award that
+honors people or an organization "for developing a software system that had a
+lasting influence". Prior recipients include \emph{Unix}, \emph{TCP/IP}, and
+the \emph{World Wide Web}.
+
+\subsection{This proposal}
+
+In this proposal, core team developers of the project, including a
+number of recipients of the ACM award, and key contributors to the
+open source scientific computing ecosystem detail improvements to the
+capabilities of Project Jupyter.  The goal is to improve the
+accessibility of EOSC resources to researchers and the general public,
+and improve the accessibility, interactivity, reproducibility and
+re-usability of computational research.
+
+\subsubsection{Proposed improvements concern core components of Jupyter (WP2)}
+
+\begin{itemize}
+\item The \emph{Notebook} is a development environment in the form of an
+interactive document including executable code, rich text, interactive data
+visualization and GUI components.
+\item The \emph{Binder Project} is a tool allowing the execution of such
+notebooks within a tailored computational environment. It is key to reproducibility
+of research results as it makes it possible for
+users use these environment without installing anything locally.
+Improvements will concern packages underlying the binder infrastructure such
+as \emph{repo2docker}, \emph{BinderHub}, and \emph{JupyterHub}.
+\item The \emph{Jupyter Interactive Widgets}, which are used to include GUI
+components and interactive visualisations in notebooks. This includes 2d
+and 3d interactive plotting, geographic data visualization and much more.
+\end{itemize}
+
+\subsubsection{Proposed improvements of the Jupyter ecosystem (WP3)}
+
+We further propose improvements of the wider Jupyter ecosystem for
+better scientific workflows, including
+\begin{itemize}
+\item The \emph{ipyvolume} and \emph{k3d} packages, which enable interactive
+3-D visualization in the Jupyter ecosystem, including the EOSC-Hub.
+\item The \emph{Voila} package, built upon Jupyter components, which enable the
+sharing of notebook-based interactive dashboards for non-technical users.
+\item The \emph{Xeus} kernel instrastructure, and more specifically,
+  the \emph{xeus-cling} C++ kernel, built upon CERN's C++ interpreter,
+  "cling", which has a lot of adoption in the High-Energy-Physics
+  community. The xeus-based C++ kernel is already in use for the
+  teaching of the C++ programming language.
+\item The \emph{JupyterArchive} which will store a notebook together
+  with its execution environment to allow re-execution of the notebook
+  in the future.
+\end{itemize}
+
+\subsubsection{Beyond the improvement of the Jupyter Project (WP4,
+  WP5, WP6)}
+Beyond the improvement to the software stack, we plan on
+\begin{itemize}
+\item Application, demonstration and evaluation of such novel services
+  in multiple demonstrators, that cover research fields such as
+  health, astrophysics, photon and neutron science, geosciences and
+  mathematics, and also interests of participating SMEs (WP4)
+\item Operating a \emph{European Binder Service} on the EOSC-hub and
+  enabling provision of Jupyter Services through the EOSC-sub (WP5).
+\item Producing \emph{training and education material} to disseminate
+  the ability to do reproducible computational science using the tools
+  we develop, among others. (WP6)
+\end{itemize}
+
+\TODO{HF: This is a nice summary. Is that good here in the excellence
+  section? Or should we have a separate 'execute summary' before the
+  main document starts, that shows the above?}
 
 \clearpage
-
 
 %%% Local Variables:
 %%% mode: latex
