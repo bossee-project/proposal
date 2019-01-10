@@ -9,32 +9,82 @@
   partners={}
 ]
   % Scientific description
-  OpenDose is a collaborative effort to generate an open, traceable, reference database adapted to radiopharmaceutical dosimetry. 
-  Targeted radionuclide therapy (TRT) is a cancer therapy modality, where radioactive vectors irradiate in situ target tumours. Its operating principle relies on a combination of specificity, where a biologic vector targets a tumour, with selectivity achieved by the short range of emitted radiation (usually beta or alpha particles). A classical TRT example is the treatment of thyroid pathologies with radioactive iodine, that has been successfully used for decades. The further development of TRT relies on the availability of new vector/radionuclide combinations, to insure an effective concentration of radiation in the tumour while sparing surrounding healthy tissues. In addition, if radiation can be detected (as is usually the case, since photon emissions are often associated to the radioactive disintegration process), it may be possible to follow the fate of the radioactive vector, and therefore assess the irradiation delivered to the patient (absorbed dose, in gray). This paves the way for treatment optimisation, where the administered activity is tailored specifically for the patient, thereby achieving personalised medicine.
-  Internal dosimetry is the process that leads to the calculation of absorbed doses in patient organs and tissues. Since the administration of the radiopharmaceutical is usually systemic, the absorbed dose is calculated for all tissues that compose the body. This involves radiation transport modelling and energy deposition scoring in anthropomorphic models, usually based on Monte Carlo simulation in heterogeneous media.  
-  The advent of voxel-based computational models requires a new appraisal of dosimetric variables. For example, the models recently proposed by the International Commission on Radiation Protection include 140 possible radiation sources, leading to around 20000 source/target combinations for each radiation type and energy. 
-  The OpenDose collaboration was recently established to generate reference dosimetric data for a large number of computing models, using various Monte Carlo codes available in each participating team. The collaboration includes at the moment 14 research teams over 18 institutes. The idea is to impulse the collaborative development of a reference database, freely available, proposing dosimetric data applicable in a context of radiopharmaceutical dosimetry (for therapy and diagnostic applications). A major aspect is the development of  tools ensuring traceability and sustainability of generated results.
+  OpenDose is a collaborative effort to generate an open, traceable, reference
+  database adapted to radiopharmaceutical dosimetry. 
+  Targeted radionuclide therapy (TRT) is a cancer therapy modality, where
+  radioactive vectors irradiate in situ target tumours. Its operating principle
+  relies on a combination of specificity, where a biologic vector targets a
+  tumour, with selectivity achieved by the short range of emitted radiation
+  (usually beta or alpha particles). A classical TRT example is the treatment
+  of thyroid pathologies with radioactive iodine, that has been successfully
+  used for decades. The further development of TRT relies on the availability
+  of new vector/radionuclide combinations, to insure an effective concentration
+  of radiation in the tumour while sparing surrounding healthy tissues. In
+  addition, if radiation can be detected (as is usually the case, since photon
+  emissions are often associated to the radioactive disintegration process), it
+  may be possible to follow the fate of the radioactive vector, and therefore
+  assess the irradiation delivered to the patient (absorbed dose, in gray).
+  This paves the way for treatment optimisation, where the administered
+  activity is tailored specifically for the patient, thereby achieving
+  personalised medicine.  Internal dosimetry is the process that leads to the
+  calculation of absorbed doses in patient organs and tissues. Since the
+  administration of the radiopharmaceutical is usually systemic, the absorbed
+  dose is calculated for all tissues that compose the body. This involves
+  radiation transport modelling and energy deposition scoring in
+  anthropomorphic models, usually based on Monte Carlo simulation in
+  heterogeneous media.  
+  The advent of voxel-based computational models requires a new appraisal of
+  dosimetric variables. For example, the models recently proposed by the
+  International Commission on Radiation Protection include 140 possible
+  radiation sources, leading to around 20000 source/target combinations for
+  each radiation type and energy.  The OpenDose collaboration was recently
+  established to generate reference dosimetric data for a large number of
+  computing models, using various Monte Carlo codes available in each
+  participating team. The collaboration includes at the moment 14 research
+  teams over 18 institutes. The idea is to impulse the collaborative
+  development of a reference database, freely available, proposing dosimetric
+  data applicable in a context of radiopharmaceutical dosimetry (for therapy
+  and diagnostic applications). A major aspect is the development of  tools
+  ensuring traceability and sustainability of generated results.
 
   % Technical description
-  OpenDose data is produced using the five most represented Monte Carlo simulation softwares in medical applications: Geant4/GATE, MCNP, EGS, PENELOPE and Fluka. Each simulation consists of calculating radiation transport in anthropomorphic models  for specific parameters (source organ, particle type, energy, model and number of primaries to simulate).
-  Every simulation produces binary (3D matrices) and ASCII files for a total of ~150MB / simulation. The 3D matrices contain energy deposited per voxels, and ASCII files contain pre-processed data corresponding to energy deposited per regions such as organs and tissues. These raw outputs are later processed into dosimetric data such as Specific Absorbed Fractions (SAFs) and fed into a database.
+  OpenDose data is produced using the five most represented Monte Carlo
+  simulation softwares in medical applications: Geant4/GATE, MCNP, EGS,
+  PENELOPE and Fluka. Each simulation consists of calculating radiation
+  transport in anthropomorphic models  for specific parameters (source organ,
+  particle type, energy, model and number of primaries to simulate).  Every
+  simulation produces binary (3D matrices) and ASCII files for a total of
+  ~150MB / simulation. The 3D matrices contain energy deposited per voxels, and
+  ASCII files contain pre-processed data corresponding to energy deposited per
+  regions such as organs and tissues. These raw outputs are later processed
+  into dosimetric data such as Specific Absorbed Fractions (SAFs) and fed into
+  a database.
 
-  Producing data for one model (ex. Adult female) requires $\sim 30 000$ simulations, with the work load shared between the different teams and softwares. 
+  Producing data for one model (ex. Adult female) requires $\sim 30 000$
+  simulations, with the work load shared between the different teams and
+  softwares. 
 
   This collaborative effort rise some challenges:
   \begin{compactitem}
   \item Amount of results: Terabytes of data that can be heterogeneous
   \item Database: has to be efficient and handle all the results 
-  \item Data analysis: processing raw data into dosimetric data in a robust and reproducible way
+  \item Data analysis: processing raw data into dosimetric data in a robust and
+  reproducible way
   \item Visualization: display and compare results from all teams
   \end{compactitem}
 
 
-  The data produced by all the teams is currently centralised in CRCT, processed and fed into a local SQL database. 
-  The objective of this task is to build on the Jupyter ecosystem to create a unified data analysis framework for the members of the OpenDose collaboration.
+  The data produced by all the teams is currently centralised in CRCT,
+  processed and fed into a local SQL database. 
+  The objective of this task is to build on the Jupyter ecosystem to create a
+  unified data analysis framework for the members of the OpenDose
+  collaboration.
 
   \textbf{Jupyter workspace for OpenDose members}\\
-  For the OpenDose project members, Jupyter/Binder will provide the platform for all the tools to access, process and display results in a traceable and reproducible way. 
+  For the OpenDose project members, Jupyter/Binder will provide the platform
+  for all the tools to access, process and display results in a traceable and
+  reproducible way.
+
   The task includes the following activities:
   \begin{compactitem}
   \item Developing tools to work seamlessly on the SQL database
@@ -45,10 +95,15 @@
     (\localdelivref{opendose-analysis})
   \end{compactitem}
 
-  Another major aspect of the OpenDose collaboration is to provide an open access to the generated dosimetric data. For that purpose a website is under development and will allow data download and dosimetry calculations. For users who need more advanced calculations, a Jupyter workspace can provide a set of tools to easily access and process the OpenDose data.
+  Another major aspect of the OpenDose collaboration is to provide an open
+  access to the generated dosimetric data. For that purpose a website is under
+  development and will allow data download and dosimetry calculations. For
+  users who need more advanced calculations, a Jupyter workspace can provide a
+  set of tools to easily access and process the OpenDose data.
 
   \textbf{Jupyter workspace for OpenDose users}\\
-  For the OpenDose project users, a Jupyter/Binder workspace could allow user studies on the reference data by:
+  For the OpenDose project users, a Jupyter/Binder workspace could allow user
+  studies on the reference data by:
   \begin{compactitem}
   \item Providing a set of tools to ease the access to the SQL database
   \item Providing a set of tools to analyse and visualize display data
