@@ -1,0 +1,46 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[title=Easy deployment of JupyterHub and BinderHub on a variety of
+  infrastructure,
+  id=openstack,
+  lead=EP,
+  PM=6, % ???
+  wphases={0-24}, % ???
+  partners={EP,UPSUD}] % others? OVH?
+
+  The JupyterHub or BinderHub installation tutorials mostly focuses on deployment
+  on corporate cloud services (mainly GoogleCloud). For many academic institutions
+  and SMEs, a deployment on their own infrastructure is preferable for a combination
+  of reasons (better control on private data, easier integration with the local
+  information system, difficulty of funding the costs of external services, ...).
+
+  The purpose of this task is to make the deployment of JupyterHub or BinderHub
+  easier on a variety of cloud infrastructure, in particular to help institutions
+  and SMEs deploying them on premises.
+  Since the deployment of JupyterHub or BinderHub is well documented for an
+  installation upon Kubernetes cluster, we will focus on two opensource 
+  softwares which can manage this kind of infrastructure (OpensStack and OpenShift). 
+
+  While platforms like GoogleCloud already offer effective tools to deploy a 
+  Kubernetes cluster, this is not the case when we deploy our own infrastructure.
+  The tools available for the two solutions mentioned above are numerous and it
+  is often difficult to choose which ones are the most suitable and best maintained.
+  We will therefore first take an interest in making a state of the art and explaining
+  our choices. We will then put it into practice to allow the community to easily
+  deploy a JupyterHub or BinderHub on their own infrastructure based on OpenStack
+  and/or OpenShift.
+
+  Particular attention will be focused on the possibility to mount storage devices
+  on the containers deployed on the Kubernetes cluster. This will be useful for
+  the task xxx.
+
+  The task includes the following activities:
+  \begin{compactitem}
+  \item Prototypes / POC deployment on OpenStack and/or OpenShift
+  \item Partial / Full automation of the deployment
+  \item Documentation
+    % Deliverable: a report based on the documentation
+    %(\localdelivref{deliv-id})
+  \end{compactitem}
+\end{task}
