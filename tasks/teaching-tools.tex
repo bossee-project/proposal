@@ -1,0 +1,35 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[title=Teaching tools,
+  id=task-id,
+  lead=XXX,
+  PM=20, % 18 for RSE, 2 for supervision
+  wphases={0-48},
+  partners={X,PSud}]
+
+  The partners will be delivering a large number of courses using
+  Jupyter technology. This will require tools for easy sharing,
+  collecting, self assessment and semi-automatic grading of course
+  material, class management, and integration with the local
+  e-learning infrastructure. The variety of use cases and
+  infrastructure will provide a rich test bed for the further
+  development of tools (nbgrader, okpy, ...) and best practices around
+  them.
+
+  \TODO{review existing tools; mention what needs to be done, and
+    specific actions to be taken}
+
+  The task includes the following activities:
+  \begin{compactitem}
+  \item Review and follow up on related efforts: gryd.us, cocalc, fun,
+    Berkeley, ...
+  \item Collaborative grade management
+  \item Insulation through container of the automatic grading
+  \item Integration with e-learning platforms (e.g. Moodle, OpenEDX
+    (Coursera/Fun)), through an LTI connector.
+    %(\delivref{workpackage}{deliv-id})
+  \item Develop course templates for various use cases
+  \item ...
+  \end{compactitem}
+\end{task}
