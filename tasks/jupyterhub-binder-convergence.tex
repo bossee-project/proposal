@@ -1,0 +1,56 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[
+  title=JupyterHub / BinderHub convergence,
+  id=jh-bh-conv,
+  lead=EP,
+  PM=12,
+  wphases={0-48},
+  partners={EP,WTT}]
+  % Lead: Loic
+
+  An institution – typically a university, a national lab, a transnational
+  research infrastructure such as the European XFEL, or transnational 
+  infrastructure provider like EGI – wishes to provide its members and 
+  users with a Jupyter service.
+
+  The service lets user spawn and access personal or collaborative virtual
+  environments: namely a web interface to a light weight virtual machine,
+  in which they can use Jupyter notebooks, run calculations, etc.
+
+  To cater for a large variety of use cases in teaching and research,
+  the main aim of the upcoming specifications is to make the service as
+  versatile as possible. In particular, it should empower the users to 
+  customize the service (available software stack, storage setup, ...),
+  without a need for administrator intervention.
+
+  JupyterHub already provides authentication, persistent storage and some
+  default environments for its users. On the other hand, BinderHub offers
+  the possibility to define more precisely what you need for your teaching
+  or research environmment which makes it very flexible. But, unfortunetly,
+  it's not possible yet to have authentication and persistent storage with
+  BinderHub.
+
+  The purpose of this task is to have the same services offered by JupyterHub
+  (authentication, persistent storage, ...) with the flexibility of BinderHub
+  (construction of your own environment for teaching or research).
+
+  % Motivation: \TODO{reuse material from the blog post:
+  % \url{https://opendreamkit.org/2018/03/15/jupyterhub-binder-convergence/}}
+  % \TODO{reuse material from the hackmd notes with Tim:
+  % \url{https://hackmd.io/0DLDCXcmRzC_dOwjEak3hg#}}
+  The task includes the following activities:
+  \begin{compactitem}
+  \item Interoperability with more authentication standards (OIDC,
+    ...)
+  \item Credential management
+  \item Customizable persistence (admin configuration, api, UI)
+  \item Choice of container registry
+  \item Support for authenticated git repo for repo2docker?
+  \item Resource configuration
+  \end{compactitem}
+
+  \TODO{Deliverable: report on the JupyterHub/Binder convergence, M18?
+    M36? Sooner is better, but only if really feasible.}
+\end{task}

@@ -13,6 +13,8 @@ To see a rendered draft, click on a successful build and then the 'Artifacts' ta
 
 ![circle-screenshot](circle-screenshot.png)
 
+Or follow the URL on [this page](https://circleci.com/api/v1.1/project/github/bossee-project/proposal/latest/artifacts?branch=master&filter=successful) to view the latest build.
+
 
 ## To compile document
 

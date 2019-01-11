@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+"""
+Check pdata for consistency
+
+Check things like PM totals in tasks, work packages, sites, etc.
+"""
+
+import copy
+from operator import itemgetter
+from pprint import pprint
+import re
+
+
+def _mini_fsm(s):
+    """mini fsm for dealing with nested {}"""
+    level = 0
+    characters = []
+    for i, c in enumerate(s):
+        if c == '{':
+            level += 1
+            if level == 1:
+                # don't include first opening brace
+                continue
+        elif c == '}':
+            level -= 1
+            if level == 0:
+                break
+        characters.append(c)
+    else:
+        raise ValueError(f"Failed to properly parse line: {s}")
+    return ''.join(characters), s[i + 1 :]
+
+
+PDATA_PREFIX = '\@pdata@def'
+_num_pat = re.compile(r'^\d+$')
+
+
+def parse_pdata_line(line):
+    """Return list of pdata fields on a given line"""
+    assert line.startswith(PDATA_PREFIX)
+    fields = []
+    remaining = line[len(PDATA_PREFIX) :].strip()
+    while remaining:
+        field, remaining = _mini_fsm(remaining)
+        fields.append(field)
+    for i, field in enumerate(fields):
+        # cast integers
+        try:
+            fields[i] = int(field)
+        except ValueError:
+            pass
+    return fields
+
+
+def _add_field(data, fields):
+    """Add pdata fields to running dict"""
+    d = data
+    for f in fields[:-2]:
+        d = d.setdefault(f, {})
+    key, value = fields[-2:]
+    # split known list entries
+    if key in {'ids', 'partners'}:
+        value = value.split(',')
+    d[key] = value
+
+
+def reformat_data(data):
+    pass
+
+
+def summary(data):
+    total_pms = 0
+    site_pms = {key: 0 for key in data['site']}
+    data = copy.deepcopy(data)
+    for wp_id, wp in data['wp'].items():
+        print(f"WP{wp['number']}: {wp['title']}")
+        wp_data = data[wp_id]
+
+        # collect pms by site assigned to the work package
+        wp_pms = 0
+        for site in site_pms:
+            rm = wp_data.get(site, {}).get('RM', 0)
+            site_pms[site] += rm
+            wp_pms += rm
+
+        # collect pms assigned to the tasks
+        task_ids = wp_data['task']['ids']
+        task_pms = 0
+        for task_id in task_ids:
+            task = data['task'][task_id]
+            task_pms += task['PM']
+        print(f"  Lead: {wp['lead']}")
+        print(f"  Tasks: {len(task_ids)}")
+        print(f"  Deliverables: ???")
+        print(f"    WP PMs: {wp_pms}")
+        print(f"  task PMs: {task_pms}")
+
+    print()
+    print(f"{'Site':12}: {'PMs':3}")
+    for site, pms in sorted(site_pms.items(), key=itemgetter(1), reverse=True):
+        print(f"{site:12}: {pms:3}")
+
+
+def main(pdata_file='draft.pdata'):
+    data = {}
+    with open(pdata_file) as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            fields = parse_pdata_line(line)
+            _add_field(data, fields)
+    pprint(data)
+    summary(data)
+
+
+if __name__ == '__main__':
+    main()

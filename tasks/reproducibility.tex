@@ -1,12 +1,13 @@
 % template for a task
 % each task should be added to exactly one workpackage
 % in the workpackage task list
-\begin{task}[title=Archiving software for reproducible workflows,
+\begin{task}[
+  title=Archiving software for reproducible workflows,
   id=reproducibility,
-  lead=EuXFEL,
+  lead=XFEL,
   PM=36,
   wphases={0-48},
-  partners={}
+  partners={XFEL}
 ]
   By combining explanation with code and output, Jupyter notebooks are
   valuable tools for making scientific computing more reproducible.
@@ -34,11 +35,11 @@
     continue to work in the future, or may not build an equivalent container.
     We will explore both approaches, with a particular interest in how to
     make build instructions that can still work many years in the future.
-    (\delivref{workpackage}{deliv-id})
+    (\localdelivref{deliv-id})
   \end{compactitem}
   \begin{compactitem}
   \item ...
-    (\delivref{workpackage}{deliv-id})
+    (\localdelivref{deliv-id})
   \end{compactitem}
 
   This techology will be developed with a real scientific use case at European
