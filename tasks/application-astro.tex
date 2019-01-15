@@ -10,7 +10,8 @@
   Context: CDS runs astronomical services accessed by world-wide astronomers. 
 Its three main services (SIMBAD, VizieR and Aladin) add up to one million
 queries per day.  They can be accessed through web interfaces, mainly for human
-interaction, as well as through programmatic interfaces.
+interaction, as well as through programmatic interfaces, including the
+standardized protocols defined by Virtual Observatory project..
     
   We will develop a Jupyter-based framework to efficiently access, explore, 
 visualize and analyze CDS data. 
@@ -32,10 +33,10 @@ We will also improve existing Jupyter widgets (ipyaladin, interactive sky atlas
 running in the notebook) and develop a new widget to offer a tree-like view
 of available data.
     
-  We will also develop Python to allow integration and usage in notebook of
+  We will also develop Python libraries to allow integration and usage in notebook of
 existing CDS infrastructure services, namely CDSLogin (which provides
 authentication) and CDS MyData (remote storage space for tabular data).
-This will allow the user to interact with her personal storage space from
+This will allow the user to interact with one's personal storage space from
 the notebook. It will also allow for advanced customisation.
   
   Initially, the notebooks generated will run locally on user machines.
