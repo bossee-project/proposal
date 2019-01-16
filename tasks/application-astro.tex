@@ -1,5 +1,5 @@
 \begin{task}[
-  title=Astro application,
+  title=Astronomy application,
   id=astro,
   lead=CDS,
   PM=18,
@@ -13,7 +13,7 @@
   services (SIMBAD, VizieR and Aladin) are heavily used with up to one million
   queries per day.  These services be accessed through web interfaces, mainly
   for human interaction, as well as through programmatic interfaces, including
-  the standardized protocols defined by International Virtual Observatory
+  the standardized protocols defined by the International Virtual Observatory
   Alliance.
     
   We will develop a Jupyter-based framework to efficiently access, explore, 
@@ -34,11 +34,11 @@
 
 
   This task will rely on existing Python libraries to access CDS data
-  (astroquery.[cds/simbad/vizier/xmatch]) and to visualize them (GLUE, 
-  ipyvolume).
-  We will also improve existing Jupyter widgets (ipyaladin, interactive sky 
-  atlas running in the notebook) and develop a new widget to offer a tree-like
-  view of available data.
+  (\textit{astroquery.[cds/simbad/vizier/xmatch]}) and to visualize them 
+  (\textit{GLUE, ipyvolume}).
+  We will also improve existing Jupyter widgets (\textit{ipyaladin}, 
+  interactive sky atlas running in the notebook) and develop a new widget to
+  offer a tree-like view of available data.
     
   We will also develop Python libraries to allow integration and usage in 
   notebook of existing CDS infrastructure services, namely CDSLogin (which 
@@ -56,5 +56,15 @@
 these potentially large tables will bridge the gap between access and analysis
 of the data, with zero installation for the user.
 
+  These new developments will be an awaited and welcome addition to existing 
+  toolset. In fact, Python for Astronomy software ecosystem has known a constant
+    steady growth in the latest years, as shown in figure~\ref{fig:python-astro-citations}.
+
+  \begin{figure}[ht]\centering
+  \includegraphics[width=0.7\textwidth]{python-astro-citations}
+  \caption{Mentions of programming languages in refereed Astronomy papers}\label{fig:python-astro-citations}
+\end{figure}
+
   Deliverable: \localdelivref{application-astro}
 
+\end{task}
