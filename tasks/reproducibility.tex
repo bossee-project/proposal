@@ -9,39 +9,101 @@
   wphases={0-48},
   partners={XFEL}
 ]
-  By combining explanation with code and output, Jupyter notebooks are
-  valuable tools for making scientific computing more reproducible.
+
   Reproducible research can inspire greater confidence in scientific results,
   and make it easier for future research to build on those results.
-  However, the code in a notebook invariably relies on external code: libraries
-  and programs which are not saved as part of the notebook.
+
+  Reproducibility is seen as an essential pillar of scientific truth,
+  nevertheless there is a real shortcoming of truly reproducible
+  research in the areas of computational and data science. In part,
+  this is a cultural matter. However, there is also a lack of
+  computational e-infrastructure supporting reproducibility.
+  \medskip
+
+  Jupyter Notebooks combine explanation with code and output and are
+  thus valuable tools for making scientific computing more
+  reproducible. However, the code in a notebook invariably relies on
+  external code: libraries and programs which are not saved as part of
+  the notebook.
+
   This task concerns ways to record the versions of these tools in use, and to
-  make sure them available for practical reproduction of the computation.
+  make them available for practical reproduction of the computation.
 
-  The task includes the following activities:
-  \begin{compactitem}
-  \item Facilitating reproducible creation and long-term archiving of container
-    images. Container technologies, such as Docker, offer exciting possibilities
-    for capturing a computational environment, but much of the development of
-    these tools is focused on short-term operational uses, not long-term
-    preservation. We will develop tools and guidelines for building containers
-    for scientific computing purposes so that they remain useful in the longer
-    term, building on existing technology such as repo2docker wherever possible.
+  Binder and its tool repo2docker are a first step in the right
+  direction: given the description of a computational environment,
+  they allow to create that computational environment as a docker
+  container automatically on demand, which in turn allows to execute a
+  given notebook within this container environment. By archiving the
+  notebooks together with the environment specification, the container
+  computation environment can be created on demand. We see a number of
+  publications being complemented by such git repositories that allow
+  reproducing figures and results from papers by re-executing
+  notebooks; often archiving these repositories via the Zenodo
+  service.
 
-    There is a trade-off between preserving binary container images,
-    and preserving the source code and instructions to build a container.
-    Preserving sources is more transparent, and makes it easier to modify the
-    code to explore a result, but without special care, the instructions may not
-    continue to work in the future, or may not build an equivalent container.
-    We will explore both approaches, with a particular interest in how to
-    make build instructions that can still work many years in the future.
-    (\localdelivref{deliv-id})
-  \end{compactitem}
-  \begin{compactitem}
-  \item ...
-    (\localdelivref{deliv-id})
-  \end{compactitem}
+  \TODO{add citations: LIGO paper, one from Hans' papers}.
+
+  Container technologies, such as Docker, offer exciting possibilities
+  for capturing a computational environment, but much of the
+  development of these tools is focused on short-term operational
+  uses, not long-term preservation.
+
+  There are currently at least two shortcomings in the existing
+  repo2docker approach:
+\begin{enumerate}
+\item the environment specifications need to be written carefully and
+  need to explicitly define particular version numbers of operating
+  systems, libraries, and software to be used in the
+  environment. While there are no guidelines (yet) for best practice
+  in writing such specifications, in principle users can do this
+  correctly.
+\item when repo2docker builds a container environment, it relies on
+  the required software being available on the Internet: Commands that
+  clone software from Github assume that the software is actually
+  available on Github. If a relevant repository disappears (or Github
+  disappears), it will be impossible to clone that software from
+  there, and this will break the binder execution and thus
+  reproducibility. Some environments are specified through
+  Dockerfiles, and often start from an Ubuntu Linux distribution
+  container, followed by a \texttt{apt-get update} command. This
+  command will fail once the age of the specified distribution exceeds
+  the support period, and similarly subsequent \texttt{apt-get
+    install} commands will fail.
+\end{enumerate}
+
+The task includes the following activities:
+\begin{compactitem}
+
+\item Literature review and technology exploration: research Binder
+  model and horizon scan for related technology to support long term
+  reproducibility.
+
+\item Establish and document best practice for Binder use: Create
+  public guidelines for building containers for scientific computing
+  purposes so that they remain useful in the longer term, building on
+  existing technology such as repo2docker. ($\rightarrow$
+  \localdelivref{binder-guidelines})
+
+\item Facilitating reproducible creation and long-term archiving of
+  container images for reproducibility: Develop new software to
+  provide long-term executable computational environments that support
+  the Binder model.
+
+  There is a trade-off between preserving binary container images, and
+  preserving the source code and instructions to build a container.
+  Preserving sources is more transparent, and makes it easier to
+  modify the code to explore a result, but without special care, the
+  instructions may not continue to work in the future, or may not
+  build an equivalent container.  We will explore both approaches,
+  with a particular interest in how to make build instructions that
+  can still work many years in the future.  ($\rightarrow$ \localdelivref{jupyter-archive})
+\end{compactitem}
+
+%\begin{compactitem}
+%  \item
+%    (\localdelivref{deliv-id})
+%  \end{compactitem}
 
   This techology will be developed with a real scientific use case at European
-  XFEL (see WP3).
+  XFEL (see WP3). \TODO{Add link to particular task}
 \end{task}
