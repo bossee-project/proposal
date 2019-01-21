@@ -26,8 +26,30 @@ The
 \else
 As shown in Figure~\ref{fig:wplist}, the
 \fi
+
 work plan is broken down into
-X work packages: \WPref{management}...
+six work packages:
+\WPref{core} about maintaining the core Jupyter software infrastructure,
+\WPref{ecosystem} for developing the ecosystem of software surrounding Jupyter,
+\WPref{applications} for building applications to demonstrate the efficacy and guide the development
+of core infrastructure,
+\WPref{eosc} for operating services built on these
+components and collaborating with existing EOSC stakeholders,
+\WPref{education} for educating the public on Open Science best practices with the project's tools
+and fostering diversity in the research and software communities.
+This is complemented by the
+the usual management  work package
+(\WPref{management}). The Gantt chart on
+Page~\pageref{fig:gantt} illustrates the timeline for the various
+tasks for these work packages.
+%, including inter-task dependencies.
+
+\ifgrantagreement\else
+%\makeatletter\wp@total@RM{management}\makeatother
+\wpfigstyle{\footnotesize\def\tabcolsep{3.5pt}}
+%\wpfig[pages,type,start,end]
+{\wpfig}
+\fi
 
 \subsubsection{How the Work Packages will Achieve the Project Objectives}
 \label{sssec:how_the_work_packages_will_achieve}
