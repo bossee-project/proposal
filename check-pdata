@@ -88,17 +88,27 @@ def summary(data):
         task_pms = 0
         for task_id in task_ids:
             task = data['task'][task_id]
-            task_pms += task['PM']
+            try:
+                task_pms += task['PM']
+            except (TypeError, ValueError):
+                print(f"task {task['title']} has invalid pms: {task['PM']}")
         print(f"  Lead: {wp['lead']}")
         print(f"  Tasks: {len(task_ids)}")
         print(f"  Deliverables: ???")
         print(f"    WP PMs: {wp_pms}")
         print(f"  task PMs: {task_pms}")
+        if wp_pms != task_pms:
+            print("!!!!! task PMs don't add up !!!!")
+        print()
 
     print()
     print(f"{'Site':12}: {'PMs':3}")
+    total_pms = 0
     for site, pms in sorted(site_pms.items(), key=itemgetter(1), reverse=True):
         print(f"{site:12}: {pms:3}")
+        total_pms += pms
+    print()
+    print(f"{'total':12}: {total_pms:3}")
 
 
 def main(pdata_file='draft.pdata'):
