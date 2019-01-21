@@ -13,7 +13,7 @@
   surveys) are diagnostic examinations, therapeutic applications tend to
   develop and drag more and more attention, for example for the treatment of
   neuroendocrine tumours.
-  
+
   The formalism used to objectively characterise the irradiation process is
   similar for both application types: it was introduced in the late 60s by the
   MIRD (Medical Internal Radiation Dose) committee of the American Society of
@@ -25,7 +25,7 @@
   radioisotope decay characteristics, it can be expressed as a linear
   combination of yields/energies ($J$) and Specific Absorbed Fractions (SAF,
   $g^{-1}$).
-  
+
   The calculation of SAFs involves radiation transport modelling and energy
   deposition scoring in anthropomorphic models, usually based on Monte Carlo
   simulation. Historically, SAFs were computed from mathematical models -
@@ -36,7 +36,7 @@
   to around 20000 source/target combinations. The production of SAFs for these
   models for all possible source regions, radiation types and energies
   represent an important computation time (millions of CPU hours).
-  
+
   The OpenDose project is a collaborative effort to generate reference
   dosimetric data using various Monte Carlo codes across different teams. The
   collaboration includes at the moment 14 research teams over 18 institutes.
@@ -57,13 +57,13 @@
   pre-processed data corresponding to energy deposited per regions such as
   organs and tissues. These raw outputs are later processed into dosimetric
   data such as Specific Absorbed Fractions (SAFs) and S-values.
-  
+
   Producing data for one model (ex. adult female) requires $\sim$30 000
   simulations, with the workload shared between the different teams and
   software.
-  
+
   The data produced by all the teams is currently centralised at CRCT,
-  processed and fed into a local SQL database. 
+  processed and fed into a local SQL database.
 
   This collaborative effort rise some challenges:
   \begin{compactitem}
