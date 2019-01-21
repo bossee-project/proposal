@@ -3,12 +3,14 @@
 % in the workpackage task list
 \begin{task}[
   title=Reproducible X-ray crystallography workflows at European XFEL,
-  id=reproducibility-euxfel,
+  id=reproducibility-xfel,
   lead=XFEL,
   PM=36,
   wphases={6-48},
   partners={XFEL}
   ]
+
+\emph{Summary:}
 
   European XFEL is a research facility that provides X-ray Free
   Electron Laser (XFEL) light to image structures at the nanoscale. It
@@ -16,114 +18,150 @@
   long tunnel, and supporting user experiments since September
   2017. These imaging capabilities from European XFEL and similar
   services from synchrotron and neutron sources, underpin lots of
-  fundamental and research, in domains covering fundamental physics,
-  material science to biochemistry and drug design.
+  fundamental and applied research, in domains ranging from fundamental
+  physics and material science to biochemistry and drug design.
 
-  European XFEL's data policy \cite{EuXFEL-datapolicy-2017} imposes a
-  3-year embargo period on data acquired at the facility during user
-  experiments, but makes the data accessibly to the public
-  subsequently. A task in the EC funded project Photon and Neutron
-  Open Science Cloud (PaNOSC) is using the Jupyter Ecosystem as of
-  2019 to provide data analysis services to complement the data:
-  through use of Jupyter Notebook and exploitation of the mybinder.org
-  service, this activity will reduce the barrier for understanding and
-  making use of the data, and eventually make those services available
-  through EOSC.
+  All of the data recorded at European XFEL will be made freely
+  available after an embargo period of three years
+  \cite{EuXFEL-datapolicy-2017}. This provides scientific transparency
+  and is expected to enable better exploitation of the data, as more
+  researchers than those conducting the experiments have access to the
+  results. If the analysis steps are not carefully recorded, there is a risk
+  that the necessary understanding of the data is lost by the time it
+  is made public or subsequently, greatly reducing its scientific
+  value.
+
+  We are keen to complement this open data access to the actual data
+  with open access to reproducible data analysis, to confirm
+  conclusions drawn and to significantly lower the barriers for
+  re-analysis with new tools or for new research purposes.
+
+  A task in the EC funded project Photon and Neutron Open Science
+  Cloud (PaNOSC) is using the Jupyter Ecosystem tools as they are in
+  2019 to provide interactive data analysis services to complement the
+  data: through use of Jupyter Notebook and exploitation of the
+  mybinder.org service, this activity will reduce the barrier for
+  interactively exploring the data, understanding and making use of
+  the data, and to do this through a central portal such as EOSC.
 
   Here, we want to combine and use the new developments of this
   proposal to enable new qualities of open science services, and to
-  demonstrate the potential impact of these improvements.
+  demonstrate the potential impact of these improvements for EOSC.
 
-  \medskip Context: The very first experiments at European XFEL
+  \medskip \emph{Context}: The very first experiments at European XFEL
   produced as little as 45 TeraByte of data on average, but as the
   facility develops, the amount of data produced per time is expected
   to grow substantially: Given the rate of light pulses, there is the
   potential to produce up to a PetaByte of data within the beam time
   of one experiment. These significant amounts of data need to be
   complemented by complicated workflows to convert the data into
-  insight through data analysis. Results of such data analysis are
-  typically much smaller in size and useful to archive together with
-  the raw data. To explain how they have been obtained, the particular
-  workflow of data analysis also needs to be archived.
+  insight through data analysis. Derived results of such data analysis
+  are typically much smaller in size and useful to archive together
+  with the raw data. To explain how they have been obtained, the
+  particular workflow of data analysis also needs to be archived.
 
-  At European XFEL, it is explored how Jupyter Notebooks can be used
-  as programs to facilitate this workflow: the simplest model would be
-  to use one Notebook per workflow. This notebook can be executed
-  (without being displayed in a webbrowser) once the data capture is
-  completed to start processing the data. When the notebook has
+  \medskip \emph{Vision}: At European XFEL we will use Jupyter Notebooks to facilitate
+  this workflow: the simplest model would be to use one Notebook per
+  workflow. Once the data capture from the experiment is completed,
+  this notebook can be executed (without being displayed in a web
+  browser) to start processing the data. When the notebook has
   completed execution, it is saved, and contains the analysis results
   (it may of course also created files on disk as part of the
   process).
 
   A particularly useful aspect of the notebooks is that they mix data
   analysis commands with outputs, and that the notebook provides a
-  reproducible summary of the data analysis when it succeeds with the
-  execution. Should the execution fail, for example half-way through
-  the notebook, then results obtained prior to the error occurring are
-  preserved and can be inspected. The error is embedded in the
-  notebook and appears after the command that has triggered the error;
-  which helps with debugging the process.
+  complete (and thus reproducible) summary of the data analysis when
+  it succeeds with the execution. Should the execution fail, for
+  example half-way through the notebook, then derived results obtained
+  prior to the error occurring are preserved and can be inspected. The
+  error is embedded in the notebook and appears after the command that
+  has triggered the error; which helps with debugging the process.
 
-  This is of particular interest as the data analysis processes may
-  fail not because of software errors but due to variation in the data
-  that require (manual) adjustments of parameters. The ``failure'' of
-  such an analysis script is thus not exceptional, but a common
-  occurrence. The scientist conducting the experiment is sufficiently
-  skilled to modify the parameters and wants to either re-execute the
-  script from the beginning or to continue from the point of
-  failure. The notebook caters for both use cases. The modified
-  notebook would need to be preserved of course.
+  This is of particular interest as the data analysis processes at
+  European XFEL may fail not because of software errors but due to
+  variation in the data that require (manual) expert adjustments of
+  parameters. The ``failure'' of such an analysis workflow
+  (represented through the Notebook) is thus not exceptional, but a
+  common occurrence. The scientist conducting the experiment is
+  sufficiently skilled to modify the parameters and wants to either
+  re-execute the notebook from the beginning or to continue from the
+  point of failure. The notebook caters for both use cases. The
+  modified notebook would need to be preserved of course to provide
+  reproducibility of the derived results that the notebook has
+  computed.
 
   We are aiming for re-executability of the notebook for the lifetime
-  of the data. At the moment, this is guaranteed for 5 years and aimed
-  to be 10 years. It is possible though, that data used for
-  publications will be preserved for longer, and it would be highly
-  desirable to keep the data analysis re-executable for the same
-  period of time, potentially exceeding 10 years.
+  of the data. The life time of the archived data at European XFEL is
+  currently guaranteed for 5 years and aimed to be 10 years
+  \cite{EuXFEL-datapolicy-2017}. It is possible though, that data used
+  for publications will be preserved for longer, and it would be
+  highly desirable to keep the data analysis re-executable for the
+  same period of time, potentially well exceeding 10 years.
 
 
 
+%%%
+%%% A major category of experiments already begun at European XFEL revolve around
+%%% X-ray crystallography, using X-ray scattering to resolve molecular structures.
+%%% Processing the data collected to produce meaningful structures is a
+%%% significant computational task, and researchers have developed complex
+%%% software for this, such as CrystFEL, Cheetah and CORTEX.
+%%%
+%%% As an application of the reproducible workflows task in WP2, we will build
+%%% workflows around such software, aiming to allow 'one button'' replication
+%%% of published structures once the raw data is made available.
+%%% As part of European XFEL's data policy, all data is to be publicly available
+%%% ?? years after it is collected.
 
-
-
-
-  Using the improvements of task
-  \taskref{server-state} in \WPref{core}), will allow us to l, moving
-  the Notebook document state into the server
-
-
-
-% applicability
-
-  There is stiff competition for beam time to do research at European XFEL,
-  and it is important to the 12 countries \TOWRITE{}{How many are EU member states?}
-  which fund the facility that the best possible use is made of the data collected.
-  All of the data will be made freely available after an embargo period of
-  three years, and we are keen to complement this with reproducible data
-  analysis, to confirm conclusions drawn and to allow re-analysis with new
-  tools or for new purposes. \TODO{Cite data policy}
-  If the analysis steps are not carefully recorded, there is a risk that the
-  necessary understanding of the data is lost by the time it is made public,
-  greatly reducing its scientific value.
-
-  A major category of experiments already begun at European XFEL revolve around
-  X-ray crystallography, using X-ray scattering to resolve molecular structures.
-  Processing the data collected to produce meaningful structures is a
-  significant computational task, and researchers have developed complex
-  software for this, such as CrystFEL, Cheetah and CCTBX.
-  % How do I properly cross-reference another task or workpackage?
-  % using \WPref or \taskref.
-  As an application of the reproducible workflows task in WP2, we will build
-  workflows around such software, aiming to allow 'one button'' replication
-  of published structures once the raw data is made available.
-  As part of European XFEL's data policy, all data is to be publicly available
-  ?? years after it is collected.
-  The task includes the following activities:
+  \medskip \emph{This task} includes the following activities:
   \begin{compactitem}
-  \item ...
-    (\localdelivref{deliv-id})
+  \item Aim to use the software archive for reproducible computation
+    (as co-developed in \taskref{ecosystem}{reproducibility}), to
+    provide reproducible computation environments for data analysis at
+    European XFEL that remains executable for the same duration as the
+    data is kept (currently aiming at 10 years, at least 5).
+
+    As often in computational science, software used at XFEL is often
+    relying on unusual combinations of libraries, often with
+    particular version requirements. Thus we will need a dedicated
+    software archive that holds all relevant packages and source codes
+    that are required to build the required computational environments
+    (see \taskref{ecosystem}{reproducibility}) to ensure they are
+    available even if an open source software provider decides to
+    remove their repositories, or changes the API of a package, or
+    Github decides to terminate their business.
+
+    Applying the work from \taskref{ecosystem}{reproducibility} in the
+    context of a production system will demonstrate its true useful
+    ness and provide important feedback for the design. There will be
+    iterative feedback and refinement of the service.
+
+  \item Extend the use of notebooks from \emph{interactive} data
+    exploration and analysis at European XFEL to also provide
+    computational work flows via (semi-)automatic execution of
+    notebooks as described above. The work done in
+    \taskref{core}{server-state} will allow us to execute notebooks in
+    the background, and to connect to the running notebook process to
+    display or inspect progress, or to modify a notebook if the
+    science requires it.
+
+    By doing so, we can make the standard analysis that is carried out
+    by the facility available on EOSC as a service. By using one tool
+    (the notebook) we simplify process for users and for the research
+    facility.
+
+  \item Work with partners in the PaNOSC project to evaluate and use
+    these advances for other Photon and Neutron Science research
+    facilities.
+
+  \item Evaluate the chosen workflow design and experience from using
+    it in a real-world context; make this available as a report and
+    through presentations/workshops to interested organisations and
+    facilities. (Deliverable \localdelivref{xfel-workflows})
   \end{compactitem}
 
-
-  \TODO{Mention PaNOSC}
-\end{task}
+  \TODO{Mention PaNOSC -- add project REFERENCE}
+  \TODO{Mention widgets for interactive work?}
+  \TODO{Make link to EOSC more obvious}
+  \end{task}
