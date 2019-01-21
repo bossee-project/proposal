@@ -7,32 +7,46 @@
   wphases={0-24}, % ???
   partners={EP,UPSUD}] % others? OVH?
 
-  The JupyterHub or BinderHub installation tutorials mostly focuses on deployment
-  on corporate cloud services (mainly GoogleCloud). For many academic institutions
-  and SMEs, a deployment on their own infrastructure is preferable for a combination
-  of reasons (better control on private data, easier integration with the local
-  information system, difficulty of funding the costs of external services, ...).
+  The JupyterHub or BinderHub installation tutorials mostly focuses on
+  deployment on corporate cloud services (mainly GoogleCloud). For many academic
+  institutions and SMEs, a deployment on their own infrastructure is preferable
+  for a combination of reasons (better control on private data, easier
+  integration with the local information system, the difficulty of funding the
+  costs of external services, ...).
 
-  The purpose of this task is to make the deployment of JupyterHub or BinderHub
-  easier on a variety of cloud infrastructure, in particular to help institutions
-  and SMEs deploying them on premises.
-  Since the deployment of JupyterHub or BinderHub is well documented for an
-  installation upon Kubernetes cluster, we will focus on two opensource 
-  softwares which can manage this kind of infrastructure (OpensStack and OpenShift). 
-
-  While platforms like GoogleCloud already offer effective tools to deploy a 
-  Kubernetes cluster, this is not the case when we deploy our own infrastructure.
-  The tools available for the two solutions mentioned above are numerous and it
-  is often difficult to choose which ones are the most suitable and best maintained.
-  We will therefore first take an interest in making a state of the art and explaining
-  our choices. We will then put it into practice to allow the community to easily
-  deploy a JupyterHub or BinderHub on their own infrastructure based on OpenStack
-  and/or OpenShift.
-
-  Particular attention will be focused on the possibility to mount storage devices
-  on the containers deployed on the Kubernetes cluster. This will be useful for
-  the task xxx.
-
+  There are many pre-existing academic clouds managed by people with a high
+  level of expertise and a thorough knowledge of their infrastructure and
+  associated tools. These are often more cost-effective for research and
+  education. This is also true for SMEs. The purpose of this task is to make the
+  deployment of JupyterHub or BinderHub easier upon these academic cloud
+  computing and to provide scalable and high-quality infrastructure for
+  education and research. Most of them are based on two open-source softwares
+  which can manage this kind of infrastructure: OpenStack and OpenShift. We will
+  then focus on these two tools.
+  
+  While platforms such as GoogleCloud already offer effective tools to deploy a
+  Kubernetes cluster, this is not the case when we deploy our own
+  infrastructure. The tools available for the two solutions mentioned above are
+  numerous and it is often difficult to choose which ones are the most suitable
+  and best maintained. We will therefore first take an interest in making a
+  state of the art and explaining our choices. We already began this study at
+  Ecole polytechnique (see the post in
+  medium\footnote{\url{https://blog.jupyter.org/how-to-deploy-jupyterhub-with-kubernetes-on-openstack-f8f6120d4b1}})
+  and we want to deepen it. At each step, we will use infrastructures available
+  locally (OpenShift at Ecole polytechnique and OpenStack at University of
+  Paris-Sud), available in France (OpenShift at Mathrice which is a "Groupements
+  de Service" at CNRS of the research laboratories IT in French mathematics),
+  available in Europe (EGI). We will document all the process to allow the
+  community to easily deploy a JupyterHub or BinderHub on their own
+  infrastructure based on OpenStack and/or OpenShift.
+  
+  Once the infrastructure is in place, JupyterHub or BinderHub provide teaching
+  or research environment with all the tools needed to make your experiment. But
+  one issue remains: you want to get access to your data everywhere. Therefore,
+  particular attention will be focused on the possibility to mount various
+  storage devices on the containers deployed on the Kubernetes cluster. This
+  will be a key issue for the task \taskref{core}{jh-bh-conv}.
+  
   The task includes the following activities:
   \begin{compactitem}
   \item Prototypes / POC deployment on OpenStack and/or OpenShift
