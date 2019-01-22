@@ -1,10 +1,10 @@
 \begin{task}[
   title=Easy deployment of JupyterHub and BinderHub on a variety of
   infrastructure,
-  id=openstack,
+  id=jh-bh-deplyment,
   lead=EP,
   PM=11PM, % EP: 11PM
-  wphases={0-24}, % ???
+  wphases={0-18}, % ???
   partners={EP,UPSUD}] % others? OVH?
 
   The JupyterHub or BinderHub installation tutorials mostly focuses on
@@ -39,20 +39,20 @@
   available in Europe (EGI). We will document all the process to allow the
   community to easily deploy a JupyterHub or BinderHub on their own
   infrastructure based on OpenStack and/or OpenShift.
-  
-  Once the infrastructure is in place, JupyterHub or BinderHub provide teaching
-  or research environment with all the tools needed to make your experiment. But
-  one issue remains: you want to get access to your data everywhere. Therefore,
-  particular attention will be focused on the possibility to mount various
-  storage devices on the containers deployed on the Kubernetes cluster. This
-  will be a key issue for the task \taskref{core}{jh-bh-conv}.
+
+  Once the infrastructure is in place, even if JupyterHub or BinderHub provide
+  efficient teaching or research environments, one issue remains: the lack of
+  choice in terms of storage devices and data persistence. Thus, we will provide
+  a unified environment and  focus on the possibility to mount various  storage
+  devices on the containers deployed on the Kubernetes cluster and provide
+  persistence storage for Binder. This will be a key issue for the task
+  \taskref{core}{jh-bh-conv}.
   
   The task includes the following activities:
   \begin{compactitem}
   \item Prototypes / POC deployment on OpenStack and/or OpenShift
   \item Partial / Full automation of the deployment
-  \item Documentation
-    % Deliverable: a report based on the documentation
-    %(\localdelivref{deliv-id})
+  \item Documentation ($\rightarrow$
+  \localdelivref{openstack-openshift-documentation})
   \end{compactitem}
 \end{task}
