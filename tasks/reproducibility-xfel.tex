@@ -44,21 +44,23 @@
   interactively exploring the data, understanding and making use of
   the data, and to do this through a central portal such as EOSC.
 
-  Here, we want to combine and use the new developments of this
+  Here, we combine and use the new developments of this
   proposal to enable new qualities of open science services, and to
-  demonstrate the potential impact of these improvements for EOSC.
+  demonstrate the potential impact of these improvements for a wide
+  set of EOSC services through a demonstrator in Photon Science.
 
   \medskip \emph{Context}: The very first experiments at European XFEL
   produced as little as 45 terabytes of data on average, but as the
   facility develops, the amount of data produced per time is expected
   to grow substantially: Given the rate of light pulses, there is the
   potential to produce up to a petabyte of data within the beam time
-  of one experiment. These significant amounts of data need to be
-  complemented by complicated workflows to convert the data into
-  insight through data analysis. Derived results of such data analysis
-  are typically much smaller in size and useful to archive together
-  with the raw data. To explain how they have been obtained, the
-  particular workflow of data analysis also needs to be archived.
+  of one experiment (typically one week). These significant amounts of
+  data need to be complemented by complicated workflows to convert the
+  data into insight through data analysis. Derived results of such
+  data analysis are typically much smaller in size and useful to
+  archive together with the raw data. To explain how they have been
+  obtained, the particular workflow of data analysis also needs to be
+  archived.
 
   \medskip \emph{Vision}: At European XFEL we will use Jupyter notebooks to facilitate
   this workflow: the simplest model would be to use one notebook per
@@ -101,11 +103,11 @@
 
   \medskip \emph{This task} includes the following activities:
   \begin{compactitem}
-  \item Aim to use the software archive for reproducible computation
-    (as co-developed in \taskref{ecosystem}{reproducibility}), to
-    provide reproducible computation environments for data analysis at
+  \item Use the software archive for reproducible computation
+    (as co-developed in \taskref{ecosystem}{reproducibility}), with
+    the aim to provide reproducible computation environments for data analysis at
     European XFEL that remains executable for the same duration as the
-    data is kept (currently aiming at 10 years, at least 5).
+    data is kept (currently aiming at 10+ years, at least 5 years).
 
     As is common in computational science, software used at XFEL often
     relies on specific combinations of libraries, often with
@@ -126,7 +128,7 @@
     exploration and analysis at European XFEL to also provide
     computational work flows via (semi-)automatic execution of
     notebooks as described above. The work done in
-    \taskref{core}{server-state} will allow us to execute notebooks in
+    \taskref{core}{collaboration} will allow us to execute notebooks in
     the background, and to connect to the running notebook process to
     display or inspect progress, or to modify a notebook if the
     science requires it.
