@@ -2,11 +2,11 @@
 % each task should be added to exactly one workpackage
 % in the workpackage task list
 \begin{task}[
-  title=Archiving software for reproducible workflows,
+  title=Archiving software environments for reproducible computation,
   id=reproducibility,
   lead=XFEL,
   PM=36,
-  wphases={0-48},
+  wphases={1-36},
   partners={XFEL}
 ]
 
@@ -48,7 +48,7 @@
   development of these tools is focused on short-term operational
   uses, not long-term preservation.
 
-  There are currently at least two shortcomings in the existing
+  There are currently at least two limitations in the existing
   repo2docker approach:
 \begin{enumerate}
 \item the environment specifications need to be written carefully and
@@ -98,16 +98,22 @@ The task includes the following activities:
   with a particular interest in how to make build instructions that
   can still work many years in the future.  ($\rightarrow$
   \localdelivref{jupyter-archive})
-  \TODO{Add more detail here or in summary above.}
-\end{compactitem}
 
+  It may be necessary for the build process to make use of alternative
+  sources for source code and packages to install, such as snapshots
+  of github repositories that are available on Zenodo, or dedicated
+  software archive servers that provide selected pieces of software
+  that are required to build particular containers.
+  \end{compactitem}
+
+\end{task}
 %\begin{compactitem}
 %  \item
 %    (\localdelivref{deliv-id})
 %  \end{compactitem}
 
   This techology will be developed with a real scientific use case at European
-  XFEL (see WP3). \TODO{Add link to particular task}
-  \TODO{Mention other use cases: universities and publishers}
+  XFEL (see \taskref{applications}{reproducibility-xfel} in
+  \WPref{applications}).
 
-\end{task}
+  \TODO{Mention other use cases: universities and publishers}
