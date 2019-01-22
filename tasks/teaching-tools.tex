@@ -1,59 +1,74 @@
-% template for a task
-% each task should be added to exactly one workpackage
-% in the workpackage task list
 \begin{task}[
-  title=Teaching tools,
+  title=Teaching tools, infrastructure, and best practices,
   id=teaching-tools,
   lead=EP,
   PM=20, % EP: 20PM
   wphases={0-36},
   partners={EP,UPSUD}]
 
-  The Jupyter notebooks offer much more interesting perspectives than the usual
-  course provided in pdf format. The teacher can illustrate his course with
-  videos, code,... The course becomes interactive. The student is no longer
-  passive. He can use the notebook and play with the code provided by
-  the teacher. He can thus change the parameters of the simulation, change the
-  numerical method, represent the results in another way,... He takes ownership
-  of the course and better understands the issues. He can then make his own
-  notebooks and share his experiences with his colleagues and teachers.
+  In the recent years, Jupyter technologies have been widely adopted
+  worldwide in higher education -- and even in high schools -- for
+  teaching in all areas of sciences. The Jupyter notebook indeed
+  provides a very versatile environment -- with a smooth learning
+  curve -- for authoring interactive material such as class notes,
+  exercise sheets, dedicated applets; all the way to complete books
+  such as those produced by OpenDreamKit for biology, physics, and
+  mathematics. The interactivity engages the students to take an
+  active role, for example playing with code, exploring the effect of
+  tweaking the parameters in a simulation, changing visualizing tools,
+  adding personal notes. This lets them take progressively ownership
+  of the material and better understands the issues, and encourages
+  them to create their own documents and share their experience with
+  colleagues and teachers.
 
-  In order to have the best working environment for both teacher and student, it
-  is necessary to have tools for easy sharing,
-  collecting, self assessment and semi-automatic grading of course material,
-  class management, and integration with the local e-learning infrastructure.
-  
-  There are already many tools available to manage classes (Moodle, OpenEDX) and tools to
-  share course documents and grading (nbgrader, okpy, ...). The purpose of this
-  task is therefore not to rewrite a new tool but to try to use existing ones
-  and improve them in order to achieve a unified framework.
+  Setting up a comfortable working environment for both teachers and
+  students, requires tools for easy sharing, collecting, self
+  assessment, and semi-automatic grading of course material, class
+  management, and integration with the local e-learning infrastructure
+  such as, e.g., Moodle or OpenEDX.
 
-  A survey will be delivered to the education community using Jupyter in order
-  to have a better vision of the needs. Then we will propose a tool that meets
-  these needs. It will be also important for us to have feedbacks from MOOC
-  courses which use Jupyter (see
-  Coursera\footnote{\url{https://www.coursera.org/courses?query=jupyter}}, and
-  Fun\footnote{\url{https://www.fun-mooc.fr/courses/course-v1:inria+41016+session01bis/about}}).
+  In this task, we will review the state of the art: existing tools,
+  within the Jupyter ecosystem (e.g. nbgrader or okpy) and outside;
+  course services (e.g. gryd.us or cocalc); course infrastructure that
+  have been designed and deployed at many institutions (Berkeley,
+  École Polytechnique, Université Paris Sud), etc.
 
-  It is also important to notice that the partners of the BOSSEE project will
-  deliver a large number of courses using Jupyter technology. The variety of use
-  cases and infrastructure will provide a rich test bed for the further
-  development of tools and best practices around them.
+  To build and share a better vision of the needs, we will conduct a
+  survey in the education community about the usage of Jupyter. In
+  particular we will seek feedback from Jupyter-based MOOC courses,
+  e.g. on
+  Coursera\footnote{\url{https://www.coursera.org/courses?query=jupyter}},
+  and
+  Fun\footnote{\url{https://www.fun-mooc.fr/courses/course-v1:inria+41016+session01bis/about}}.
 
-  The task includes the following activities:
+  The collected requirements will be exposed in a first report
+  \localdelivref{teaching-report} and largely disseminated.
+
+  The core of the task will then be to \textbf{further develop
+    teaching tools and infrastructure to contribute to the emergence
+    of versatile solutions and best practices around them}.
+
+  The outcome will be put into production by the participants of the
+  BOSSEE project (and beyond!) who will deliver a large number of
+  courses using Jupyter technology (see Task~\ref{}). The variety of
+  use cases and infrastructure will provide a rich test bed and
+  immediate feedback at each iteration, ensuring that the developments
+  are informed and steered by demand (co-design), and battle field
+  tested.
+
+  At this stage, we already envision specific development in the
+  following directions:
   \begin{compactitem}
-  \item Review and follow up on related efforts: gryd.us, cocalc, Coursera/Fun,
-    Berkeley, Ecole polytechnique, University of Paris Sud, ...
-  \item Survey of the needs in the education community
+  % \item Review and follow up on related efforts: gryd.us, cocalc, Coursera/Fun,
+  %   Berkeley, Ecole polytechnique, University of Paris Sud, ...
+  % \item Survey of the needs in the education community
   \item Collaborative grade management
   \item Insulation through container of the automatic grading
   \item Integration with e-learning platforms (e.g. Moodle, OpenEDX
     (Coursera/Fun)), through an LTI connector.
   \item Develop course templates for various use cases
   \end{compactitem}
-  A report of the existing and the requirements tools provided by the education
-  community thanks to the survey will be written ($\rightarrow$
-  \localdelivref{teaching-report}). We will then provide a first version of an
-  unified tool to manage classes and associated courses ($\rightarrow$
-  \localdelivref{nbgrader-like}).
+
+  A second report~\localdelivref{nbgrader-like} will review the
+  developments, our in-class experience with them, and best practices.
 \end{task}
