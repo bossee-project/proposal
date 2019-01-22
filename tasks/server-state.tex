@@ -2,20 +2,34 @@
 % each task should be added to exactly one workpackage
 % in the workpackage task list
 \begin{task}[
-  title=Server-side Document State,
-  id=server-state,
+  title=Multi-device Real-time Collaboration,
+  id=collaboration,
   lead=UPSUD,
   PM=20,
   wphases={0-48},
   partners={SRL,QS}
 ]
-  For applications such as real-time collaboration and others,
-  it can be beneficial.
-  We will explore different possible mechanisms for moving document state
-  to the server-side in JupyterLab.
+  % For applications such as real-time collaboration and others,
+  % it can be beneficial.
+  % We will explore different possible mechanisms for moving document state
+  % to the server-side in JupyterLab.
 
-  \begin{compactitem}
-  \item ...
-    (\localdelivref{deliv-id})
-  \end{compactitem}
-\end{task}
+Current practices, in research and industry, are often collaborative and would benefit tremendously from the ability to collectively edit notebooks. Unfortunately there is no “Google doc” equivalent to a Jupyter notebook that is widely available today. 
+Moreover, we routinely use multiple devices to manipulate or present content, although it is often  difficult to juggle devices and apps to transfer content from one device to the next. 
+Jupyter already recognizes the distributed nature of the digital environment by supporting remote kernels for computation. 
+But the user interfaces are stuck in single devices. 
+BOSSEE will embrace this multi-device world and facilitate the distribution and real-time collaborative editing of content across multiple devices for presentation, interaction and collaboration purposes.
+
+We will create a real-time collaborative notebook or JupyterLab-like application by leveraging well-known synchronization techniques such as Operational Transformation (OT) or Conflict-free Replicated Data Types (CRDTs), with server-side hosting of the document state. 
+We will build on our experience with Webstrates (\url{http://webstrates.net}), a web-based environment that supports real-time sharing of web content. The CodeStrates extension to Webstrates uses the layout of Jupyter notebooks, and we have created a proof-of-concept showing that it can work with Jupyter kernels. However CodeStrates, and there are interesting unresolved questions about code execution in such a shared environment: Should it be synchronized or not among participants? Should there be a single kernel or one per participant? etc.
+
+We will also enable selective distribution, aggregation and control of content across devices. 
+We have used Webstrates to distribute and synchronize content across multiple devices such as a tablet, a laptop and a large wall-sized display. Yet this does not cover all use cases. 
+For example, in a meeting, the participants should each be able to run their own notebook and pick which content to share with the group on a large display. 
+We will create an environment where a notebook can collect specific cells from another notebook, or where a JupyterLab widget aggregates data from a collection of widgets running on each user’s device. 
+We also want to support remote interaction using one device to control another, e.g. a widget on a smartphone to control a parameter in a computation taking place in a particular notebook, whose result is shown on a large shared display.
+
+  % \begin{compactitem}
+  % \item ...
+  %   (\localdelivref{deliv-id})
+  % \end{compactitem}
