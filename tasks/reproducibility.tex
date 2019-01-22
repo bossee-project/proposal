@@ -7,7 +7,7 @@
   lead=XFEL,
   PM=36,
   wphases={1-36},
-  partners={XFEL}
+  partners={XFEL,WTT,SRL,UPSUD,QS}
 ]
 
   Reproducible research can inspire greater confidence in scientific results,
@@ -64,13 +64,14 @@
   there, and this will break the binder execution and thus
   reproducibility. Some environments are specified through
   Dockerfiles, and often start from an Ubuntu Linux distribution
-  container, followed by a \texttt{apt-get update} command. This
+  container, followed by an \texttt{apt-get update} command. This
   command will fail once the age of the specified distribution exceeds
   the support period, and similarly subsequent \texttt{apt-get
-    install} commands will fail.
+    install} commands will fail. As the Binder service matures, we
+  start to see such failures occur.
 \end{enumerate}
 
-The task includes the following activities:
+The task addresses these problems and includes the following activities:
 \begin{compactitem}
 
 \item Literature review and technology exploration: research Binder
@@ -103,16 +104,31 @@ The task includes the following activities:
   of github repositories that are available on Zenodo, or dedicated
   software archive servers that provide selected pieces of software
   that are required to build particular containers.
+
+  The developed software will be integrated into the EOSC Binder
+  (\taskref{eosc}{eu-binder}).
   \end{compactitem}
 
-\end{task}
+
 %\begin{compactitem}
 %  \item
 %    (\localdelivref{deliv-id})
 %  \end{compactitem}
 
-  This techology will be developed with a real scientific use case at European
-  XFEL (see \taskref{applications}{reproducibility-xfel} in
-  \WPref{applications}).
+This techology will be co-developed with a real scientific use case at
+European XFEL (see \taskref{applications}{reproducibility-xfel} in
+\WPref{applications}).
 
-  \TODO{Mention other use cases: universities and publishers}
+  We note that there is a wide variety of use cases for this kind of
+  technology and advances towards long term reproducibility, which we
+  expect to grow in importance over time and with the increasing
+  acceptance of open science: journals do increasingly (and rightly
+  so) request from authors that they can reproduce their studies, or
+  even submit corresponding code with the submission of the papers. As
+  Binder and notebooks are a popular way of achieving this, the long
+  term executability becomes a challenge. The same is true for
+  universities and other academic institutions that take FAIR data
+  seriously, and want to support the reproducibility and re-usability
+  aspect of data comprehensively through providing data analysis
+  software that allows access to the meaning of the data.
+\end{task}
