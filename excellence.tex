@@ -45,6 +45,57 @@ honors people or an organization "for developing a software system that had a
 lasting influence". Prior recipients include \emph{Unix}, \emph{TCP/IP}, and
 the \emph{World Wide Web}.
 
+A large number of discrete software components make up Project Jupyter.
+While these interact with one another, many can be installed separately
+to serve various use cases. For this proposal, we loosely divide the
+software involved into \emph{core} components developed under the guidance
+of the developers who started the project, and the broader \emph{Jupyter
+ecosystem} including software developed by third parties. Some of the
+important components and concepts are detailed below.
+
+\begin{figure}[ht]\centering
+  \includegraphics[width=0.9\textwidth]{spectrogram_smaller.png}
+  \caption{A notebook document in the Jupyter Notebook interface.}\label{fig:notebook-screenshot}
+\end{figure}
+
+\begin{itemize}
+  \item The \textbf{Jupyter Notebook} is the flagship application of Project Jupyter.
+  It allows the creation of notebook documents, containing a mixture of text and
+  interactively executable code, along with rich output from running that code.
+  Figure \ref{fig:notebook-screenshot} shows an open notebook including graphs
+  from an audio processing example. Notebook documents are readily shareable,
+  providing a popular way to describe and illustrate computational methods and
+  tools.
+
+  \item \textbf{Jupyter kernels} are the backend software which allow Jupyter to execute
+  code in many different programming languages. The \textbf{IPython} kernel is
+  the reference kernel, supporting the Python programming language, and is
+  developed by the Jupyter core team. Kernels for other languages are maintained
+  by third parties.
+
+  \item \textbf{nbconvert} converts notebook files to a variety of other file
+  formats, including HTML and PDF, so that the content of a notebook can easily
+  be shared with people who don't have Jupyter software. nbconvert also powers
+  \textbf{nbviewer}, a web service which provides static HTML views of publicly
+  accessible notebooks.
+
+  \item \textbf{JupyterHub} is a multi-user extension of the Jupyter Notebook.
+  It runs on one or more servers, for example at a research institution.
+  Users can log in to author and run notebooks securely through their web
+  browser, without needing to install any special software on their own
+  computer.
+
+  \item \textbf{Binder} builds on JupyterHub to allow sharing executable
+  notebooks along with (small) data files and a description of the libraries
+  required to run the notebooks. When someone accesses a Binder repository,
+  the service builds the computational environment on-demand, allowing them to
+  execute and modify a copy of the notebooks.
+  \end{itemize}
+
+\subsubsection{Jupyter Ecosystem}
+
+\TOWRITE{TK}{...}
+
 \subsection{This proposal}
 
 In this proposal, core team developers of the project, including a
