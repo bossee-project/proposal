@@ -25,15 +25,16 @@ To mention a few,
 
 \begin{itemize}
 \item
-   the \emph{PanGeo} platform (Funded by the NSF, NASA, and the Alfred P.
-   Sloan Foundation) is built upon Jupyter, JupyterHub, Binder, and Dask.
+   the \emph{PanGeo} platform \cite{Pangeo2018} (Funded by the NSF, NASA, and the
+   Alfred P. Sloan Foundation) is built upon Jupyter, JupyterHub, Binder, and Dask.
 \item
    the \emph{Joint Research Centre Earth Observation Data and Processing Platform}
-   (JEODPP) relies on Jupyter, JupyterHub and ipyleaflet as its main user
-   interface.
+   (JEODPP) \cite{Soille2018} relies on Jupyter, JupyterHub and ipyleaflet as
+   its main user interface.
 \item
-   the \emph{google earth engine} platform also offers a jupyter-based user
-   interface allowing the visual exploration of the data with ipyleaflet.
+   the \emph{Google Earth Engine} platform also offers a jupyter-based user
+   interface allowing the visual exploration of the data with ipyleaflet
+   \cite{GEEJupyterLeaflet2017}.
 \end{itemize}
 
 In these three cases, deferred processing is used to restrict computation to
@@ -41,7 +42,7 @@ the extent of the area displayed in the map viewer, which allowed these
 platforms to scale up to petabytes of data. In all examples, interactive
 visualization is a key feature of the platform. Beyond tile-based
 2-D visualization, the ability to efficiently process and visualize vector
-or 3-D data is also becoming critical.
+or 3-D  data is also becoming critical.
 
 The BOSSEE team, which comprises the main authors of the technologies upon
 which these platforms are built (Jupyter, JupyterHub, Binder, ipyleaflet),
@@ -53,7 +54,9 @@ This demonstrator will focus on tools for two transversal research projects
 
 \begin{itemize}
 \item LATICE (Land-Atmosphere Interactions in Cold Environments)
+\url{https://www.mn.uio.no/geo/english/research/groups/latice/}
 \item EarthFlows (Interface Dynamics in Geophysical Flows)
+\url{https://www.mn.uio.no/geo/english/research/groups/earthflows/}
 \end{itemize}
 
 The work items for this demonstrator fall in two main categories:
@@ -89,7 +92,7 @@ visualization and geographical data processing tools.
   \item adding the ability to interactively integrate information or corrections
     observed during field trips, correspdonding to specific geographical locations.
 
-    \TODO{Concurrent editing links to real-time editing from the
+  \TODO{Concurrent editing links to real-time editing from the
     core WP2 - mention link?}
 
   \item adding the ability to deploy Jupyter-based applications together with
@@ -98,26 +101,27 @@ visualization and geographical data processing tools.
     dashboard.
 \end{compactitem}
 
+\textbf{Data processing tools}
+
+\begin{compactitem}
+  \item streamlining visualization of standard data formats such as \emph{NetCDF}
+  with ipyleaflet, and ipyvolume.
+
+  \item better support for \emph{geopandas} dataframes in Jupyter interactive
+  visualization tools.
+\end{compactitem}
+
 \textbf{Teaching geo-sciences with Jupyter}
 
-  All these developments will be used both for scientific research and
-  in the classroom for teaching master's students with best practices
-  in open science.
+Beyond their use in scientific research, these development will be used in
+the class room for teaching master's students with best practices in open
+science.
 
-  The Geosciences use case will make it possible to demonstrate the
-  effectiveness of the BOSSEE co-design approach. The main challenges
-  will be on the one hand to learn to take advantage of feedback given
-  by users (either novices or experts) and on the other hand for
-  BOSSEE developers to adapt their communication and language as well
-  as their offer to the Geoscience. This will lead the way for
-  on-boarding new communities.
-
-  \TODO{The transversal research plays into the desired ``services that
-    encourate collaborative interdisciplinary work'' that are desired
-    by this call; this is good. Can you imagine that some of these
-    facilities can be used via the EOSC? That would be a good
-    addition. For example, one could use the BinderHub installation
-    that we expect on the EOSC. }
-
+\TODO{The transversal research plays into the desired ``services that
+  encourate collaborative interdisciplinary work'' that are desired
+  by this call; this is good. Can you imagine that some of these
+  facilities can be used via the EOSC? That would be a good
+  addition. For example, one could use the BinderHub installation
+  that we expect on the EOSC. }
 
 \end{task}
