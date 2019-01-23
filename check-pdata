@@ -120,8 +120,11 @@ def main(pdata_file='draft.pdata'):
                 continue
             fields = parse_pdata_line(line)
             _add_field(data, fields)
-    pprint(data)
-    summary(data)
+    try:
+        summary(data)
+    except Exception:
+        pprint(data)
+        raise
 
 
 if __name__ == '__main__':
