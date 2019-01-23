@@ -2,12 +2,12 @@
 % each task should be added to exactly one workpackage
 % in the workpackage task list
 \begin{task}[
-  title=Archiving software for reproducible workflows,
+  title=Archiving software environments for reproducible computation,
   id=reproducibility,
   lead=XFEL,
   PM=36,
-  wphases={0-48},
-  partners={XFEL}
+  wphases={1-36},
+  partners={XFEL,WTT,SRL,UPSUD,QS}
 ]
 
   Reproducible research can inspire greater confidence in scientific results,
@@ -36,19 +36,18 @@
   given notebook within this container environment. By archiving the
   notebooks together with the environment specification, the container
   computation environment can be created on demand. We see a number of
-  publications being complemented by such git repositories that allow
+  publications being complemented by such Git repositories that allow
   reproducing figures and results from papers by re-executing
   notebooks; often archiving these repositories via the Zenodo
-  service.
-
-  \TODO{add citations: LIGO paper, one from Hans' papers}.
+  service (for example publication \cite{CortsOrtuo2018}) with github
+  repository \cite{GithubRepoExampleCortes2018}).
 
   Container technologies, such as Docker, offer exciting possibilities
   for capturing a computational environment, but much of the
   development of these tools is focused on short-term operational
   uses, not long-term preservation.
 
-  There are currently at least two shortcomings in the existing
+  There are currently at least two limitations in the existing
   repo2docker approach:
 \begin{enumerate}
 \item the environment specifications need to be written carefully and
@@ -65,13 +64,14 @@
   there, and this will break the binder execution and thus
   reproducibility. Some environments are specified through
   Dockerfiles, and often start from an Ubuntu Linux distribution
-  container, followed by a \texttt{apt-get update} command. This
+  container, followed by an \texttt{apt-get update} command. This
   command will fail once the age of the specified distribution exceeds
   the support period, and similarly subsequent \texttt{apt-get
-    install} commands will fail.
+    install} commands will fail. As the Binder service matures, we
+  start to see such failures occur.
 \end{enumerate}
 
-The task includes the following activities:
+The task addresses these problems and includes the following activities:
 \begin{compactitem}
 
 \item Literature review and technology exploration: research Binder
@@ -98,16 +98,37 @@ The task includes the following activities:
   with a particular interest in how to make build instructions that
   can still work many years in the future.  ($\rightarrow$
   \localdelivref{jupyter-archive})
-  \TODO{Add more detail here or in summary above.}
-\end{compactitem}
+
+  It may be necessary for the build process to make use of alternative
+  sources for source code and packages to install, such as snapshots
+  of github repositories that are available on Zenodo, or dedicated
+  software archive servers that provide selected pieces of software
+  that are required to build particular containers.
+
+  The developed software will be integrated into the EOSC Binder
+  (\taskref{eosc}{eu-binder}).
+  \end{compactitem}
+
 
 %\begin{compactitem}
 %  \item
 %    (\localdelivref{deliv-id})
 %  \end{compactitem}
 
-  This techology will be developed with a real scientific use case at European
-  XFEL (see WP3). \TODO{Add link to particular task}
-  \TODO{Mention other use cases: universities and publishers}
+This techology will be co-developed with a real scientific use case at
+European XFEL (see \taskref{applications}{reproducibility-xfel} in
+\WPref{applications}).
 
+  We note that there is a wide variety of use cases for this kind of
+  technology and advances towards long term reproducibility, which we
+  expect to grow in importance over time and with the increasing
+  acceptance of open science: journals do increasingly (and rightly
+  so) request from authors that they can reproduce their studies, or
+  even submit corresponding code with the submission of the papers. As
+  Binder and notebooks are a popular way of achieving this, the long
+  term executability becomes a challenge. The same is true for
+  universities and other academic institutions that take FAIR data
+  seriously, and want to support the reproducibility and re-usability
+  aspect of data comprehensively through providing data analysis
+  software that allows access to the meaning of the data.
 \end{task}
