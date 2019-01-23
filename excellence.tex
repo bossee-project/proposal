@@ -90,11 +90,29 @@ important components and concepts are detailed below.
   required to run the notebooks. When someone accesses a Binder repository,
   the service builds the computational environment on-demand, allowing them to
   execute and modify a copy of the notebooks.
-  \end{itemize}
+\end{itemize}
 
-\subsubsection{Jupyter Ecosystem}
+\subsubsection{Jupyter ecosystem}
 
-\TOWRITE{TK}{...}
+The broader Jupyter ecosystem includes many more projects than we will describe
+here, but these are a selection of projects which may be relevant to
+\TheProject:
+
+\begin{itemize}
+  \item \textbf{nbval} is a plugin for the popular \emph{pytest} testing
+  framework to automatically execute notebooks and optionally check that the
+  output matches that saved in the file. While this is not a subsitute for a
+  test suite, it's valuable for documentation with code examples in notebooks.
+  If changes to the underlying tools mean the example no longer
+  works, testing with nbval will quickly show this, so that either the software
+  or the example can be corrected. This ensures that example code doesn't
+  get outdated.
+
+  \item \textbf{nbdime} provides tools for comparing and merging notebooks.
+  These integrate with version control systems such as \emph{git}, which
+  are designed for plain text files and typically don't handle notebook files
+  well.
+\end{itemize}
 
 \subsection{This proposal}
 
