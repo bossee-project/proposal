@@ -4,83 +4,124 @@
   lead=UIO,
   PM=24,
   wphases={0-48},
-  partners={UIO,QS,SRL}
+  partners={QS,SRL}
 ]
-
 
 % Scientific description
 
-The Geoscience field covers a wide range of disciplines, from deep
-mantle processes to atmospheric sciences, and all these activities are
-actually studied at the Department of Geosciences of the University of
-Oslo. In this regard, being the widest ranging earth sciences
-department in Norway, it is a unique “living” laboratory for the
-BOSSEE project. Some of the research groups are still virtually in the
-“stone age” in terms of digitization, and as far as can be from open
-and reproducible science. At the other extreme, other groups already
-had to make significant steps towards reproducible science with the
-use of complex numerical tools and huge amount of data necessarily
-shared within their community through National/International computing
-and storage infrastructures.
-\TODO{Can you add a figure that shows some typical data? Or the data
-  in a notebook?}
+The amount of geospatial data from a variety of sources, including satellite observations, 4D simulations and in-situ observations, contributed by volunteers
+or state agencies keeps increasing. In many disciplines, managing this large volume
+has become a challenge, and the old approach of downloading datasets for a local
+analysis has become intractable.
 
-Two transversal and strategic research initiatives, namely LATICE
-(Land-Atmosphere Interactions in Cold Environments) and EarthFlows
-(Interface Dynamics in Geophysical Flows) intertwine these groups,
-although technical issues hinder the full exploitation of these
-multidisciplinary aspects.
+The heterogeneity of the tools used in different institutions to deal with
+large geographical datasets makes it difficult for researchers to share the outcome
+of their work in a reproducible fashion.
 
-% Technical description of tasks
-The goal of this task is to select, develop and adapt Jupyter
-ecosystem tools to facilitate transversal research in geoscience, and
-will include activities around:
+In this context, Jupyter is now emerging as a standard exploration tool for
+geospatial analysis, climate science, geology and by data providers in these areas.
 
-  \begin{compactitem}
-  \item Mapping tools for visualization of in-situ and model generated
-    data (Land, river-runoff, ocean, ice, wave and atmosphere models,
-    particle dispersion models, oil spill models, etc.)  at
-    high-latitudes and polar regions
+To mention a few,
 
-  \item 3-D visualization for instance to display volcanic plumes
-    (injection of aerosols in the various atmospheric layers), the
-    quasi biennial oscillation (inversion of the wind direction in the
-    tropical stratosphere), atmospheric rivers (flowing column of
-    condensed water vapour in the atmosphere) and also at smaller
-    scales to visualize 3D discrete particle simulations of sheared
-    granular fault zones \TODO{Good to have QuantStack on board
-      here. Is there a technical task on Widgets in WP2 or 3, that is
-      linked to this application? If so, please mention.}
-  \item “Laboratory” notebooks with concurrent editing, annotation and
-    easy integration of information/correction observed during field
-    trips \TODO{Concurrent editing links to real-time editing from the
+\begin{itemize}
+\item
+   the \emph{PanGeo} platform \cite{Pangeo2018} (Funded by the NSF, NASA, and the
+   Alfred P. Sloan Foundation) is built upon Jupyter, JupyterHub, Binder, and Dask.
+\item
+   the \emph{Joint Research Centre Earth Observation Data and Processing Platform}
+   (JEODPP) \cite{Soille2018} relies on Jupyter, JupyterHub and ipyleaflet as
+   its main user interface.
+\item
+   the \emph{Google Earth Engine} platform also offers a jupyter-based user
+   interface allowing the visual exploration of the data with ipyleaflet
+   \cite{GEEJupyterLeaflet2017}.
+\end{itemize}
+
+In these three cases, deferred processing is used to restrict computation to
+the extent of the area displayed in the map viewer, which allowed these
+platforms to scale up to petabytes of data. In all examples, interactive
+visualization is a key feature of the platform. Beyond tile-based
+2-D visualization, the ability to efficiently process and visualize vector
+or 3-D  data is also becoming critical.
+
+The BOSSEE team, which comprises the main authors of the technologies upon
+which these platforms are built (Jupyter, JupyterHub, Binder, ipyleaflet),
+together with the Department of Geosciences of the University of Oslo, are
+in a unique position to bring these technologies together in the context of
+EOSC.
+
+This demonstrator will focus on tools for two transversal research projects
+
+\begin{itemize}
+\item LATICE (Land-Atmosphere Interactions in Cold Environments)
+\url{https://www.mn.uio.no/geo/english/research/groups/latice/}
+\item EarthFlows (Interface Dynamics in Geophysical Flows)
+\url{https://www.mn.uio.no/geo/english/research/groups/earthflows/}
+\end{itemize}
+
+The work items for this demonstrator fall in two main categories:
+visualization and geographical data processing tools.
+
+\textbf{Visualization}
+
+\begin{compactitem}
+  \item Improvement upon existing mapping tools for specialized
+    visualization of in-situ and model-generated data arizing in
+    specific use cases (Land, river-runoff, ocean, ice, wave and
+    atmosphere models, particle dispersion models, oil spill models,
+    etc.).
+
+    This may take the form of additions to the \emph{ipyleaflet} and
+    \emph{folium} extentions to JupyterLab, as well as the production of
+    curated examples in the documentation of ipyleaflet addressing these
+    specific use cases.
+
+  \item Improvements of the tooling for 3-D visualization of
+    geographical datasets in the Jupyter notebook, for use cases such as
+    displaying volcanic plumes (injection of aerosols in the various
+    atmospheric layers), the quasi biennial oscillation (inversion of
+    the wind direction in the tropical stratosphere), atmospheric rivers
+    (flowing column of condensed water vapour in the atmosphere) and
+    also at smaller scales to visualize 3-D discrete particle simulations
+    of sheared granular fault zones.
+\end{compactitem}
+
+\textbf{Collaboration with Jupyter with specialized tools for earth sciences}
+
+\begin{compactitem}
+  \item adding the ability to interactively integrate information or corrections
+    observed during field trips, correspdonding to specific geographical locations.
+
+  \TODO{Concurrent editing links to real-time editing from the
     core WP2 - mention link?}
-  \item One-click button for reproducing, cloning and archiving
-    workflows to support multidisciplinary activities \TODO{Is this
-      based on Binder?}
-   \item Sharing read-only notebook-based interactive dashboards for
-     novices \TODO{This sound like the Voila application from
-       Quantstack -- please check with Sylvain, and make Quantstack a
-       partner for this task.}
-    (\localdelivref{geoscience})
-  \end{compactitem}
 
-  All these developments will be used both for scientific research and
-  in the classroom for teaching master's students with best practices
-  in open science.
+  \item adding the ability to deploy Jupyter-based applications together with
+    the correspdonding execution environment, both in the form of a runnable
+    notebook with \emph{Binder} or as a read-only yet interactive \emph{Voila}
+    dashboard.
+\end{compactitem}
 
-  The Geosciences use case will make it possible to demonstrate the
-  effectiveness of the BOSSEE co-design approach. The main challenges
-  will be on the one hand to learn to take advantage of feedback given
-  by users (either novices or experts) and on the other hand for
-  BOSSEE developers to adapt their communication and language as well
-  as their offer to the Geoscience. This will lead the way for
-  on-boarding new communities.
+\textbf{Data processing tools}
 
-  \TODO{The transversal research plays into the desired ``services that
-    encourate collaborative interdisciplinary work'' that are desired
-    by this call; this is good. Can you imagine that some of these
-    facilities can be used via the EOSC? That would be a good
-    addition. For example, one could use the BinderHub installation
-    that we expect on the EOSC. }
+\begin{compactitem}
+  \item streamlining visualization of standard data formats such as \emph{NetCDF}
+  with ipyleaflet, and ipyvolume.
+
+  \item better support for \emph{geopandas} dataframes in Jupyter interactive
+  visualization tools.
+\end{compactitem}
+
+\textbf{Teaching geo-sciences with Jupyter}
+
+Beyond their use in scientific research, these development will be used in
+the class room for teaching master's students with best practices in open
+science.
+
+\TODO{The transversal research plays into the desired ``services that
+  encourate collaborative interdisciplinary work'' that are desired
+  by this call; this is good. Can you imagine that some of these
+  facilities can be used via the EOSC? That would be a good
+  addition. For example, one could use the BinderHub installation
+  that we expect on the EOSC. }
+
 \end{task}

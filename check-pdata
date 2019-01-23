@@ -10,6 +10,19 @@ from operator import itemgetter
 from pprint import pprint
 import re
 
+site_order = [
+    'SRL',
+    'XFEL',
+    'QS',
+    'CDS',
+    'EGI',
+    'UIO',
+    'WTT',
+    'SIL',
+    'UPSUD',
+    'INSERM',
+    'EP',
+]
 
 def _mini_fsm(s):
     """mini fsm for dealing with nested {}"""
@@ -78,8 +91,9 @@ def summary(data):
 
         # collect pms by site assigned to the work package
         wp_pms = 0
-        for site in site_pms:
+        for site in site_order:
             rm = wp_data.get(site, {}).get('RM', 0)
+            print(site, rm)
             site_pms[site] += rm
             wp_pms += rm
 
@@ -104,7 +118,10 @@ def summary(data):
     print()
     print(f"{'Site':12}: {'PMs':3}")
     total_pms = 0
-    for site, pms in sorted(site_pms.items(), key=itemgetter(1), reverse=True):
+    # for site, pms in sorted(site_pms.items(), key=itemgetter(1), reverse=True):
+    assert sorted(site_pms) == sorted(site_order), set(site_pms).difference(set(site_order))
+    for site in site_order:
+        pms = site_pms[site]
         print(f"{site:12}: {pms:3}")
         total_pms += pms
     print()
@@ -120,8 +137,11 @@ def main(pdata_file='draft.pdata'):
                 continue
             fields = parse_pdata_line(line)
             _add_field(data, fields)
-    pprint(data)
-    summary(data)
+    try:
+        summary(data)
+    except Exception:
+        pprint(data)
+        raise
 
 
 if __name__ == '__main__':

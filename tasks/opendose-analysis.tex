@@ -3,8 +3,8 @@
   id=opendose-analysis,
   lead=INSERM,
   PM=24,
-  wphases={0-24},
-  partners={INSERM}
+  wphases={3-33},
+  partners={XFEL}
 ]
   % Scientific description
   Nuclear Medicine is a field of medicine where radioactive material
@@ -12,19 +12,19 @@
   majority of Nuclear Medicine procedures (90\% according to successive EANM
   surveys) are diagnostic examinations, therapeutic applications tend to
   develop and drag more and more attention, for example for the treatment of
-  neuroendocrine tumours.
+  neuroendocrine tumours \cite{Bodei2009}.
 
   The formalism used to objectively characterise the irradiation process is
   similar for both application types: it was introduced in the late 60s by the
   MIRD (Medical Internal Radiation Dose) committee of the American Society of
-  Nuclear Medicine (SNM). This formalism requires two independent quantities;
-  the radioisotope cumulated activity ($Bq.s$) in the source (tissue/organ) and
-  the mean absorbed dose to a given target (tissue/organ) per radioisotope
-  disintegration (S-value, $Gy.Bq^{-1}.s^{-1}$). The S-value calculation
-  requires a clear definition of the geometry of the patient (or the model) and
-  radioisotope decay characteristics, it can be expressed as a linear
-  combination of yields/energies ($J$) and Specific Absorbed Fractions (SAF,
-  $g^{-1}$).
+  Nuclear Medicine (SNM). This formalism \cite{loevinger1991mird} requires two
+  independent quantities; the radioisotope cumulated activity ($Bq.s$) in the
+  source (tissue/organ) and the mean absorbed dose to a given target
+  (tissue/organ) per radioisotope disintegration (S-value,
+  $Gy.Bq^{-1}.s^{-1}$). The S-value calculation requires a clear definition of
+  the geometry of the patient (or the model) and radioisotope decay
+  characteristics, it can be expressed as a linear combination of
+  yields/energies ($J$) and Specific Absorbed Fractions (SAF, $g^{-1}$).
 
   The calculation of SAFs involves radiation transport modelling and energy
   deposition scoring in anthropomorphic models, usually based on Monte Carlo
@@ -33,21 +33,19 @@
   computational models requires a new appraisal of dosimetric data. For
   example, the models recently proposed by the International Commission on
   Radiation Protection (ICRP) include 140 possible radiation sources, leading
-  to around 20000 source/target combinations. The production of SAFs for these
-  models for all possible source regions, radiation types and energiesimpul
-  represent an important computation time (millions of CPU hours).
+  to around 20000 source/target combinations \cite{ICRP2009ICRPPhantoms}. The
+  production of SAFs for these models for all possible source regions,
+  radiation types and energiesimpul represent an important computation time
+  (millions of CPU hours).
 
-  The OpenDose project \TODO{Can we add a URL to the project, or some
-    other reference?}
-  is a collaborative effort to generate reference
-  dosimetric data using various Monte Carlo codes across different teams. The
-  collaboration includes at the moment 14 research teams over 18 institutes.
-  The idea is to impulse \TODO{``impulse'' sounds odd. Do you mean
-    ``trigger''?} the collaborative development of a reference database,
-  freely available, proposing dosimetric data applicable in a context of
-  nuclear medicine dosimetry (for therapy and diagnostic applications). A major
-  aspect of the project is the development of tools ensuring traceability and
-  robustness of generated results.
+  The OpenDose project \cite{Chauvin2017} is a collaborative effort to generate
+  reference dosimetric data using various Monte Carlo codes across different
+  teams. The collaboration includes at the moment 14 research teams over 18
+  institutes.  The idea is to trigger the collaborative development of a
+  reference database, freely available, proposing dosimetric data applicable in
+  a context of nuclear medicine dosimetry (for therapy and diagnostic
+  applications). A major aspect of the project is the development of tools
+  ensuring traceability and robustness of generated results.
 
   % Technical description
   OpenDose data is produced using the five most represented Monte Carlo
@@ -65,17 +63,14 @@
   simulations, with the workload shared between the different teams and
   software.
 
-  The data produced by all the teams is currently centralised at CRCT
-  \TODO{What is CRCT?},
-  processed and fed into a local \TODO{local at CRCT or at your site?} SQL database.
+  The data produced by all the teams is currently centralised at the Cancer
+  Research Center of Toulouse (CRCT), processed and fed into a local SQL
+  database at CRCT.
 
-  This collaborative effort rise \TODO{do you mean ``raises'' instead
-    of ``rise''?} some challenges:
+  This collaborative effort raises some challenges:
   \begin{compactitem}
-  \item Data production: a total of 750 K hours of CPU time is needed per
-    model. \TODO{Do you mean 750,000 hours of CPU time per model?
-      Maybe use ``kilo hours'' instead of ``K hours''? Or at least ``k
-      hours''.}
+  \item Data production: a total of 750,000 hours of CPU time is needed per
+    model.
   \item Volume of data: one model represents TB of raw data that can be
     heterogeneous from the different teams.
   \item Data analysis: raw data has to be processed into dosimetric data in a
@@ -99,13 +94,12 @@
 
   The task includes the following activities:
   \begin{compactitem}
-  \item Developing tools to work seamlessly on the SQL database
-    \TODO{Which keeps which data? Best to remind the reader about the
-      application here.}
-  \item Developing data analysis tools. \TODO{`'using the Python data
-      science ecosystem where possible''.}
-  \item Developing visualization tools. \TODO{``exploring Widgets
-      inside the Notebook for interactivity''?}
+  \item Developing tools to work seamlessly on the SQL database holding the
+    dosimetric data.
+  \item Developing data analysis tools using the Python data science ecosystem
+    where possible.
+  \item Developing visualization tools, exploring Widgets inside the Notebook
+    for interactivity.
   \item Comparing results between teams. \TODO{Which teams and what
       results? Scientific work itself is not in the remit here?}
   \item Disseminating results.
