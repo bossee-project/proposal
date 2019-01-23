@@ -43,7 +43,6 @@ final-split: final
 
 draft:  $(SRC)
 	$(MAKE) $(MAKEFLAGS) -w PROPOSAL=draft.tex all
-	# provide some warning if compilation fails
 	test -f draft.pdf && echo "draft.pdf has been created:     OK"
 
 grantagreement:
