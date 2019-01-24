@@ -1,0 +1,94 @@
+\begin{task}[
+  title=Application: Interactive Mathematics with Jupyter Widgets,
+  id=math,
+  lead=UPSUD,
+  PM=17, % UPSUD:17, QS:1
+  wphases={0-36},
+  partners={UPSUD,QS}
+  ]
+
+  \TODO{Ideas to reinforce the ties with EOSC services welcome!}
+
+  Computations have played a long time and ever increasing role for
+  research and teaching in (pure) mathematics, to explore, search and
+  check for conjectures, or better understand algorithmic ideas. This
+  led to the development of a whole ecosystem of mathematical
+  software, many of which are open source. Given the huge variety of
+  mathematical objects and workflows, the Read-Eval-Print-Loop (REPL)
+  paradigm -- on which Jupyter is based -- is particularly suitable:
+  the user interacts with the system by typing commands that use its
+  library of mathematical features, often combined with personal code.
+  In fact, the REPL and notebook paradigms of Jupyter as well as some
+  of its interactive features were largely inspired by that of
+  computer algebra systems such as Maple, Mathematica, or SageMath.
+
+  One major action of the OpenDreamKit project was to foster the
+  convergence between the Jupyter and math software ecosystems:
+  nowadays Jupyter can be used as a uniform user interface for most
+  major systems: e.g. GAP, OSCAR, Pari/GP, SageMath, Singular, and
+  even for C++ libraries. This interface is being widely adopted: for
+  example, Jupyter has become the standard user interface for
+  SageMath, enabling to phase out its former bespoke notebook; by now,
+  thousands of jupyter notebooks for SageMath are publicly shared
+  (6000+ on GitHub alone).
+
+  Thanks to this prior art, the mathematical community will
+  immediately enjoy all the benefits brought by EOSC-based generic
+  Jupyter services, including eased collaboration, sharing, archival,
+  and reproducibility.
+
+  The next step to maximize attractivity and impact in the
+  mathematical community, and this is the aim of this task, is to go
+  beyond the REPL paradigm, and \textbf{leverage the real time
+    interactivity and flexibility brought by Jupyter widgets for
+    Mathematical purposes}. Think making it easy for a teacher or
+  researcher to build and disseminate via the EOSC a mini applications
+  or dashboard enabling the graphical exploration of a whole range of
+  mathematical inputs, with real-time visualization of the associated
+  outputs.
+
+  The unique challenge comes from the huge variety of mathematical
+  objects that the user may want to visualize and interact with, and
+  the variety of graphical representations. Co-design is central here,
+  as building a bespoke interactive visualization entails a
+  combination of technology skills (e.g. javascript development) and
+  business knowledge (designing the interaction and visualization).
+  The role of Research Software Engineers is to leverage the
+  technology by encapsulating the technical difficulties into flexible
+  and easy to use tool boxes from which mathematicians can build
+  mini-applications tailored to their needs.
+
+  Within OpenDreamKit, we conducted experiments to explore this
+  venue~\cite{ODK_D4.16}. One specific focus was to enable not only
+  \emph{interactive visualization}, but also \emph{interactive
+    editing}: being able to graphically modify the mathematical object
+  being visualized; this enable the interactive exploration of how the
+  modifications affect its properties, or to use the editor as input
+  widget for a larger applications or dashboards. The outcome of this
+  task are the development of two prototypes in SageMath
+  (\software{sage-combinat-widget}, a library of widgets for
+  combinatorics, and \software{sage-explorer} a generic dashboard for
+  interactive browsing and introspection of mathematical objects), and
+  contributions to \software{Francy}, an Interactive Discrete Math
+  Framework for \software{GAP} and \software{SageMath}.
+
+  The aim of this task is to build on this experience to further
+  develop and promote the use of Jupyter widgets for interactive
+  Mathematics. This will include the following actions:
+  \begin{compactitem}
+  \item Engage with the community through tutorials, workshops, online
+    discussions, for codesign and for dissemination of the outcomes.
+  \item Tackle hurdles to real-time interactivity, typically by
+    modernizing the existing 2D and 3D visualization tools in
+    SageMath. % E.g.: We don't use Matplotlib's integration in Jupyter
+  \item Bring \software{sage-combinat-widgets} and
+    \software{sage-explorer} from usable prototypes to standard tools,
+    and further contribute to the development of the \software{Francy}
+    framework.
+  \item Develop other generic mathematical widgets according to the
+    users popular requests.
+  \item Demonstrate the value all of the above through applications in
+    research and teaching.
+  \end{compactitem}
+  The work carried over will be reported on in~\localdelivref{math}.
+\end{task}

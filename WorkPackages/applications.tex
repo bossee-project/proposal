@@ -23,10 +23,10 @@ once completed)}
   % SILRM=4,
   SRLRM=9,
   UIORM=12,
-  UPSUDRM=4,
+  UPSUDRM=18,
   WTTRM=3,
   XFELRM=36,
-  EPRM=4,
+  EPRM=3,
 ]
 \begin{wpobjectives}
   The objectives of this work package are
@@ -60,7 +60,11 @@ once completed)}
   widely useful in diverse domains, from physics to life sciences to
   education and the global community working with public and private
   data. We have selected a number of applications in a variety of domains
-  to demonstrate the broad impact of \TheProject.
+  to demonstrate the broad impact of \TheProject, in particular in the
+  areas of education (\localtaskref{teaching}), photon science and
+  imaging (\localtaskref{reproducibility-xfel}), astronomy
+  (\localtaskref{astro}), geosciences (\localtaskref{geoscience}),
+  mathematics (\localtaskref{math}) and health (\localtaskref{opendose-analysis}).
 
 \end{wpdescription}
 
@@ -71,6 +75,7 @@ once completed)}
 \input{tasks/reproducibility-xfel}
 \input{tasks/application-astro}
 \input{tasks/application-geo}
+\input{tasks/application-math}
 \input{tasks/opendose-analysis}
 \end{tasklist}
 
@@ -80,11 +85,19 @@ once completed)}
 \begin{wpdeliv}[due=1,miles=startup,id=infrastructure,dissem=PU,nature=DEC,lead=SRL]
   {Some Deliverable}
 \end{wpdeliv}
+%\TODO{update due date and startup!}
 \begin{wpdeliv}[due=1,miles=startup,id=opendose-analysis,dissem=PU,nature=DEM,lead=INSERM]
   {Jupyter services for nuclear medicine dosimetry with the OpenDose project}
 \end{wpdeliv}
-\begin{wpdeliv}[due=1,miles=startup,id=application-astro,dissem=PU,nature=R,lead=CDS]
-  {Report on development of Jupyter-based framework to access, visualize and analyze astronomical data available at CDS}
+\begin{wpdeliv}[due=40,miles=final,id=application-astro,dissem=PU,nature=DEM,lead=CDS]
+    {Demonstrator of astronomical data services based on on reference astronomy data from CDS in jupyter notebooks is made available for use by the astronomy research community.}
+\end{wpdeliv}
+%\TODO{update milestone!}
+\begin{wpdeliv}[due=36,miles=final,id=math,dissem=PU,nature=R,lead=UPSUD]
+  {Report on Interactive Mathematics with Jupyter Widgets}
+\end{wpdeliv}
+\begin{wpdeliv}[due=48,miles=final,id=xfel-workflows,dissem=PU,nature=R,lead=XFEL]
+  {Report on Jupyter based workflows with long term reproducibilty}
 \end{wpdeliv}
 
 \end{wpdelivs}

@@ -18,15 +18,15 @@ once completed)}
   lead=QS,
   % EGIRM=4,
   % INSERMRM=4,
-  EPRM=15,
+  EPRM=21,
   QSRM=20,
-  SILRM=24,
+  SILRM=16,
   SRLRM=30,
   % UIORM=4,
-  UPSUDRM=9,
+  UPSUDRM=0,
   WTTRM=6,
   XFELRM=54,
-  EPRM=21,
+  EPRM=20,
 ]
 \begin{wpobjectives}
  \begin{compactitem}
@@ -83,16 +83,20 @@ and much room for development of tools supporting workflows in data-driven open 
 \end{tasklist}
 
 
-\TODO{How do we label our milestones? M1 is 'startup'?}
 \begin{wpdelivs}
-\begin{wpdeliv}[due=1,miles=startup,id=infrastructure,dissem=PU,nature=DEC,lead=SRL]
-  {Some Deliverable - TODO: Add something real or remove}
-\end{wpdeliv}
 \begin{wpdeliv}[due=12,miles=startup,id=binder-guidelines,dissem=PU,nature=DEC,lead=XFEL]
   {Guidelines for Binder use to improve reproducibility of
   environments, based on existing technology such as repo2docker}
 \end{wpdeliv}
-\begin{wpdeliv}[due=48,miles=startup,id=jupyter-archive,dissem=PU,nature=OTHER,lead=XFEL]
+\begin{wpdeliv}[due=12,miles=startup,id=teaching-report,dissem=PU,nature=R,lead=EP]
+  {Study of the practices of using Jupyter for teaching and the needs to
+  effectively manage classes and associated courses in the education community}
+\end{wpdeliv}
+\begin{wpdeliv}[due=36,miles=community,id=nbgrader-like,dissem=PU,nature=OTHER,lead=EP]
+  {Unified framework to effectively manage classes and associated courses
+  using Jupyter technology}
+\end{wpdeliv}
+\begin{wpdeliv}[due=36,miles=community,id=jupyter-archive,dissem=PU,nature=OTHER,lead=XFEL]
   {Long-term reproducibility: Computational environment software
     archive system that extends lifetime of computational environments
   used in Binder service. TODO: Fix milestone}

@@ -4,11 +4,13 @@
   lead=CDS,
   PM=18,
   wphases={0-48},
-  partners={CDS}
+  partners={QS,WTT,SRL,INSERM,XFEL}
 ]
 
-  Context: The CDS \TODO{introduce CDS} plays a unique and essential role in astronomy by adding
-  value to published and reference data. CDS runs astronomical services that
+  Context: The Strasbourg Astronomical Data Center (CDS) is scientific data 
+  center hosted by the Observatory of Strasbourg. The CDS plays a unique and 
+  essential role in astronomy by adding value to published and reference data. 
+  CDS runs astronomical services that
   provide data for the world-wide astronomy research community. Its three main
   services (SIMBAD, VizieR and Aladin) are heavily used with up to one million
   queries per day.  These services be accessed through web interfaces, mainly
@@ -16,8 +18,15 @@
   the standardized protocols defined by the International Virtual Observatory
   Alliance.
 
+  Python and notebooks are rapidly increasing in importance for astronomy 
+  research. Indeed, Python for Astronomy software ecosystem has known a 
+  constant steady growth in the latest years, as shown in 
+  figure~\ref{fig:python-astro-citations}.
+
+
   We will develop a Jupyter-based framework to efficiently access, explore,
-  visualize and analyze reference data that is available through CDS services.
+  visualize and analyze reference data that are available through CDS services 
+  as a real example of using open astronomy data.
   We will provide scientific users with a set of customizable Jupyter notebooks
   for visualization and analysis tasks, providing a new level of
   interoperability with python libraries and notebooks as is highly demanded
@@ -33,51 +42,55 @@
     \end{compactitem}
 
 
-  This task will rely on existing Python libraries to access CDS data
-  (\textit{astroquery.[cds/simbad/vizier/xmatch]}) and to visualize them
-  (\textit{GLUE, ipyvolume}).
-  We will also improve existing Jupyter widgets (\textit{ipyaladin},
-  interactive sky atlas running in the notebook) and develop a new widget to
-  offer a tree-like view of available data.
+  This task will build on existing Python libraries to access CDS data
+  (\textit{astroquery.[cds/simbad/vizier/xmatch]}). For visualization, we will 
+  use proven tools like \textit{GLUE} and \textit{ipyvolume}, which are now 
+  built upon the Jupyter stack.
+  We will also make significant improvement to existing Jupyter widgets 
+  (\textit{ipyaladin}, interactive sky atlas running in the notebook) and 
+  develop a new widget to offer a tree-like view of available datasets.
 
   We will also develop Python libraries to allow integration and usage in
   notebook of existing CDS infrastructure services, namely CDSLogin (which
   provides authentication) and CDS MyData (remote storage space for tabular
   data).
   This will allow the user to interact with one's personal storage space from
-  the notebook. It will also allow for advanced customisation.
+  the notebook. It will also allow for advanced customisation of the interface 
+  to fit user needs.
 
-  Initially, the notebooks generated will run locally on user
-  machines.
-\TODO{This two stage approach (above and below) is good. Can we split
-  this into two tasks, or link each to a different milestone, to make
-  this more visible?}
+  The work is organised with a 2 stage approach. Firstly, the generated 
+  notebooks will run locally on user machines (representing a milestone for 
+  this task). Following the Binder development in \WPref{eosc}, we will aim 
+  to run these notebooks on the European Binder Service. The aspiration is 
+  that this contributes to the development of innovative services for the EOSC.
+  The deliverable of this task will be a demonstrator available to the 
+  scientific user community (\localdelivref{application-astro}).
 
-  Later on, we will run them on European Binder Service developed in \WPref{eosc}.
+  Milestone 4.X: Astronomical data services based on reference astronomy data from CDS are made available in jupyter notebooks, and decision point on how to use developments of WP5 for running these notebooks on the European Binder Service.
+
+\TODO{how to formally describe the milestone??}
+
 
   Access to the notebooks will be provided as a one-click action option from
   SIMBAD and VizieR results pages.
   Thus, providing with a one-click way of visualizing, filtering and analyzing
 these potentially large tables will bridge the gap between access and analysis
 of the data, with zero installation for the user.
+  For specific science cases, we will explore rendering of notebooks with 
+  interactive widgets through "Voila", as to allow users not familiar with 
+  Python to benefit from the Jupyter notebook framework.
 
-  These new developments will be an awaited and welcome addition to existing
-  toolset. In fact, Python for Astronomy software ecosystem has known a constant
-    steady growth in the latest years, as shown in figure~\ref{fig:python-astro-citations}.
+  These new developments will be highly visible to the large number of astronomers who use the CDS services (50,000 unique visitors per month) and such tools are in high demand by these users.
 
-  \begin{figure}[ht]\centering
-  \includegraphics[width=0.7\textwidth]{python-astro-citations}
-  \caption{Mentions of programming languages in refereed Astronomy papers}\label{fig:python-astro-citations}
+  The CDS expertise in astronomy data and interfaces will be profitably combined with expertise of BOSSEE partners to ensure the deployment of high quality widgets (Simula, WildTree Tech, QuantStack).
+
+
+\begin{figure}[ht]\centering
+  \includegraphics[width=0.8\textwidth]{python-astro-citations}
+  \caption{Mentions of programming languages in refereed Astronomy papers, extracted from ADS. Python usage has increased dramatically in the recent years.}\label{fig:python-astro-citations}
 \end{figure}
 
 Deliverable: \localdelivref{application-astro}
-
-\TODO{HF: The deliverable should either be a software (OTHER) or a
-  demonstrator (DEM), I think. A report will be required in addition
-  in either case through the deliverable reporting.}
-
-\TODO{Should Quantstack be a partner here? They are the widget
-  experts.}
 
 
 \end{task}
