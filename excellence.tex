@@ -183,16 +183,27 @@ because of the perceived pressure to focus on novelty.
 \subsubsection{Proposed improvements of the Jupyter ecosystem (WP3)}
 
 We further propose improvements of the wider Jupyter ecosystem for
-better scientific workflows, including
-
-\TOWRITE{ALL}{Summarise the improvements we propose.
-    Description of the tools themselves moved to the section above.}
+better scientific workflows. In particular, we have identified
+possible improvements to:
 
 \begin{itemize}
-\item The \emph{JupyterArchive} which will store a notebook together
-  with its execution environment to allow re-execution of the notebook
-  in the future.
+  \item Binder and its crucial software component \emph{repo2docker}
+    (\taskref{ecosystem}{r2d-and-binder})
+
+  \item Xeus, to better support the C++ programming language in notebooks
+    (\taskref{ecosystem}{xeus-cpp})
+
+  \item Interactive widgets, including tools for 3D visualisation to help
+    people make sense of large amounts of data (\taskref{ecosystem}{jupyter-widgets})
 \end{itemize}
+
+\WPref{ecosystem} also includes work on tooling and guidelines for using
+notebooks in education (\taskref{ecosystem}{teaching-tools}),
+and for archiving computational environments to allow reproducible research
+with a focus on the long term (\taskref{ecosystem}{reproducibility}).
+We may create new open source software projects in these tasks,
+but we will carefully review existing existing software, both in the
+Jupyter ecosystem and beyond, to avoid unnecessary duplication of effort.
 
 \subsubsection{Beyond the improvement of the Jupyter Project (WP4,
   WP5, WP6)}
