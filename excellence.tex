@@ -86,13 +86,6 @@ important components and concepts are detailed below.
   browser, without needing to install any special software on their own
   computer.
 
-  \item \textbf{Binder} builds on JupyterHub to allow sharing executable
-  notebooks along with (small) data files and a description of the libraries
-  required to run the notebooks. When someone accesses a Binder repository,
-  the service builds the computational environment on-demand, allowing them to
-  execute and modify a copy of the notebooks.
-  \textbf{repo2docker} and \textbf{BinderHub} are components of the Binder
-  software.
 \end{itemize}
 
 \subsubsection{Jupyter ecosystem}
@@ -102,6 +95,15 @@ here, but these are a selection of projects which may be relevant to
 \TheProject:
 
 \begin{itemize}
+
+  \item \textbf{Binder} builds on JupyterHub to allow sharing executable
+  environments along with (small) data files and a description of the libraries
+  required to run the notebooks. When someone accesses a Binder repository,
+  the service builds the computational environment on-demand, allowing them to
+  execute and modify a copy of the notebooks.
+  \textbf{repo2docker} and \textbf{BinderHub} are components of the Binder
+  software.
+
   \item \textbf{nbsphinx} \cite{Nbsphinx} integrates notebooks with the \emph{Sphinx}
   documentation system, which is widely used for software documentation,
   especially but not only for software written in Python.
