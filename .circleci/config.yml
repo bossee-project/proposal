@@ -36,6 +36,12 @@ jobs:
           path: draft.pdf
           destination: draft.pdf
 
+      - run:
+          name: check person-month data
+          command: |
+            ./check-pdata
+
+
 workflows:
   version: 2
   default:
