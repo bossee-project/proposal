@@ -7,36 +7,79 @@
   partners={UPSUD,XFEL,UIO}
   ]
 
-  The Jupyter ecosystem provides versatile tools and infrastructure which have
-  been widely adopted in higher education in the recent years (data8 ??). École
-  Polytechnique and Université Paris Sud have been at the forefront of this
-  movement (see the description of \site{EP} and \site{UPSUD} for more
-  information) since many years. 
+  This task is about \textbf{delivering and help deliver Jupyter-based
+    courses at a large scale} in our own institutions, as a mean to
+  \textbf{inform, evaluate, provide feedback on, and demonstrate the
+    value of the work performed} in this project in the context of
+  higher education, as well as to \textbf{develop and share best
+    practices} and \textbf{demonstrate and disseminate} Jupyter's full
+  potential for teaching.
 
-  Nevertheless, the implementation of such infrastructure requires a certain
-  expertise in different fields (DevOps, software development,...) and is
-  therefore not accessible to the greatest number of people.
+  As argued in Task~\taskref{ecosystem}{teaching-tools}, the Jupyter
+  ecosystem offers a versatile environment which has been widely
+  adopted in higher education in the recent years. École
+  Polytechnique, Université Paris-Sud and other participants from this
+  project have been early adopters (see the description of \site{EP}
+  and \site{UPSUD}).
 
-  As part of the Bossee project, we are trying to remove these locks so that
-  anyone can easily use the tools developed for their teaching. This task will
-  therefore serve as a demonstrator to show Jupyter's full potential in a
-  teaching environment. Therefore, we will put together several tasks and use them for courses given at \'Ecole polytechnique and Université Paris Sud.
+  We learned the hard way that deploying the Jupyter environment at a
+  large scale (e.g. for a university), requires specialized expertise
+  (DevOps, software development, ...) which impediments its adoption
+  by the greatest number of people. High quality hosted solutions
+  (e.g. cocalc, gryd) do exist but are not the final solution when it
+  is desired to get higher control on private data, integration with
+  the local infrastructure (authentication, shared drive, e-learning
+  environment, ...), or to use local computing resources rather than
+  paid services.
 
+  Tackling those hurdles and offering better support for teaching are
+  outcomes of \TODO{better name} the following tasks:
   \begin{itemize}
-    \item Tasks \taskref{core}{jh-bh-conv} and \taskref{eosc}{jh-bh-deployment} will provide the needed infrastructure to work in the best conditions for teachers and students. It will also permit to teachers to create their own teaching environment.
-    \item Task \taskref{ecosystem}{teaching-tools} will provide the needed tools for teachers to share material with their students, give them feedback on their progress,...
-    \item Finally, \taskref{ecosystem}{task xeus-cpp} will provide a new way to learn C++ language in scientific computing. It can be difficult to a student to learn all the process to make working a C++ program (syntax, compilation, link, output,...). Xeus will make it possible to avoid all these new knowledges and focus only on the syntax.   
+  \item Tasks~\taskref{core}{jh-bh-conv}
+    and~\taskref{eosc}{jh-bh-deployment} will greatly ease the
+    deployment of Jupyter environments, with tight integration in the
+    existing local infrastructure and full customizability by the
+    teachers.
+  \item Task~\taskref{ecosystem}{teaching-tools} will improve the
+    interoperability with existing e-learning systems, and further
+    develop teaching aids for, e.g., material sharing,
+    (self)-evaluation, and grade management.
+  \item \taskref{applications}{application-math} will support teaching
+    in mathematics through better support for real-time interactivity.
+  \item \taskref{ecosystem}{task xeus-cpp} will support teaching
+    in computer-science and scientific programming through
+    better C++ integration in the notebook.
+    \TODO{there is very nice language in the xeus section about the
+      advantage of Jupyter for teaching in C++; we should move or copy
+      it here}.
+    It can be difficult to
+    a student to learn all the process to make working a C++ program
+    (syntax, compilation, link, output,...). Xeus will make it
+    possible to avoid all these new knowledges and focus only on the
+    syntax.
   \end{itemize}
 
-  Another important thing to notice is that \'Ecole polytechnique and Université Paris Sud
+  \'Ecole polytechnique and Université Paris-Sud are particularly well
+  suited for this task because they
   \begin{enumerate}
-    \item will offer both the test infrastructure and community, and some identified courses and
-  Professor / Engineers / Students, who will test the newly designed tools and provide some feedback in order to
-  improve them;
-    \item will create a reactive community of students
-  and researchers, where the
-  dissemination of the project tools and experience will be easy, which will
-  organize Jupyter days as in 2018\footnote{\url{http://www.cmap.polytechnique.fr/~massot/Personal_web_page_of_Marc_Massot/JupyterX.html}} on a regular basis.
+  \item host a variety of local infrastructure (dedicated servers,
+    local cloud, computer labs, ...);
+  \item host a reactive community with highly qualified research
+    software engineers (dev-ops, software developers), researchers,
+    professors, and students that have been working together on this
+    topic for several years, with close collaboration between the two
+    sites;
+  \item offer a diversity of courses, in many disciplines and ranging
+    from large lower undergraduate courses to specialized classes for
+    graduate students and top notch engineers;
+  \item have strong support from their teaching departments.
+  \item have an influential alumni structure through which the
+    technology will be propagated.\TODO{do we want this item?}
+  % \item will create a reactive community of students and researchers,
+  %   where the dissemination of the project tools and experience will
+  %   be easy, which will organize Jupyter days as in
+  %   2018\footnote{\url{http://www.cmap.polytechnique.fr/~massot/Personal_web_page_of_Marc_Massot/JupyterX.html}}
+  %   on a regular basis.
   \end{enumerate}
 
   % \TODO{HF: Loic, can you complete this, please?}
@@ -71,11 +114,16 @@
   \item Reinforce the use of Jupyter technology in Courses at
     all levels, notably in Mathematics and Data Science, in close
     collaboration between Ecole polytechnique and Université Paris Sud;
-  \item Test the new developments and feed back to tasks \taskref{core}{jh-bh-conv} and \taskref{ecosystem}{teaching-tools}
-  \item Organize a Jupyter event every year with demonstration of Jupyter new tools for teaching and research (\localdelivref{deliv-id})
+  \item Test the new developments and feed back to tasks
+    \taskref{core}{jh-bh-conv} and \taskref{ecosystem}{teaching-tools}
+    \TODO{add the other tasks}
+  \item Follow up on a successful Jupyter day in
+    2018~\footnote{\url{http://www.cmap.polytechnique.fr/~massot/Personal_web_page_of_Marc_Massot/JupyterX.html}}
+    by organizing a yearly Jupyter event showcasing the latest
+    advances for teaching and research.
   \item Foster sharing of experience, best practices and course
     material, at the local level, and then worldwide, through meetups,
     blogs, etc.
   \end{compactitem}
-  The outcome of this task will be reported on in \delivref{}{teaching}.
+  The outcome of this task will be reported on in \delivref{applications}{teaching}.
 \end{task}
