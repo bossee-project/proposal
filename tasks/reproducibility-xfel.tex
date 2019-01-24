@@ -2,15 +2,15 @@
 % each task should be added to exactly one workpackage
 % in the workpackage task list
 \begin{task}[
-  title=Reproducible X-ray crystallography workflows at European XFEL,
+  title=Reproducible photon science workflows at European XFEL,
   id=reproducibility-xfel,
   lead=XFEL,
   PM=36,
-  wphases={6-48},
-  partners={INSERM}
+  wphases={7-48},
+  partners={INSERM,SRL,UPSUD}
   ]
 
-\emph{Summary:}
+\textbf{Summary}
 
   European XFEL is a research facility that provides X-ray Free
   Electron Laser (XFEL) light to image structures at the nanoscale. It
@@ -49,7 +49,10 @@
   demonstrate the potential impact of these improvements for a wide
   set of EOSC services through a demonstrator in Photon Science.
 
-  \medskip \emph{Context}: The very first experiments at European XFEL
+  \medskip
+  \textbf{Context}
+
+  The very first experiments at European XFEL
   produced as little as 45 terabytes of data on average, but as the
   facility develops, the amount of data produced per time is expected
   to grow substantially: Given the rate of light pulses, there is the
@@ -62,7 +65,10 @@
   obtained, the particular workflow of data analysis also needs to be
   archived.
 
-  \medskip \emph{Vision}: At European XFEL we will use Jupyter notebooks to facilitate
+  \medskip
+  \textbf{Vision}
+
+  At European XFEL we will use Jupyter notebooks to facilitate
   this workflow: the simplest model would be to use one notebook per
   workflow. Once the data capture from the experiment is completed,
   this notebook can be executed (without being displayed in a web
@@ -101,7 +107,9 @@
   highly desirable to keep the data analysis re-executable for the
   same period of time, potentially well exceeding 10 years.
 
-  \medskip \emph{This task} includes the following activities:
+  \medskip \textbf{This task}
+
+  This task includes the following activities:
   \begin{compactitem}
   \item Use the software archive for reproducible computation
     (as co-developed in \taskref{ecosystem}{reproducibility}), with
@@ -130,7 +138,7 @@
     notebooks as described above. The work done in
     \taskref{core}{collaboration} will allow us to execute notebooks in
     the background, and to connect to the running notebook process to
-    display or inspect progress, or to modify a notebook if the
+    display or inspect progress, or to modify such a notebook if the
     science requires it.
 
     By doing so, we can make the standard analysis that is carried out
@@ -138,7 +146,7 @@
     (the notebook) we simplify process for users and for the research
     facility.
 
-  \item Use the work from \task{ecosystem}{jupyter-widgets} on
+  \item Use the work from \taskref{ecosystem}{jupyter-widgets} on
     state-preserving widgets to provide GUI-like elements in notebook
     where interactive user input, data exploration or parameter
     modification is required.
