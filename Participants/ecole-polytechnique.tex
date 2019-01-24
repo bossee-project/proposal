@@ -14,10 +14,22 @@ L'X prides itself on promoting multidisciplinary research through collaboration
 between its many labs and with external, national and international partners and
 a strong connection with industry and start-up.
 
-\subsubsection*{Curriculum vitae}
-\TODO{AK - rules say "CV or description of the profile of the persons"
-  can we name it "Track record" instead of CV?}
+The Mathematics department at Ecole polytechnique has started a reform of their
+various teaching offer based on Jupyter for two years and several courses of the
+Bachelor program, 2nd and 3rd year of Engineering school and Master program have
+already begun relying on a strong use of Jupyter notebooks /
+JupyterHub\footnote{\url{http://www.cmap.polytechnique.fr/~massot/Personal_web_page_of_Marc_Massot/MAP551}} and this will continue with a strong support of the Dean of
+undergraduate studies and of graduate studies. Besides several software and
+research engineers in applied mathematics have been recruited and participate in
+this effort, as well as a administration engineer in order to help in terms of
+building an infrastructure dedicated to Jupyter with the support of the head of
+the Ecole polytechnique in order to disseminate the effort into various other
+departments (Physics, Mechanical Engineering, Biology...), where already some
+courses are starting based in Jupyter. The link with the computer science club
+of students of Ecole polytechnique (Binet R\'eseau) has also been created with
+the project and a community is emerging.
 
+\subsubsection*{Curriculum vitae}
 % Curriculum of the personnel at this institution. This includes
 % to-be-hired people for which there is a tentative candidate.
 
@@ -27,25 +39,40 @@ a strong connection with industry and start-up.
 \input{CVs/Laurent.Series.tex}
 
 % For other to-be-hired person, please include here something like:
-% \begin{participant}[type=res,PM=3,salary=5900]{NN}
-%  <a _short_ description of the qualifications of whom you want to hire>
-% \end{participant}
+\begin{participant}[type=res,PM=18,salary=5500]{DevOps Engineer}
+  We intend to hire a DevOps engineer for 18 months during the project to be supervised at \'Ecole polytechnique to work on developments defined in Tasks \taskref{core}{jh-bh-conv} and \taskref{eosc}{jh-bh-deployment}.
+\end{participant}
+
+\begin{participant}[type=res,PM=18,salary=5500]{Software Engineer}
+  We intend to hire a DevOps engineer for 18 months during the project to be supervised at \'Ecole polytechnique to work on developments defined in Task \taskref{ecosystem}{teaching-tools}.
+\end{participant}
 
 \subsubsection*{Publications, products, achievements}
 
 \begin{compactenum}
-\item \TOWRITE{XXX}{...}
+\item D. Delavennat, L. Gouarin, G. Philippon, \emph{Deploying JupyterHub with Kubernetes on OpenStack} \newline
+\url{https://blog.jupyter.org/how-to-deploy-jupyterhub-with-kubernetes-on-openstack-f8f6120d4b1}
+\item JupyterDay at \'Ecole polytechnique in 2018 \newline
+\url{http://www.cmap.polytechnique.fr/~massot/Personal_web_page_of_Marc_Massot/JupyterX.html}
+\item L. Gouarin, \emph{C++ course using xeus-cling} \newline
+\url{https://github.com/gouarin/cours_cpp_moderne}
+\item M.Massot, L. Series, \emph{Systèmes dynamiques pour la modélisation et la simulation des "milieux réactifs" multi-échelles} \newline
+\url{http://www.cmap.polytechnique.fr/~massot/Personal_web_page_of_Marc_Massot/MAP551}
 \end{compactenum}
 
 \subsubsection*{Previous projects or activities}
 
 \begin{compactenum}
-\item \TOWRITE{XXX}{...}
+\item OpenDreamKit (GA No. 676541) Open Digital Research Environment
+Toolkit for the Advancement of Mathematics, participant
 \end{compactenum}
 
 \subsubsection*{Significant infrastructure}
 
-\TOWRITE{XXX}{...}
+\site{UPSUD} hosts a local OpenStack based cloud infrastructure
+\software{Cloud@VD}. \site{EP} invested last year in the purchase of 100 cores for this infrastructure in order to study how to deploy JupyterHub and BinderHub and start to offer to researchers and students this kind of service.
+In 2019, \site{EP} will have a new infrastructure based on OpenShift with 200-300 cores dedicated to teaching using Jupyter.
+
 \end{sitedescription}
 %%% Local Variables:
 %%% mode: latex
