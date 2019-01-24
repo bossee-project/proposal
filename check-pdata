@@ -6,9 +6,10 @@ Check things like PM totals in tasks, work packages, sites, etc.
 """
 
 import copy
-from operator import itemgetter
 from pprint import pprint
 import re
+import sys
+
 
 site_order = [
     'SRL',
@@ -23,6 +24,7 @@ site_order = [
     'INSERM',
     'EP',
 ]
+
 
 def _mini_fsm(s):
     """mini fsm for dealing with nested {}"""
@@ -82,6 +84,8 @@ def reformat_data(data):
 
 
 def summary(data):
+
+    invalid = False
     total_pms = 0
     site_pms = {key: 0 for key in data['site']}
     data = copy.deepcopy(data)
@@ -113,19 +117,23 @@ def summary(data):
         print(f"  task PMs: {task_pms}")
         if wp_pms != task_pms:
             print("!!!!! task PMs don't add up !!!!")
+            invalid = 1
         print()
 
     print()
     print(f"{'Site':12}: {'PMs':3}")
     total_pms = 0
     # for site, pms in sorted(site_pms.items(), key=itemgetter(1), reverse=True):
-    assert sorted(site_pms) == sorted(site_order), set(site_pms).difference(set(site_order))
+    assert sorted(site_pms) == sorted(site_order), set(site_pms).difference(
+        set(site_order)
+    )
     for site in site_order:
         pms = site_pms[site]
         print(f"{site:12}: {pms:3}")
         total_pms += pms
     print()
     print(f"{'total':12}: {total_pms:3}")
+    return invalid
 
 
 def main(pdata_file='draft.pdata'):
@@ -138,11 +146,11 @@ def main(pdata_file='draft.pdata'):
             fields = parse_pdata_line(line)
             _add_field(data, fields)
     try:
-        summary(data)
+        return summary(data)
     except Exception:
         pprint(data)
         raise
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

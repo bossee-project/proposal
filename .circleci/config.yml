@@ -17,7 +17,8 @@ jobs:
             texlive-latex-extra \
             texlive-fonts-recommended \
             texlive-bibtex-extra \
-            git
+            git \
+            python3
 
 
       - run:
@@ -35,6 +36,12 @@ jobs:
       - store_artifacts:
           path: draft.pdf
           destination: draft.pdf
+
+      - run:
+          name: check person-month data
+          command: |
+            ./check-pdata
+
 
 workflows:
   version: 2

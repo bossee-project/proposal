@@ -13,7 +13,7 @@ once completed)}
 \end{draft}
 
 \begin{workpackage}[id=applications,wphases=0-48,swsites,
-  title=Applications and demonstrations,
+  title=Applications and showcases,
   short=Applications,
   lead=XFEL,
   % EGIRM=4,
@@ -23,7 +23,7 @@ once completed)}
   SILRM=12,
   SRLRM=9,
   UIORM=12,
-  UPSUDRM=18,
+  UPSUDRM=20,
   WTTRM=3,
   XFELRM=36,
   EPRM=3,
@@ -83,25 +83,37 @@ once completed)}
 
 
 \begin{wpdelivs}
-\begin{wpdeliv}[due=1,miles=startup,id=infrastructure,dissem=PU,nature=DEC,lead=SRL]
-  {Some Deliverable}
-\end{wpdeliv}
 %\TODO{update due date and startup!}
-\begin{wpdeliv}[due=1,miles=startup,id=opendose-analysis,dissem=PU,nature=DEM,lead=INSERM]
-  {Jupyter services for nuclear medicine dosimetry with the OpenDose project}
-\end{wpdeliv}
-\begin{wpdeliv}[due=40,miles=final,id=application-astro,dissem=PU,nature=DEM,lead=CDS]
+\begin{wpdeliv}[due=42,miles=community,id=application-astro,dissem=PU,nature=DEM,lead=CDS]
     {Demonstrator of astronomical data services based on on reference astronomy data from CDS in jupyter notebooks is made available for use by the astronomy research community.}
 \end{wpdeliv}
-%\TODO{update milestone!}
+\begin{wpdeliv}[due=45,miles=final,id=xfel-workflows,dissem=PU,nature=DEM,lead=XFEL]
+  {Demonstrator reproducible photon science}
+\end{wpdeliv}
+
+% \TODO{update milestone!}
 \begin{wpdeliv}[due=36,miles=final,id=math,dissem=PU,nature=R,lead=UPSUD]
   {Report on Interactive Mathematics with Jupyter Widgets}
 \end{wpdeliv}
-\begin{wpdeliv}[due=48,miles=final,id=xfel-workflows,dissem=PU,nature=R,lead=XFEL]
-  {Report on Jupyter based workflows with long term reproducibilty}
+\begin{wpdeliv}[due=48,miles=final,id=applications-report,dissem=PU,nature=R,lead=XFEL]
+  {Evaluation of demonstrators and case studies. Report on
+    feasibility, user feedback, potential shortcomings and
+    improvement, to guide EOSC service design.}
 \end{wpdeliv}
-\begin{wpdeliv}[due=48,miles=final,id=gpu-jupyter-notebooks,dissem=PU,nature=R,lead=SIL]
-  {Notebooks demonstrating SDE based research in Juyter notebook}
+\begin{wpdeliv}[due=24,miles=final,id=lbm-jupyter,dissem=PU,nature=DEM,lead=SIL]
+  {Demonstrator of simulations  SDE based research in Jupyter notebook. It will include example reproducing recent research as well as tutorial for researcher and developers.}
+\end{wpdeliv}
+\begin{wpdeliv}[due=36,miles=final,id=sde-jupyter,dissem=PU,nature=DEM,lead=SIL]
+  { Demonstrator of LBM simulation in in Jupyter notebook using GPU solver sailfish-cfd. It will include setting boudary conditions, monitoring the simulation and visualisation of the data. It will be based on K3D-jupyter widget for 3d interactive input and output.}
+\end{wpdeliv}
+
+
+\begin{wpdeliv}[due=36,miles=final,id=opendose-analysis,dissem=PU,nature=DEM,lead=INSERM]
+  {Jupyter services for nuclear medicine dosimetry with the OpenDose project}
+\end{wpdeliv}
+
+\begin{wpdeliv}[due=48,miles=final,id=teaching,dissem=PU,nature=R,lead=EP]
+  {How Jupyter ecosystem can enrich the teaching experience: a case study at \'Ecole polytechnique and Université Paris-Sud.}
 \end{wpdeliv}
 
 \end{wpdelivs}
