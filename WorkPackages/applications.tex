@@ -20,7 +20,7 @@ once completed)}
   CDSRM=12,
   INSERMRM=24,
   QSRM=6,
-  % SILRM=4,
+  SILRM=12,
   SRLRM=9,
   UIORM=12,
   UPSUDRM=18,
@@ -77,6 +77,7 @@ once completed)}
 \input{tasks/application-geo}
 \input{tasks/application-math}
 \input{tasks/opendose-analysis}
+\input{tasks/application-gpu}
 \end{tasklist}
 
 
@@ -86,7 +87,7 @@ once completed)}
 \begin{wpdeliv}[due=1,miles=startup,id=opendose-analysis,dissem=PU,nature=DEM,lead=INSERM]
   {Jupyter services for nuclear medicine dosimetry with the OpenDose project}
 \end{wpdeliv}
-\begin{wpdeliv}[due=40,miles=final,id=application-astro,dissem=PU,nature=DEM,lead=CDS]
+\begin{wpdeliv}[due=42,miles=community,id=application-astro,dissem=PU,nature=DEM,lead=CDS]
     {Demonstrator of astronomical data services based on on reference astronomy data from CDS in jupyter notebooks is made available for use by the astronomy research community.}
 \end{wpdeliv}
 %\TODO{update milestone!}
@@ -95,6 +96,9 @@ once completed)}
 \end{wpdeliv}
 \begin{wpdeliv}[due=48,miles=final,id=xfel-workflows,dissem=PU,nature=R,lead=XFEL]
   {Report on Jupyter based workflows with long term reproducibilty}
+\end{wpdeliv}
+\begin{wpdeliv}[due=48,miles=final,id=gpu-jupyter-notebooks,dissem=PU,nature=R,lead=SIL]
+  {Notebooks demonstrating SDE based research in Juyter notebook}
 \end{wpdeliv}
 
 \end{wpdelivs}

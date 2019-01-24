@@ -1,0 +1,48 @@
+% template for a task
+% each task should be added to exactly one workpackage
+% in the workpackage task list
+\begin{task}[
+  title=Application: Reproducible research based on GPU,
+  id=application-gpu,
+  lead=SIL,
+  PM=12,
+  wphases={0-48},
+  % don't include lead here
+  partners={}
+]
+
+
+GPGPU  has already settled its place in High-Performance Computing. It has proven its efficiency in many areas. On the other hand,  the Jupyter notebook allows to work on remote computing infrastructure. Those two facts suggest that having tools for research and experimentation which are based on Jupyter can ease access of researchers  to HPC resources as well improve the  reproducibility at the same time. 
+
+ Here we will focus on two applications: Lattice Boltzmann Method and Stochastic differential Equation. In both cased we have experience of using Python-based software which natively works on GPU. 
+
+The stochastic differential equations (SDE) have been a very useful tool for analysis of problems
+in various areas of science, engineering, and finance. Similarly to the case of ordinary differential equations, they are usually rather intractable analytically. The numerical approach can provide  statistical quantities of interest, but one has to run a large number of realizations of stochastic differential equation and take the average over all of these paths. It has been demonstrated that GPU devices are extremely efficient for this purpose. In this field we propose to develop a flexible framework for SDE simulation which can  be used in Python based Jupyter notebook. It will allow experimenting with a system which dynamics is governed by stochastic equations. 
+
+  The task includes the following activities
+  \begin{compactitem}
+  \item Development of a Python package containing tools for research based on SDE. It will contain the real-time code generation techniques which will be primarily made for CUDA language but will allow extending it for other platforms as OpenCL. It 
+  \item Creation of a collection of notebooks reproducing recent works in e.g. Brownian ratchets. We have already demonstrated \cite{januszewski2010accelerating,spiechowicz2015gpu} that a month of computations can be redone within minuted when modern GPU is applied. Publishing Jupyter notebook which supplement selected past and future papers would be very useful for people entering this field.  
+  \item Development of tutorials and examples demonstrating the extending the framework
+     % deliverable will be defined in the appropriate WorkPackage.tex
+    (\localdelivref{deliv-id})
+  \end{compactitem}
+  
+In recent years, the lattice Boltzmann method (LBM) emerged as an interesting alternative to more established methods for fluid flow simulations. Sailfish-cfd \cite{januszewski2014sailfish} is an open source implementation of LBM on GPU devices. It is written in Python with real-time generated CUDA-C code. The Jupyter notebooks with its widgets interface make it especially attractive to use it for fluid dynamics applications. It has been demonstrated that K3D-jupyter widget can display moderate dataset during the simulation and its architecture allows for a live update of the data directly from running computation.   
+
+However, the main problem is a potentially large amount of data which needs to be transferred. It still needs work. There is also an open question on what type of data processing should be performed on server-side and what can be done on the widget (browser side). Our experience suggests that there is no clear answer and it depends on the size of the data and its nature. For example, volume rendering technique if very effective on the browser side but infers large data transfers. One can perform it the server-side, in a distributed way if the simulation uses many nodes, but the interactivity is limited by network latency. Another problem which we want to address are tools for editing and inspecting of boundary conditions. 
+
+  The task includes the following activities
+  \begin{compactitem}
+  \item Development of Jupyter notebooks using LBM based fluid simulation based on the high-performance Sailfish-cfd solver.
+  \item Implementing advanced widgets for large fluid flow data visualization. 
+  \item Implementing widgets for inspection and editing boundary conditions in LBM.
+     % deliverable will be defined in the appropriate WorkPackage.tex
+    (\localdelivref{deliv-id})
+  \end{compactitem}
+  
+
+
+
+  
+\end{task}
