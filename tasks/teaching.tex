@@ -7,70 +7,72 @@
   partners={UPSUD}
   ]
 
-  As argued in Task~\ref{teaching-tools}, the Jupyter ecosystem
-  provides versatile tools and infrastructure which have been widely
-  adopted in higher education in the recent years.
+  The Jupyter ecosystem provides versatile tools and infrastructure which have
+  been widely adopted in higher education in the recent years (data8 ??). École
+  Polytechnique and Université Paris Sud have been at the forefront of this
+  movement (see the description of \site{EP} and \site{UPSUD} for more
+  information) since many years. 
 
-  École Polytechnique
-  and Université Paris Sud have been at the forefront of this movement
-  (see below). In this task, we propose to further support the use of
-  Jupyter in their curriculum, as a test bed for the tools,
-  infrastructure and best practices developed in
-  Task~\ref{teaching-tools}.
+  Nevertheless, the implementation of such infrastructure requires a certain
+  expertise in different fields (DevOps, software development,...) and is
+  therefore not accessible to the greatest number of people.
 
-  \TODO{NT: wondering whether the development of best practice belongs
-    to the other task or this one}
+  As part of the Bossee project, we are trying to remove these locks so that
+  anyone can easily use the tools developed for their teaching. This task will
+  therefore serve as a demonstrator to show Jupyter's full potential in a
+  teaching environment. Therefore, we will put together several tasks and use them for courses given at \'Ecole polytechnique and Université Paris Sud.
 
-  The Bossee project framework is ideal for two reasons:
+  \begin{itemize}
+    \item Tasks \taskref{core}{jh-bh-conv} and \taskref{eosc}{jh-bh-deployment} will provide the needed infrastructure to work in the best conditions for teachers and students. It will also permit to teachers to create their own teaching environment.
+    \item Task \taskref{ecosystem}{teaching-tools} will provide the needed tools for teachers to share material with their students, give them feedback on their progress,...
+    \item Finally, \taskref{ecosystem}{task xeus-cpp} will provide a new way to learn C++ language in scientific computing. It can be difficult to a student to learn all the process to make working a C++ program (syntax, compilation, link, output,...). Xeus will make it possible to avoid all these new knowledges and focus only on the syntax.   
+  \end{itemize}
+
+  Another important thing to notice is that \'Ecole polytechnique and Université Paris Sud
   \begin{enumerate}
-    \item it offers both the test infrastructure and community, and some identified courses and
-  Professor / Engineers / Students, who will test the newly designed tools
-  (nbgrader / novel JupyterHub technology) and provide some feedback in order to
-  improve them (this can be conducted within the timing of the project since the
-  framework is already present);
-    \item It creates a reactive community of students
-  and researchers within Ecole polytechnique and Paris-Sud, where the
+    \item will offer both the test infrastructure and community, and some identified courses and
+  Professor / Engineers / Students, who will test the newly designed tools and provide some feedback in order to
+  improve them;
+    \item will create a reactive community of students
+  and researchers, where the
   dissemination of the project tools and experience will be easy, which will
-  organize Jupyter days as in 2018\footnote{\url{http://www.cmap.polytechnique.fr/~massot/Personal_web_page_of_Marc_Massot/JupyterX.html}} on a regular basis, where the demonstrators of the
-  project for tasks xxx will be presented and discussed. {\bf link with WP
-    dissemination}
+  organize Jupyter days as in 2018\footnote{\url{http://www.cmap.polytechnique.fr/~massot/Personal_web_page_of_Marc_Massot/JupyterX.html}} on a regular basis.
   \end{enumerate}
 
-  \TODO{HF: Loic, can you complete this, please?}
+  % \TODO{HF: Loic, can you complete this, please?}
 
-  A variety of courses are delivered at Université Paris Sud using
-  Jupyter technologies. This includes for example programming classes
-  in C++ at lower undergraduate level (400 students per year since
-  2017), a series of undergraduate and graduate math courses (computer
-  aided mathematics, computer algebra, numerical methods), or courses
-  in physics, bio-informatics, etc. To support these courses, a
-  JupyterHub service has been deployed in 2017 and progressively
-  improved since, on Paris Sud's local cloud infrastructure, enabling
-  students and teachers to work from anywhere and any device.
+  % A variety of courses are delivered at Université Paris Sud using
+  % Jupyter technologies. This includes for example programming classes
+  % in C++ at lower undergraduate level (400 students per year since
+  % 2017), a series of undergraduate and graduate math courses (computer
+  % aided mathematics, computer algebra, numerical methods), or courses
+  % in physics, bio-informatics, etc. To support these courses, a
+  % JupyterHub service has been deployed in 2017 and progressively
+  % improved since, on Paris Sud's local cloud infrastructure, enabling
+  % students and teachers to work from anywhere and any device.
 
-  The Mathematics department at Ecole polytechnique has started a reform of their various teaching offer based on
-  Jupyter for two years and several courses of the Bachelor program, 2nd and 3rd
-  year of Engineering school and Master program have already begun relying on a
-  strong use of Jupyter notebooks / JupyterHub\footnote{MAP551 - 2nd yer course
-  MAP411 - AMS X02 - Mooc INRIA preciser?} and this will continue with a strong
-  support of the Dean of undergraduate studies and of graduate studies. Besides
-  several software and research engineers in applied mathematics have been
-  recruited and participate in this effort, as well as a administration engineer
-  in order to help in terms of building an infrastructure dedicated to Jupyter
-  with the support of the head of the Ecole polytechnique in order to disseminate
-  the effort into various other departments (Physics, Mechanical Engineering,
-  Biology...), where already some courses are starting based in Jupyter. The
-  link with the computer science club of students of Ecole polytechnique (Binet
-  R\'eseau) has also been created with the project and a community is emerging.
+  % The Mathematics department at Ecole polytechnique has started a reform of their various teaching offer based on
+  % Jupyter for two years and several courses of the Bachelor program, 2nd and 3rd
+  % year of Engineering school and Master program have already begun relying on a
+  % strong use of Jupyter notebooks / JupyterHub\footnote{MAP551 - 2nd yer course
+  % MAP411 - AMS X02 - Mooc INRIA preciser?} and this will continue with a strong
+  % support of the Dean of undergraduate studies and of graduate studies. Besides
+  % several software and research engineers in applied mathematics have been
+  % recruited and participate in this effort, as well as a administration engineer
+  % in order to help in terms of building an infrastructure dedicated to Jupyter
+  % with the support of the head of the Ecole polytechnique in order to disseminate
+  % the effort into various other departments (Physics, Mechanical Engineering,
+  % Biology...), where already some courses are starting based in Jupyter. The
+  % link with the computer science club of students of Ecole polytechnique (Binet
+  % R\'eseau) has also been created with the project and a community is emerging.
 
   The task includes the following activities
   \begin{compactitem}
   \item Reinforce the use of Jupyter technology in Courses at
     all levels, notably in Mathematics and Data Science, in close
     collaboration between Ecole polytechnique and Université Paris Sud;
-  \item Test the new developments and feed back to tasks ... (List of courses? Link Data science - JB?)
-  \item Organize a Jupyter event every year with demonstration of Jupyter new tools
-    (\localdelivref{deliv-id})
+  \item Test the new developments and feed back to tasks \taskref{core}{jh-bh-conv} and \taskref{ecosystem}{teaching-tools}
+  \item Organize a Jupyter event every year with demonstration of Jupyter new tools for teaching and research (\localdelivref{deliv-id})
   \item Foster sharing of experience, best practices and course
     material, at the local level, and then worldwide, through meetups,
     blogs, etc.
