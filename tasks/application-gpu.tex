@@ -8,47 +8,47 @@
   partners={EGI}
 ]
 
-\textbf{Context: Fluid dynamics with Lattice Boltzmann method on GPU}
+\textbf{Context}
 
 In recent years, the lattice Boltzmann method (LBM) emerged as an
 interesting alternative to more established methods for fluid flow
 simulations. Sailfish-cfd \cite{januszewski2014sailfish} is an open
-source implementation of LBM on General Purpose Graphical Processing
+source implementation of the LBM on General Purpose Graphical Processing
 Unit (GPGPU) devices. It is written in Python with real-time
-generation of CUDA-C code.  In order to harvest capabilities of GPGPU
+generation of CUDA-C code.  In order to harvest capabilities of GPGPUs
 one needs to access the specialized hardware, which usually is
-avaiable to researchers as remote HPC resources.  The typical fluid
+available to researchers as remote HPC resources.  The typical fluid
 dynamics research workflow consists of three stages: preparing
 boundary conditions, running a simulation, and data analysis. The
 first and last stage require capable and responsive user interface for
-maniputation and inspection of 3d data.  The Jupyter 3d visualization
-widgets developed in \taskref{ecosystem}{jupyter-widgets} can fulfill
+maniputation and inspection of 3d data.  The Jupyter 3d visualisation
+widgets developed in \taskref{ecosystem}{jupyter-widgets} can fulfil
 such needs.
 
 \textbf{This task}
 
-In this task we will improve and adapt existing open software to
+In this task we will improve and adapt existing open source software to
 easily work in Jupyter notebook and fully use its interactive
 features. Based on previous experience with K3D-jupyter\cite{K3D}
-widget we know that web browser based software can display moderate
-dataset during the simulation As the dataset is becoming larger the
-visualization in the browser turns out to be nontrivial due to
-limitations of the browser itself and large data transfers. There is
-an open question on how much of data processing should be performed on
-server-side and what can be done on the widget (browser side). Our
+widgets we know that web browser based software can display moderate
+dataset during the simulation. As the dataset is becoming larger the
+visualisation in the browser turns out to be nontrivial due to
+limitations of the browser itself and required large data transfers. It is
+an open question how much of data processing should be performed on
+server-side and what can be done on the client hardware (i.e. in the
+widget in the browser side of the user). Our
 experience suggests that there is no clear answer and it depends on
 the size of the data and its nature. For example, volume rendering
-technique if very effective on the browser side but infers large data
+technique can be very effective on the browser side but infers large data
 transfers. One can perform it the server-side, in a distributed way if
 the simulation uses many nodes, but the interactivity is limited by
 network latency. In this task we will attempt to provide practical
-solution to this issue.  Furthermore, we will contruct tools for
+solutions to this issue.  Furthermore, we will contruct tools for
 editing and inspecting boundary conditions. Having such tools as
 Jupyter widgets will allow to complete the workflow without leaving
 Jupyter notebook.
 
 The task includes the following activities
-
 \begin{compactitem}
 \item Development of Jupyter notebooks using LBM based fluid
   simulation based on the high-performance Sailfish-cfd solver.
@@ -58,13 +58,14 @@ The task includes the following activities
   conditions in LBM.
 \end{compactitem}
 
-This part will closely interact in with the task
+This work will closely interact in with the task
 \taskref{ecosystem}{jupyter-widgets}: it will both provide guidelines
 for the development to \taskref{ecosystem}{jupyter-widgets} and serve
 as test case for implemented features in
 \taskref{ecosystem}{jupyter-widgets}.
 
 The deliverable of this part will be a demonstrator
-(\localdelivref{lbm-jupyter}) available via the EOSC hub.
+(\localdelivref{lbm-jupyter}) available via the EOSC hub, and
+contributions to \localdelivref{applications-report}.
 
 \end{task}
