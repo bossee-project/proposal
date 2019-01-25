@@ -99,7 +99,7 @@ echo:
 	echo $(BBL)
 
 singlerun:
-	pdflatex -file-line-error $(PROPOSAL)
+	$(PDFLATEX) draft
 
 TOWRITE: *.tex */*.tex
 	fgrep 'TOWRITE{' *.tex */*.tex | perl -p -e 's/^(.*):.*TOWRITE\{(.*?)\}(.*)$$/$$2\t$$1: $$3/' - | grep -v XXX | sort > TOWRITE
