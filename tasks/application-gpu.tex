@@ -12,21 +12,30 @@
 ]
 
 
-Context: General Purpose Graphical Processing Unit (GPGPU) has already settled its place in High-Performance Computing. The enomoues efficiency of massively parallel architecture can be beneficial in many areas of science. In order to exploit those capabilities one needs to access the specialized hardware, which is usually avaiable to researcher as remote HPC resources. At this point the Jupyter notebook becomes a valuable toos, as it allows to work on a remote computing infrastructure with a capable user interface. Those two facts suggest that having tools for research and experimentation which are based on Jupyter can ease the access of researchers to HPC resources as well improve the reproducibility at the same time. By that means, Jupyter can help users to gain access to dedicated hardware through EOSC for specific applications.
+\textbf{Context}
+
+ General Purpose Graphical Processing Unit (GPGPU) has already settled its place in High-Performance Computing. The enomoues efficiency of massively parallel architecture can be beneficial in many areas of science. In order to exploit those capabilities one needs to access the specialized hardware, which is usually avaiable to researcher as remote HPC resources. At this point the Jupyter notebook becomes a valuable toos, as it allows to work on a remote computing infrastructure with a capable user interface. Those two facts suggest that having tools for research and experimentation which are based on Jupyter can ease the access of researchers to HPC resources as well improve the reproducibility at the same time. By that means, Jupyter can help users to gain access to dedicated hardware through EOSC for specific applications.
 
 Here we will focus on two applications: Lattice Boltzmann Method and Stochastic differential Equation. In both cases we have experience of using Python-based software which natively works on GPU. We will improve and adapt existing open software to easily work in Jupyter notebook and fully use its interactive features including 3d visualization widgets developed in \taskref{ecosystem}{jupyter-widgets}.
 
-The stochastic differential equations (SDE) have been a very useful tool for analysis of problems in various areas of science, engineering, and finance. Similarly to the case of ordinary differential equations, they are usually rather intractable analytically. The numerical approach can provide  statistical quantities of interest, but one has to run a large number of realizations of stochastic differential equation and take the average over all of these paths. It has been demonstrated that GPU devices prove even 1000x speedup compared to a single CPU\cite{januszewski2010accelerating,spiechowicz2015gpu}. In this field we propose to develop a flexible framework for SDE simulation which can be used in Python based Jupyter notebook. Its core will be based on already written software which has been used at University of Silesia.  It will allow experimenting with models which dynamics is governed by stochastic equations. The aim is to provide such a framework, that if used for publishing research will allow not only to reproduce results but also easily manipulate the parameters and extend the model.
 
-  The task includes the following activities
+\textbf{Stochastic dynamics in physics}
+
+The stochastic differential equations (SDE) have been a very useful tool for analysis of problems in various areas of science, engineering, and finance. Similarly to the case of ordinary differential equations, they are usually rather intractable analytically. The numerical approach can provide  statistical quantities of interest, but one has to run a large number of realizations of stochastic differential equation and take the average over all of these paths. It has been demonstrated that GPU devices provide even 1000x speedup compared to a single CPU\cite{januszewski2010accelerating,spiechowicz2015gpu}. In this field we propose to develop a flexible framework for SDE simulation which can be used in Python based Jupyter notebook. Its core will be based on already written software which has been used at University of Silesia.  It will allow experimenting with models which dynamics is governed by stochastic equations. The aim is to provide such a framework, that if used for publishing research will allow not only to reproduce results but also easily manipulate the parameters and extend the model.
+
+The task includes the following activities
+
   \begin{compactitem}
-  \item Development of a lighweight prototyping framework based on Python for numerical experiments based on SDE. It will contain the real-time code generation techniques which will be primarily made for CUDA language but will allow extending it for other platforms as OpenCL. 
+  \item Development of a lightweight prototyping framework based on Python for numerical experiments based on SDE. It will contain the real-time code generation techniques which will be primarily made for CUDA language but will allow extending it for other platforms as OpenCL. 
   \item Creation of a collection of notebooks reproducing recent works in e.g. Brownian ratchets. We have already demonstrated \cite{januszewski2010accelerating,spiechowicz2015gpu} that a month of computations can be redone within minuted when modern GPU is applied. Publishing Jupyter notebook which supplement selected past and future papers would be very useful for people entering this field.  
   \item Development of tutorials and examples demonstrating the extending the framework
     
   \end{compactitem}
 
 The deliverable of this part will be a demonstrator (\localdelivref{sde-jupyter}) available via the EOSC hub.
+
+
+\textbf{Fluid dynamics with Lattice Boltzmann method}
 
 In recent years, the lattice Boltzmann method (LBM) emerged as an interesting alternative to more established methods for fluid flow simulations. Sailfish-cfd \cite{januszewski2014sailfish} is an open source implementation of LBM on GPU devices. It is written in Python with real-time generated CUDA-C code. The Jupyter notebooks with its widgets interface make it especially attractive to use it for fluid dynamics applications. It has been demonstrated that K3D-jupyter widget can display moderate dataset during the simulation and its architecture allows for a live update of the data directly from running computation.
 
