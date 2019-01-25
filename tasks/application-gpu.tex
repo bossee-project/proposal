@@ -25,11 +25,7 @@ maniputation and inspection of 3d data.  The Jupyter 3d visualisation
 widgets developed in \taskref{ecosystem}{jupyter-widgets} can fulfil
 such needs.
 
-\textbf{This task}
-
-In this task we will improve and adapt existing open source software to
-easily work in Jupyter notebook and fully use its interactive
-features. Based on previous experience with K3D-jupyter\cite{K3D}
+Based on previous experience with K3D-jupyter\cite{K3D}
 widgets we know that web browser based software can display moderate
 dataset during the simulation. As the dataset is becoming larger the
 visualisation in the browser turns out to be nontrivial due to
@@ -42,17 +38,22 @@ the size of the data and its nature. For example, volume rendering
 technique can be very effective on the browser side but infers large data
 transfers. One can perform it the server-side, in a distributed way if
 the simulation uses many nodes, but the interactivity is limited by
-network latency. In this task we will attempt to provide practical
-solutions to this issue.  Furthermore, we will contruct tools for
-editing and inspecting boundary conditions. Having such tools as
-Jupyter widgets will allow to complete the workflow without leaving
-Jupyter notebook.
+network latency. We will attempt to provide practical
+solutions to this issue.
+%
 
-The task includes the following activities
+
+\textbf{This task}
+
+
+In this task, we will contruct tools for editing and inspecting
+boundary conditions. Having such tools as Jupyter widgets will allow
+to complete the workflow without leaving Jupyter notebook. We plan the
+following activities
 \begin{compactitem}
-\item Development of Jupyter notebooks using LBM based fluid
+\item Development of Jupyter notebooks using fluid
   simulation based on the high-performance Sailfish-cfd solver.
-\item Implementing advanced widgets for data visualization of large
+\item Implementing advanced widgets for data visualisation of large
   fluid dynamics simulations.
 \item Implementing widgets for inspection and editing boundary
   conditions in LBM.
@@ -66,6 +67,6 @@ as test case for implemented features in
 
 The deliverable of this part will be a demonstrator
 (\localdelivref{lbm-jupyter}) available via the EOSC hub, and
-contributions to \localdelivref{applications-report}.
+contributions to report \localdelivref{applications-report}.
 
 \end{task}
