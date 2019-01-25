@@ -8,7 +8,7 @@
   PM=12,
   wphases={4-36},
   % don't include lead here
-  partners={}
+  partners={EGI}
 ]
 
 
@@ -26,10 +26,10 @@ The stochastic differential equations (SDE) have been a very useful tool for ana
 The task includes the following activities
 
   \begin{compactitem}
-  \item Development of a lightweight prototyping framework based on Python for numerical experiments based on SDE. It will contain the real-time code generation techniques which will be primarily made for CUDA language but will allow extending it for other platforms as OpenCL. 
-  \item Creation of a collection of notebooks reproducing recent works in e.g. Brownian ratchets. We have already demonstrated \cite{januszewski2010accelerating,spiechowicz2015gpu} that a month of computations can be redone within minuted when modern GPU is applied. Publishing Jupyter notebook which supplement selected past and future papers would be very useful for people entering this field.  
+  \item Development of a lightweight prototyping framework based on Python for numerical experiments based on SDE. It will contain the real-time code generation techniques which will be primarily made for CUDA language but will allow extending it for other platforms as OpenCL.
+  \item Creation of a collection of notebooks reproducing recent works in e.g. Brownian ratchets. We have already demonstrated \cite{januszewski2010accelerating,spiechowicz2015gpu} that a month of computations can be redone within minuted when modern GPU is applied. Publishing Jupyter notebook which supplement selected past and future papers would be very useful for people entering this field.
   \item Development of tutorials and examples demonstrating the extending the framework
-    
+
   \end{compactitem}
 
 The deliverable of this part will be a demonstrator (\localdelivref{sde-jupyter}) available via the EOSC hub.
@@ -39,7 +39,7 @@ The deliverable of this part will be a demonstrator (\localdelivref{sde-jupyter}
 
 In recent years, the lattice Boltzmann method (LBM) emerged as an interesting alternative to more established methods for fluid flow simulations. Sailfish-cfd \cite{januszewski2014sailfish} is an open source implementation of LBM on GPU devices. It is written in Python with real-time generated CUDA-C code. The Jupyter notebooks with its widgets interface make it especially attractive to use it for fluid dynamics applications. It has been demonstrated that K3D-jupyter widget can display moderate dataset during the simulation and its architecture allows for a live update of the data directly from running computation.
 
-However, the main problem is a potentially large amount of data which needs to be transferred. There is also an open question on how much of data processing should be performed on server-side and what can be done on the widget (browser side). Our experience suggests that there is no clear answer and it depends on the size of the data and its nature. For example, volume rendering technique if very effective on the browser side but infers large data transfers. One can perform it the server-side, in a distributed way if the simulation uses many nodes, but the interactivity is limited by network latency. 
+However, the main problem is a potentially large amount of data which needs to be transferred. There is also an open question on how much of data processing should be performed on server-side and what can be done on the widget (browser side). Our experience suggests that there is no clear answer and it depends on the size of the data and its nature. For example, volume rendering technique if very effective on the browser side but infers large data transfers. One can perform it the server-side, in a distributed way if the simulation uses many nodes, but the interactivity is limited by network latency.
 Another problem which we want to address are tools for editing and inspecting of boundary conditions. It is important to have such tools as widgets because it will allow to complete the workflow without leaving Jupyter based interface.
 
 
@@ -47,7 +47,7 @@ Another problem which we want to address are tools for editing and inspecting of
   The task includes the following activities
   \begin{compactitem}
   \item Development of Jupyter notebooks using LBM based fluid simulation based on the high-performance Sailfish-cfd solver.
-  \item Implementing advanced widgets for data visualization of large fluid dynamics simulations. 
+  \item Implementing advanced widgets for data visualization of large fluid dynamics simulations.
   \item Implementing widgets for inspection and editing boundary conditions in LBM.
   \end{compactitem}
 
@@ -57,5 +57,5 @@ This part will closely interact in with the task \taskref{ecosystem}{jupyter-wid
 The deliverable of this part will be a demonstrator (\localdelivref{lbm-jupyter}) available via the EOSC hub.
 
 
-  
+
 \end{task}
