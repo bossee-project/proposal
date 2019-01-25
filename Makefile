@@ -34,6 +34,11 @@ PROPCLS = $(PROPCLS.clssty:%=$(PROPCLS.dir)/%) $(EUPROPCLS.clssty:%=$(EUPROPCLS.
 
 all: $(TBIB.pdf) $(TSIMP.pdf)
 
+check:
+	test -f draft.pdf
+	test -f draft.pdata
+	python3 ./check-pdata
+
 final:
 	$(MAKE) $(MAKEFLAGS) -w PROPOSAL=final.tex all
 
@@ -94,7 +99,7 @@ echo:
 	echo $(BBL)
 
 singlerun:
-	pdflatex -file-line-error $(PROPOSAL)
+	$(PDFLATEX) draft
 
 TOWRITE: *.tex */*.tex
 	fgrep 'TOWRITE{' *.tex */*.tex | perl -p -e 's/^(.*):.*TOWRITE\{(.*?)\}(.*)$$/$$2\t$$1: $$3/' - | grep -v XXX | sort > TOWRITE
