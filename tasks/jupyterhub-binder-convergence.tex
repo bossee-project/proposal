@@ -9,9 +9,11 @@
   wphases={0-36},
   partners={WTT}]
 
-  An institution - typically a university, a national lab, a transnational
+  \textbf{Scenario}
+
+  An institution -- typically a university, a national lab, a transnational
   research infrastructure such as the European XFEL, or transnational 
-  infrastructure provider like EGI - wishes to provide its members and 
+  infrastructure provider like EGI -- wishes to provide its members and
   users with a Jupyter service.
 
   The service lets user spawn and access personal or collaborative virtual
@@ -24,13 +26,15 @@
   customize the service (available software stack, storage setup, ...),
   without a need for administrator intervention.
 
+  \textbf{State of the art}
   JupyterHub already provides authentication, persistent storage and some
   default environments for its users. On the other hand, BinderHub offers
   the possibility to define more precisely what you need for your teaching
-  or research environmment which makes it very flexible. But, unfortunetly,
-  it's not possible yet to have authentication and persistent storage with
+  or research environment which makes it very flexible. But
+  it is not yet possible yet to have authentication and persistent storage with
   BinderHub.
 
+  \textbf{This task}
   The purpose of this task is to have the same services offered by JupyterHub
   (authentication, persistent storage, ...) with the flexibility of BinderHub
   (construction of your own environment for teaching or research).
@@ -45,9 +49,7 @@
   \item Credential management
   \item Customizable persistence at the admin, and user level
   \item Choice of container registry at the admin and user level % Could be moved to the repo2docker/binder task
-  \item Support for authenticated git repo for repo2docker? % Could be moved to the repo2docker/binder task
   \item Runtime resource configuration % (disk, memory, cpus, time, ...)
   \end{compactitem}
-  We will provide a report explaining how to make JupyterHub/Binder convergence a reality ($\rightarrow$
-  \localdelivref{jh-bh-conv-report}).
+  We will provide a report explaining how to make JupyterHub/Binder convergence a reality (\localdelivref{jh-bh-conv-report}).
 \end{task}
