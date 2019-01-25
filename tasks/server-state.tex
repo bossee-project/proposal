@@ -15,11 +15,26 @@
 
   \TODO{Put into perspective w.r.t. prior art, in ODK and elsewhere}
 
-Current practices, in research and industry, are often collaborative and would benefit tremendously from the ability to collectively edit notebooks. Unfortunately there is no ``Google doc'' equivalent to a Jupyter notebook that is widely available today. 
-Moreover, we routinely use multiple devices to manipulate or present content, although it is often  difficult to juggle devices and apps to transfer content from one device to the next. 
-Jupyter already recognizes the distributed nature of the digital environment by supporting remote kernels for computation. 
-But the user interfaces are stuck in single devices. 
-BOSSEE will embrace this multi-device world and facilitate the distribution and real-time collaborative editing of content across multiple devices for presentation, interaction and collaboration purposes.
+Collaboration is tremendously important in both research and industry,
+so the ability to collectively edit and run notebooks would be invaluable.
+It's also increasingly common for each person to use multiple devices to
+manipulate or present content, and seamlessly transferring updates between them
+presents similar technical challenges.
+Jupyter already recognizes the distributed nature of the digital environment by supporting remote kernels for computation,
+but the interface assumes that one user at a time works on a notebook from
+one device.
+BOSSEE will embrace this multi-device world and facilitate the distribution and
+real-time collaborative editing of content across multiple devices for presentation, interaction and collaboration purposes.
+
+There are already some services providing real-time collaboration atop
+notebooks. Google offers \emph{Colaboratory} \cite{Colab}, a proprietary
+web application using its \emph{Google Drive} backend.
+\emph{CoCalc} \cite{Cocalc} provides a suite of tools for collaborative
+mathematical computing, including an open-source mechanism for real-time
+collaboration on notebooks, but this is tightly integrated with that service's
+infrastructure.
+We want to make realtime collaboration available to as many Jupyter users as
+possible, however they choose to install and use the notebook software.
 
 We will create a real-time collaborative notebook or JupyterLab-like application by leveraging well-known synchronization techniques such as Operational Transformation (OT) or Conflict-free Replicated Data Types (CRDTs), with server-side hosting of the document state. 
 We will build on our experience with Webstrates (\url{http://webstrates.net}), a web-based environment that supports real-time sharing of web content. The CodeStrates extension to Webstrates uses the layout of Jupyter notebooks, and we have created a proof-of-concept showing that it can work with Jupyter kernels. However CodeStrates, and there are interesting unresolved questions about code execution in such a shared environment: Should it be synchronized or not among participants? Should there be a single kernel or one per participant? etc.
