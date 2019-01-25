@@ -16,7 +16,7 @@ The Jupyter  3d visualization widgets developed in \taskref{ecosystem}{jupyter-w
 
 \textbf{This task}
 
-In this task we will improve and adapt existing open software to easily work in Jupyter notebook and fully use its interactive features. Based on previous experience with K3D-jupyter widget we know that web browser based software can display moderate dataset during the simulation
+In this task we will improve and adapt existing open software to easily work in Jupyter notebook and fully use its interactive features. Based on previous experience with K3D-jupyter\cite{K3D} widget we know that web browser based software can display moderate dataset during the simulation
 As the dataset is becoming larger the visualization in the browser turns out to be nontrivial due to limitations of the browser itself and large data transfers. There is an open question on how much of data processing should be performed on server-side and what can be done on the widget (browser side). Our experience suggests that there is no clear answer and it depends on the size of the data and its nature. For example, volume rendering technique if very effective on the browser side but infers large data transfers. One can perform it the server-side, in a distributed way if the simulation uses many nodes, but the interactivity is limited by network latency. In this task we will attempt to provide practical solution to this issue. 
 Furthermore, we will contruct tools for editing and inspecting boundary conditions. Having such tools as Jupyter widgets will allow to complete the workflow without leaving Jupyter notebook.
 
