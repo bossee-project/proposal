@@ -4,8 +4,11 @@
   lead=INSERM,
   PM=25,
   wphases={3-33},
-  partners={XFEL,EGI}
+  partners={EGI,XFEL}
 ]
+
+  \textbf{Context}
+
   % Scientific description
   Nuclear Medicine is a field of medicine where radioactive material
   (radiopharmaceutical) is used for diagnostic and therapy. Even though the
@@ -80,10 +83,24 @@
   \item Visualization: display and compare results from all teams.
   \end{compactitem}
 
+  \textbf{This task}
+
   The objective of this task is to build on the Jupyter ecosystem to create a
-  unified data analysis framework for the OpenDose project. By building a set
-  of tools to access and process data, this will ensure the production of
-  traceable and reproducible dosimetric data for the OpenDose project members.
+  unified data analysis framework for the OpenDose project. Figure
+  \ref{fig:opendose_framework} shows the overall framework of the project and
+  how data will be managed.
+
+  \begin{figure}[t!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{images/opendose_framework.pdf}
+    \caption{OpenDose project overall framework including the unified data
+    analysis to be developed in this task.}
+    \label{fig:opendose_framework}
+  \end{figure}
+  
+  By building a set of tools to access and process data, this will ensure the
+  production of traceable and reproducible dosimetric data for the OpenDose
+  project members.
 
   Another major aspect of the OpenDose collaboration is to provide an open
   access to the generated dosimetric data. For that purpose a website is under
@@ -114,6 +131,9 @@
   The deliverable of this task will be a demonstrator
   (\localdelivref{opendose-analysis}) available via the EOSC hub, contributing
   to the development of innovatives services for the scientific community.
+
+  The evaluation of the developed tools from user feedback will contribute to
+  the deliverable \localdelivref{applications-report}.
 
   \TODO{How does this task relate to EOSC-life?}
 
