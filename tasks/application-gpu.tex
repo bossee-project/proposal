@@ -1,14 +1,11 @@
-% template for a task
-% each task should be added to exactly one workpackage
-% in the workpackage task list
 \begin{task}[
-  title=Application: Visualisation and contrall of fluid dynamics in Jupyter notebook,
+  title=Application: Visualisation and controll of fluid dynamics in Jupyter notebook,
   id=application-gpu,
   lead=SIL,
   PM=12,
   wphases={4-36},
   % don't include lead here
-  partners={}
+  partners={EGI}
 ]
 
 \textbf{Context: Fluid dynamics with Lattice Boltzmann method on GPU}
@@ -24,9 +21,10 @@ As the dataset is becoming larger the visualization in the browser turns out to 
 Furthermore, we will contruct tools for editing and inspecting boundary conditions. Having such tools as Jupyter widgets will allow to complete the workflow without leaving Jupyter notebook.
 
 The task includes the following activities
+
   \begin{compactitem}
   \item Development of Jupyter notebooks using LBM based fluid simulation based on the high-performance Sailfish-cfd solver.
-  \item Implementing advanced widgets for data visualization of large fluid dynamics simulations. 
+  \item Implementing advanced widgets for data visualization of large fluid dynamics simulations.
   \item Implementing widgets for inspection and editing boundary conditions in LBM.
   \end{compactitem}
 
@@ -36,5 +34,5 @@ This part will closely interact in with the task \taskref{ecosystem}{jupyter-wid
 The deliverable of this part will be a demonstrator (\localdelivref{lbm-jupyter}) available via the EOSC hub.
 
 
-  
+
 \end{task}
