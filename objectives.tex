@@ -14,18 +14,47 @@ exploitation and impact of the project (see section 2).}}
   Maybe reduce by 1-3.
 }
 
+\noindent The aims of \TheProject are:
 
-\noindent The aims and objectives of \TheProject are:
+\begin{compactenum}[\textbf{Aim} 1:]
+
+\item \label{aim:facilitation}
+  Facilitate Open Science through the development
+  of tools enabling reproducibility, sharing, and collaboration.
+
+\item \label{aim:accessibility}
+  Maximise accessibility of Open Science services and tools,
+  across domains, disciplines, and demographics.
+
+\item \label{aim:sustainability}
+  Maximise sustainability of software for Open Science
+  by developing the community and contributing
+  to and supporting community-led software efforts.
+
+\end{compactenum}
+
+\noindent We will achieve our aims through the following objectives:
+
 \begin{compactenum}[\textbf{Objective} 1:]
 
-\item \label{aim:eosc}%
-  Develop an infrastructure for the EOSC-hub and the wider open
+\item \label{obj:deployment}
+  Develop an infrastructure for the EOSC-Hub and the wider open
   science community, that can be tailored and used to provide a
   multitude of specific services on the EOSC to support open science
   in a wide range of scientific domains and projects. This infrastructure
   builds on the Jupyter project and ecosystem.
+  We will operate such a service in the form of JupyterHub and Binder,
+  to be accessible via EOSC-Hub.
 
-\item \label{aim:jupyter}%
+\item \label{obj:interactivity}
+  Improve the interactive capabilities of Jupyter software,
+  through developments of interactive widgets,
+  visualization tools, collaboration features,
+  and expanded support for kernels such as interactive C++.
+  While Jupyter is already widely used, there are many areas
+  of interactive exploration that can be improved upon.
+
+\item \label{obj:jupyter}
   Support and steer the Jupyter ecosystem, as a general purpose
   toolbox for better science through interactive computing and
   visualisation that supports the entire life-cycle of open science:
@@ -34,50 +63,60 @@ exploitation and impact of the project (see section 2).}}
   the Jupyter ecosystem of tools further so that they can become key
   technology for the EOSC-hub.
 
-\item \label{aim:jupyter-reusability}%
-  Extend the Jupyter project's capabilities to better support FAIR
+\item \label{obj:reusability}
+  Extend the facilities for reproducibility of computational environments
+  and facilitating FAIR data practices.
+  We will contribute to the recording and reproducibility
+  of environments with repo2docker and Binder
+  and extend capabilities to better support FAIR
   data requirements. In particular, the archival of execution
   environments to support re-usability of notebooks in the future
   needs attention. Such notebooks may be published together with
   publication manuscripts to detail the computation of published data
   and figures, to address the Re-usable requirement of FAIR data.
 
-\item \label{aim:jupyter-collaboration}%
-  Extend the Jupyter project's capabilities to better support
-  collaborative work, in particular enabling concurrent editing of a
-  document.
-
-\item \label{aim:jupyter-widgets}%
-  Improve on the core Jupyter Widget libraries to better support advanced
-  use cases such as the case of large widgets state saved in the notebook, or
-  the use of Jupyter Interactive Widgets outside of Jupyter. This also includes
-  improvements to the tooling built around interactive widgets such as the
-  testing of widget packages.
-
-\item \label{aim:demonstrators}%
+\item \label{obj:demonstrators}
   Demonstrate and evaluate the value and versatility of the design and
   the services building on it through applications to a number of
-  domains in academic research, research infrastructures, SMEs and for
+  domains in academic research, education, research infrastructures, SMEs and for
   the public sector, driven through our project partners. In
   particular, demonstrators for research infrastructure facilities and
-  Photon Science (EuXFEL), SMEs (QuantStack, WildTreeTech), public
-  sector (Paul), academic research (UPSud), \ldots.
+  Photon Science (\site{XFEL}), SMEs (\site{QS}, \site{WTT}),
+  astronomy (\site{CDS}), life sciences (\site{INSERM}),
+  geosciences (\site{UIO}), physics (\site{SIL}),
+  and math and education (\site{UPSUD}, \site{EP}).
 
-  \TODO{Hans: Paul and all, please add your own domain above}
-
-\item \label{aim:binderservice}%
-  Design and provide a pilot MyBinder service on EOSC-Hub as a service
-  that can be used immediately for EOSC-hub users from any domain to
-  support their reproducible open science and assess the importance of
-  this service for the future.
-
-\item \label{aim:outreach-and-engagement}%
-  Reach out to researchers outside this project to encourage engagement
+\item \label{obj:outreach-and-engagement}
+  Reach out to researchers and the wider Open Science and Open Data
+  communities outside this project to encourage engagement
   and exploitation of the EOSC-Hub and the Jupyter-based Open Science
-  Services for their research domains.
-  Engaging a larger community will also make the
-  future maintenance and development of the infrastructure more sustainable.
+  Services for their research domains and interests.
+  Engaging a larger community will help ensure the
+  future maintenance and development of the infrastructure more sustainable
+  by integrating stakeholders from a variety of institutions.
 
 \end{compactenum}
 
-\TODO{make a table with all objectives with Key Performance Indicators (specific and realistic to achieve) and means of achievements.}
+\noindent Progress toward these aims can be monitored via the following
+Key Performance Indicators (KPIs):
+
+\begin{compactenum}[\textbf{KPI} 1:]
+  \item \label{kpi:workshop-attendees}
+    Aim \ref{aim:accessibility}:
+    Attendees at Open Science workshops organised by \TheProject participants.
+  \item \label{kpi:binder-publications}
+    Aim \ref{aim:facilitation}:
+    Open publications available on \TheProject services.
+  \item \label{kpi:binder-visits}
+    Aim \ref{aim:accessibility}:
+    Visitors to \TheProject services, engaging with open, interactive communications.
+  \item \label{kpi:dissemination}
+    Aim \ref{aim:facilitation}:
+    Publications and presentations by \TheProject documenting the use of \TheProject services for Open Science.
+  \item \label{kpi:contributions}
+    Aim \ref{aim:sustainability}:
+    Contributions by \TheProject and the wider community to Jupyter software and others.
+\end{compactenum}
+
+
+\TODO{table relating objectives and tasks/deliverables}
