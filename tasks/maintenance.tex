@@ -6,6 +6,16 @@
   wphases={0-48},
   partners={XFEL,UPSUD,QS}
 ]
+
+\begin{figure}[ht!]\centering
+  \includegraphics[width=0.6\textwidth]{images/jupyterhub-kube.png}
+  \caption{
+  Jupyter notebooks deployed for many users
+  on shared infrastructure using JupyterHub and Kubernetes.
+  }
+  \label{fig:jupyterhub-kubernetes}
+\end{figure}
+
   Developing software that people will use requires maintenance of that software,
   not just new development.
   Millions of people rely on Jupyter software,
@@ -26,4 +36,18 @@
   and aid in the release process to ensure that stable releases
   of Jupyter software can be used in mature \TheProject services
   (\localdelivref{jupyter-releases}).
+
+  \TheProject will need improvements to core Jupyter functionality, including areas of:
+
+  \begin{compactenum}
+    \item ease of deployment
+    \item security
+    \item scalability of JupyterHub
+    \item performance
+  \end{compactenum}
+
+  We will contribute improvements in these areas,
+  meeting the needs of \TheProject and benefiting the wider Jupyter
+  community.
+
 \end{task}
