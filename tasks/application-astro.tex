@@ -1,5 +1,5 @@
 \begin{task}[
-  title=Astronomy application,
+  title=Demonstrator: Astronomy,
   id=astro,
   lead=CDS,
   PM=20,
@@ -7,53 +7,6 @@
   partners={EGI,INSERM,QS,SRL,WTT,XFEL}
 ]
 
-\textbf{Context}
-
-  The Strasbourg Astronomical Data Center (CDS) is scientific data
-  center hosted by the Observatory of Strasbourg. The CDS plays a unique and
-  essential role in astronomy by adding value to published and reference data.
-  CDS runs astronomical services that
-  provide data for the world-wide astronomy research community. Its three main
-  services (SIMBAD, VizieR and Aladin) are heavily used with up to one million
-  queries per day.  These services be accessed through web interfaces, mainly
-  for human interaction, as well as through programmatic interfaces, including
-  the standardized protocols defined by the International Virtual Observatory
-  Alliance.
-
-\begin{figure}[ht!]\centering
-  \includegraphics[width=0.6\textwidth]{python-astro-citations}
-  \caption{Mentions of programming languages in refereed Astronomy papers, extracted from ADS. Python usage has increased dramatically in the recent years.}\label{fig:python-astro-citations}
-\end{figure}
-
-  Python and notebooks are rapidly increasing in importance for astronomy
-  research. Indeed, Python for Astronomy software ecosystem has known a
-  constant steady growth in the latest years, as shown in
-  figure~\ref{fig:python-astro-citations}. As Python and notebooks integrate
-  well together, the Jupyter notebook as an analysis tool is becoming a hot
-  topic in the astronomical world: large surveys like the LSST (Large Synoptic
-  Survey Telescope) have endorsed the usage of the Jupyter platform for their
-    data access portal \cite{lsst2017scienceplatform}.\\
-
-
-  We will develop a Jupyter-based framework to efficiently access, explore,
-  visualize and analyze reference data that are available through CDS services
-  as a real example of using open astronomy data.
-  We will provide scientific users with a set of customizable Jupyter notebooks
-  for visualization and analysis tasks, providing a new level of
-  interoperability with python libraries and notebooks as is highly demanded
-  by the astronomy research community.
-
-  The focus is on the two following user stories:
-    \begin{compactitem}
-        \item analysis of catalogue data results, up to billions of rows.
-              Tabular data is the typical output of SIMBAD and VizieR data.
-        \item modular dashboard-like interface providing a top level
-              interactive view of the available data for a given astronomical
-              object and enabling loading and analysis of those data.
-    \end{compactitem}
-
-
-  \textbf{This task}
 
   This task will build on existing Python libraries to access CDS data
   (\textit{astroquery.[cds/simbad/vizier/xmatch]}). For visualization, we will
@@ -83,25 +36,6 @@
   astronomy data from CDS are made available in Jupyter notebooks, and
   decision point on how to use developments of WP5 for running these
   notebooks on the European Binder Service.
-
-\begin{figure}[ht!]\centering
-  \includegraphics[width=1.0\textwidth]{astro-aladin-snapshot}
-  \caption{Simbad objects, XMM and Hubble coverages overlaid on Digital Sky Survey imagery in the vicinity of the Horsehead nebula, and visualized in Aladin Desktop software.}\label{fig:astro-aladin-snapshot}
-\end{figure}
-
-  Access to the notebooks will be provided as a one-click action option from
-  SIMBAD and VizieR results pages.
-  Thus, providing with a one-click way of visualizing, filtering and analyzing
-these potentially large tables will bridge the gap between access and analysis
-of the data, with zero installation for the user.
-  For specific science cases, we will explore rendering of notebooks with
-  interactive widgets through "Voila", as to allow users not familiar with
-  Python to benefit from the Jupyter notebook framework.
-  Figure~\ref{fig:astro-aladin-snapshot} depicts typical data objects we want to analyse and interact with in the notebooks: images, catalogue data, datasets coverages.
-
-  These new developments will be highly visible to the large number of astronomers who use the CDS services (50,000 unique visitors per month) and such tools are in high demand by these users.
-
-  The CDS expertise in astronomy data and interfaces will be profitably combined with expertise of BOSSEE partners to ensure the deployment of high quality widgets (Simula, WildTree Tech, QuantStack).
 
   A demonstrator will be developed (Deliverable \localdelivref{application-astro}).
 
