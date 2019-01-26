@@ -67,6 +67,8 @@ important components and concepts are detailed below.
   from an audio processing example. Notebook documents are readily shareable,
   providing a popular way to describe and illustrate computational methods and
   tools.
+  \textbf{JupyterLab} is the new, modular, extensible client application
+  for Jupyter notebooks.
 
   \item \textbf{Jupyter kernels} are the backend software which allow Jupyter to execute
   code in many different programming languages. The \textbf{IPython} kernel is
@@ -81,7 +83,7 @@ important components and concepts are detailed below.
   accessible notebooks.
 
   \item \textbf{JupyterHub} is a multi-user extension of the Jupyter Notebook.
-  It runs on one or more servers, for example at a research institution.
+  It runs on one or more notebook servers, for example at a research institution.
   Users can log in to author and run notebooks securely through their web
   browser, without needing to install any special software on their own
   computer.
@@ -90,18 +92,24 @@ important components and concepts are detailed below.
 
 \subsubsection{Jupyter ecosystem}
 
+While Jupyter is a large, distributed, coordinated project,
+the wider community of Jupyter users develops a great deal of
+software with Jupyter integration,
+providing increased or domain-specific functionality,
+building on top of Jupyter, or integrating core Jupyter components in some aspect.
+We call this the \textbf{Jupyter ecosystem}.
 The broader Jupyter ecosystem includes many more projects than we will describe
-here, but these are a selection of projects which may be relevant to
-\TheProject:
+here, but a selection of projects which may be relevant to
+\TheProject includes:
 
 \begin{itemize}
 
   \item \textbf{Binder} builds on JupyterHub to allow sharing executable
-  environments along with (small) data files and a description of the libraries
+  environments along with data files and a description of the libraries
   required to run the notebooks. When someone accesses a Binder repository,
   the service builds the computational environment on-demand, allowing them to
   execute and modify a copy of the notebooks.
-  \textbf{repo2docker} and \textbf{BinderHub} are components of the Binder
+  \textbf{repo2docker} \cite{repo2docker} and \textbf{BinderHub} \cite{binder} are components of the Binder
   software.
 
   \item \textbf{nbsphinx} \cite{Nbsphinx} integrates notebooks with the \emph{Sphinx}
