@@ -1,5 +1,5 @@
 \begin{task}[
-  title=Enrich the teaching experience,
+  title=Demonstrator: enriched teaching with Jupyter,
   id=teaching,
   lead=EP,
   PM=6, % EP: 3PM, UPSUD: 2PM, EuXFEL 1 PM
@@ -7,24 +7,7 @@
   partners={EGI,UIO,UPSUD,XFEL}
   ]
 
-  This task is about \textbf{delivering and help deliver Jupyter-based
-    courses at a large scale} in our own institutions, as a mean to
-  \textbf{inform, evaluate, provide feedback on, and demonstrate the
-    value of the work performed} in this project in the context of
-  higher education, as well as to \textbf{develop and share best
-    practices} and \textbf{demonstrate and disseminate} Jupyter's full
-  potential for teaching.
-
-\begin{figure}[ht!]\centering
-  \includegraphics[width=.45\textwidth]{images/teaching-cling}\quad
-  \includegraphics[width=.45\textwidth]{images/teaching-graphs}
-  \caption{Jupyter based teaching material from Paris Sud. On the
-    left: an exercise sheet for the course \emph{introduction to
-      programming}; this instructor version showcases interactive C++
-    execution and automatic grading configuration menus. On the right:
-    interactive slides for a graph theory course.
-    course.}\label{fig:teaching-cling}
-\end{figure}
+  \textbf{Context}
 
   As argued in Task~\taskref{ecosystem}{teaching-tools}, the Jupyter
   ecosystem offers a versatile environment which has been widely
@@ -33,18 +16,29 @@
   project have been early adopters (see the description of \site{EP}
   and \site{UPSUD}).
 
+  \begin{figure}[ht!]\centering
+  \includegraphics[width=.45\textwidth]{images/teaching-cling}\quad
+  \includegraphics[width=.45\textwidth]{images/teaching-graphs}
+  \caption{Jupyter based teaching material from Paris Sud. On the
+    left: an exercise sheet for the course \emph{introduction to
+      programming}; this instructor version showcases interactive C++
+    execution and automatic grading configuration menus. On the right:
+    interactive slides for a graph theory course.
+    course.}\label{fig:teaching-cling}
+  \end{figure}
+
   We learned the hard way that deploying the Jupyter environment at a
-  large scale (e.g. for a university), requires specialized expertise
+  large scale (e.g. for a university) requires specialized expertise
   (DevOps, software development, ...) which impediments its adoption
   by the greatest number of people. High quality hosted solutions
   (e.g. cocalc, gryd) do exist but are not the final solution when it
   is desired to get higher control on private data, integration with
   the local infrastructure (authentication, shared drive, e-learning
-  environment, ...), or to use local computing resources rather than
-  paid services.
+  environment, dedicated hardware, ...), or to use local computing
+  resources rather than paid services.
 
-  Tackling those hurdles and offering better support for teaching are
-  outcomes of \TODO{better name} the following tasks:
+  The following tasks will contribute to tackling those hurdles and
+  offering better support for teaching:
   \begin{itemize}
   \item Tasks~\taskref{core}{jh-bh-conv}
     and~\taskref{eosc}{jh-bh-deployment} will greatly ease the
@@ -60,8 +54,21 @@
   \item Task~\taskref{ecosystem}{xeus-cpp} will support teaching
     in computer-science and scientific programming through
     better C++ integration in the notebook and will allow to first classe students to focus on the
-    syntax of the language without distractions such as compiling and linking a program.
+    syntax of the language without distractions such as compiling and
+    linking a program.
+  \item Task~\taskref{eosc}{eosc} will ease publication and FAIR
+    access to course material.
   \end{itemize}
+
+  \textbf{This task}
+
+  In this task, we will \textbf{deliver and help deliver Jupyter-based
+    courses at a large scale} in our own institutions, as a mean to
+  \textbf{inform, evaluate, provide feedback on, and demonstrate the
+    value of the work performed} in this project in the context of
+  higher education, as well as to \textbf{develop and share best
+    practices} and \textbf{demonstrate and disseminate} Jupyter's full
+  potential for teaching.
 
   \'Ecole polytechnique and Université Paris-Sud are particularly well
   suited for this task because they
