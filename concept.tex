@@ -536,10 +536,8 @@ of the data, with zero installation for the user.
   \end{itemize}
 
 \medskip
-\textbf{Demonstrator: Visualisation and control of fluid dynamics in
-  Jupyter notebook (\taskref{applications}{application-gpu})}\label{sec:concept-demonstrator-gpu}
-
-
+\noindent\textbf{Demonstrator: Visualisation and control of fluid dynamics in
+  Jupyter notebook (\taskref{applications}{application-gpu})}\label{sec:concept-demonstrator-gpu}\\
 In recent years, the lattice Boltzmann method (LBM) emerged as an
 interesting alternative to more established methods for fluid flow
 simulations. Sailfish-cfd \cite{januszewski2014sailfish} is an open
@@ -555,7 +553,7 @@ maniputation and inspection of 3d data.  The Jupyter 3d visualisation
 widgets developed in \taskref{ecosystem}{jupyter-widgets} can fulfil
 such needs.
 
-Based on previous experience with K3D-jupyter\cite{K3D}
+Based on previous experience with K3D-jupyter~\cite{K3D}
 widgets we know that web browser based software can display moderate
 dataset during the simulation. As the dataset is becoming larger the
 visualisation in the browser turns out to be nontrivial due to
@@ -573,13 +571,20 @@ solutions to this issue.
 %
   \begin{figure}[ht!]\centering
   \includegraphics[width=.95\textwidth]{images/k3d_cfd.png}
-  \caption{An example showing Jupyter based visualization of velocity magnitude in the blood flow through an aneurysm. It demonstrates use of small interactive widget for selecting cutting plane. Visualization is done by K3D-jupyter widget\cite{K3D}. In this case most of computations are done using VTK library on the server side, K3D-jupyter widget is used to display colored surface mesh. }\label{fig:k3d-cfd}
+  \caption{An example showing Jupyter based visualization of velocity
+    magnitude in the blood flow through an aneurysm. It demonstrates
+    the use of small interactive widget for selecting the cutting
+    plane.
+    Visualization is done by a K3D-jupyter widget~\cite{K3D}.
+    In this case most of computations are done using VTK library on
+    the server side, and the K3D-jupyter widget is used to display the
+    colored surface mesh.
+  }\label{fig:k3d-cfd}
   \end{figure}
 
 
 \medskip
-\textbf{Demonstrator: Geosciences (\taskref{applications}{geoscience})}\label{sec:concept-demonstrators-geo}
-
+\noindent\textbf{Demonstrator: Geosciences (\taskref{applications}{geoscience})}\label{sec:concept-demonstrators-geo}\\
 The amount of geospatial data from a variety of sources, including satellite observations, 4D simulations and in-situ observations, contributed by volunteers
 or state agencies keeps increasing. In many disciplines, managing this large volume
 has become a challenge, and the old approach of downloading datasets for a local
