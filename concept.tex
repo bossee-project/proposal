@@ -188,6 +188,8 @@ important components and concepts are detailed below.
 
 \end{itemize}
 
+\medskip\noindent\emph{Jupyter ecosystem}\label{jupyter-ecosystem}
+
 While Jupyter is a large, distributed, coordinated project,
 the wider community of Jupyter users develops a great deal of
 software with Jupyter integration,
@@ -197,8 +199,6 @@ We call this the \textbf{Jupyter ecosystem}.
 The broader Jupyter ecosystem includes many more projects than we will describe
 here, but a selection of projects which are relevant to
 \TheProject includes:
-
-\medskip\noindent\emph{Jupyter ecosystem}\label{jupyter-ecosystem}
 
 \begin{itemize}
   \item \textbf{Binder} builds on JupyterHub to allow sharing executable
@@ -293,8 +293,7 @@ For example:
   anyone, without Jupyter software.
 \item The Jupyter protocol describes how execution is performed, which
   has enabled the development of over one hundred kernel
-  implementations in dozens of languages. \TODO{Would be nice to add
-    reference that points to the relevant webpage listing the kernels.}
+  implementations in dozens of languages\footnote{\url{https://github.com/jupyter/jupyter/wiki/Jupyter-kernels}}.
 \item Output in the Jupyter protocol uses web-standard MIME types,
   enabling any possible format to be an output in a Jupyter notebook.
 \item The JupyterLab extension system provides a system for building
@@ -312,7 +311,7 @@ The benefits of focusing our work on a mature system like Jupyter are
 \begin{itemize}
 \item vibrant community ensures health and sustainability,
 \item large existing user base maximises impact of contributions,
-\item mature software ecosystem maintains quality software through,
+\item mature software ecosystem maintains quality software through
   industry standards such as version control, tests, continuous
   integration, stable release cycles, roadmaps, and user support.
 \end{itemize}
@@ -348,9 +347,10 @@ under-represented communities.
 
 
 \textbf{Proposed improvements of core components of Jupyter (\WPref{core})}\\
-We plan to make technical changes to the Jupyter Notebook software to support
+We plan to make technical changes to the Jupyter Notebook software to better support
 real-time collaboration (\taskref{core}{collaboration}),
-so that two or more people in different places can work together
+so that two or more people in different places or working on different
+devices can work together
 on the same notebook. This would significantly enhance the value of
 notebooks for collaborative research.
 We will also work on making Jupyter software accessible to as broad a
@@ -418,13 +418,13 @@ Beyond the improvement to the Jupyter core and ecosystem software for EOSC, we p
 \textbf{The science demonstrators}\label{sec:science-demonstrators-in-concept}\\
 \emph{Demonstrator: Astronomy (\taskref{applications}{astro})}\label{sec:concept-demonstrator-astronomy}
 
-  The \href{http://cdsweb.u-strasbg.fr/}{Strasbourg Astronomical Data Center} (CDS) is scientific data
+  The \href{http://cdsweb.u-strasbg.fr/}{Strasbourg Astronomical Data Center} (CDS) is a scientific data
   center hosted by the Observatory of Strasbourg. The CDS plays a unique and
   essential role in astronomy by adding value to published and reference data.
   CDS runs astronomical services that
   provide data for the world-wide astronomy research community. Its three main
   services (SIMBAD, VizieR and Aladin) are heavily used with up to one million
-  queries per day.  These services be accessed through web interfaces, mainly
+  queries per day.  These services can be accessed through web interfaces, mainly
   for human interaction, as well as through programmatic interfaces, including
   the standardized protocols defined by the International Virtual Observatory
   Alliance.
