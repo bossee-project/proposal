@@ -473,7 +473,7 @@ Beyond the improvement to the Jupyter core and ecosystem software for EOSC, we p
 these potentially large tables will bridge the gap between access and analysis
 of the data, with zero installation for the user.
   For specific science cases, we will explore rendering of notebooks with
-  interactive widgets through "Voila", as to allow users not familiar with
+  interactive widgets through Voila \cite{Voila}, as to allow users not familiar with
   Python to benefit from the Jupyter notebook framework.
   Figure~\ref{fig:astro-aladin-snapshot} depicts typical data objects we want to analyse and interact with in the notebooks: images, catalogue data, datasets coverages.
 
@@ -482,29 +482,28 @@ of the data, with zero installation for the user.
   The CDS expertise in astronomy data and interfaces will be profitably combined with expertise of BOSSEE partners to ensure the deployment of high quality widgets (Simula, WildTree Tech, QuantStack).
 
 \medskip
-\textbf{Demonstrator: enriched teaching with Jupyter (\taskref{applications}{teaching})}\label{sec:concept-demonstrator-teaching}
+\noindent\textbf{Demonstrator: Enriched education with Jupyter (\taskref{applications}{teaching})}\label{sec:concept-demonstrator-teaching}
 
-  As argued in Task~\taskref{ecosystem}{teaching-tools}, the Jupyter
+  The Jupyter
   ecosystem offers a versatile environment which has been widely
   adopted in higher education in the recent years. École
   Polytechnique, Université Paris-Sud and other participants from this
   project have been early adopters (see the description of \site{EP}
-  and \site{UPSUD}).
+  and \site{UPSUD}, and also task~\taskref{ecosystem}{teaching-tools}).
 
   \begin{figure}[ht!]\centering
   \includegraphics[width=.45\textwidth]{images/teaching-cling}\quad
   \includegraphics[width=.45\textwidth]{images/teaching-graphs}
   \caption{Jupyter based teaching material from Paris Sud. On the
-    left: an exercise sheet for the course \emph{introduction to
+    left: an exercise sheet for the course \emph{Introduction to
       programming}; this instructor version showcases interactive C++
     execution and automatic grading configuration menus. On the right:
-    interactive slides for a graph theory course.
-    course.}\label{fig:teaching-cling}
+    interactive slides for a graph theory course.}\label{fig:teaching-cling}
   \end{figure}
 
   We learned the hard way that deploying the Jupyter environment at a
   large scale (e.g. for a university) requires specialized expertise
-  (DevOps, software development, ...) which impediments its adoption
+  (DevOps, software development, ...) which impedes its adoption
   by the greatest number of people. High quality hosted solutions
   (e.g. cocalc, gryd) do exist but are not the final solution when it
   is desired to get higher control on private data, integration with
@@ -529,7 +528,7 @@ of the data, with zero installation for the user.
     in mathematics through better support for real-time interactivity.
   \item Task~\taskref{ecosystem}{xeus-cpp} will support teaching
     in computer-science and scientific programming through
-    better C++ integration in the notebook and will allow to first classe students to focus on the
+    better C++ integration in the notebook and will allow to first class students to focus on the
     syntax of the language without distractions such as compiling and
     linking a program.
   \item Task~\taskref{eosc}{eosc} will ease publication and FAIR
