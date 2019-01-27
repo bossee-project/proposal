@@ -30,13 +30,6 @@ project's content.}
 
 \subsubsection{Concept}\label{sec:concept}
 
-\begin{figure}[ht]\centering
-  \includegraphics[width=0.9\textwidth]{use-cases-binder-logbook-solution.png}
-  \caption{A typical use case for Jupyter notebooks in research.
-            Image by Juliette Belin for the OpenDreamKit project, used under
-            CC-BY-SA.}\label{fig:use-cases-binder}
-\end{figure}
-
 Open Science is the principle that science, in order to be most
 impactful and socially responsible, should be done publicly, with as
 much of the scientific process and products accessible, reviewable,
@@ -70,16 +63,16 @@ how can we make Open Science
 
 \begin{enumerate}
 \item improve and maintain common software infrastructure used for
-  Open Science
-\item develop the Jupyter ecosystem to improve capabilities better
-  serve Open Science
+  Open Science,
+\item develop the Jupyter ecosystem to improve capabilities to better
+  serve Open Science,
 \item guide, validate, and demonstrate our developments through
-  collaboration with a wide variety of application domains
+  collaboration with a wide variety of application domains,
 \item enable students and researchers to perform Open Science through
   training and education, and improving inclusiveness by focusing
-  these on under-served and under-represented communities.
+  these on under-served and under-represented communities, and
 \item operate services to facilitate Open Science collaborations with
-  Jupyter software
+  Jupyter software.
 \end{enumerate}
 
 \medskip
@@ -87,30 +80,50 @@ how can we make Open Science
 \subsubsection{Project Jupyter and the surrounding ecosystem}
 \label{sec:project-jupyter}
 
-\textbf{Jupyter ecosystem as the root of \TheProject}
+\begin{figure}[htb]\centering
+  \includegraphics[width=0.9\textwidth]{use-cases-binder-logbook-solution.png}
+  \caption{A typical use case for Jupyter notebooks in research.
+            Image by Juliette Belin for the OpenDreamKit project, used under
+            CC-BY-SA.}\label{fig:use-cases-binder}
+\end{figure}
+
+\noindent\textbf{Jupyter ecosystem as the root of \TheProject}
+
 
 \TheProject has chosen to centre its efforts on the Jupyter software
-ecosystem.  The Jupyter notebook and Jupyter ecosystem is of
-increasing importance in computational science and data science, in
-academia, industry and services. In addition to supporting high
-productivity of researchers, they have great potential to push open
-science forward: the notebook provides a complete description of a
-computational and data science study, and the notebook can -- in
-principle -- be turned into a publication, or can be used to provide
-the required computation for a part of a publication, such as a
-figure. In this way, the notebook enables reproducibility of complex
-tasks with hardly any additional effort on the user side (if used
+ecosystem. Figure~\ref{fig:use-cases-binder} summarises a typical use
+case of Jupyter Notebook and Binder; both are described in more detail
+below.
+
+The Jupyter notebook and Jupyter ecosystem are of increasing
+importance in computational science and data science, in academia,
+industry and services. In addition to supporting high productivity of
+researchers, they have great potential to push open science forward:
+the notebook provides a complete description of a computational and
+data science study (Step 1 in figure~\ref{fig:use-cases-binder}), and the notebook can -- in principle -- be turned
+into a publication, or can be used to provide the required computation
+for a part of a publication, such as a figure
+(Step 2 in figure~\ref{fig:use-cases-binder}). Once the researcher has
+specified what software is required to execute the notebook (Step 3
+in figure~\ref{fig:use-cases-binder}), the study is completely
+reproducible by anyone (Step 4 in figure~\ref{fig:use-cases-binder}).
+
+In this way, the notebook enables reproducibility of complex tasks
+with hardly any additional effort on the user side (if used
 appropriately). The Binder project allows to execute such notebooks in
 tailored computational environments; an aspect of reproducibility that
-is not widely supported yet. Furthermore, for users wanting to connect
+is not widely supported yet.
+
+Furthermore, for users wanting to connect
 to a local Jupyter notebook server on their machine, or to connect to
 a server somewhere else on the Internet, the users only need a
-webbrowser to display the notebook locally. Because of these
+web-browser to display and use the notebook regardless of the location
+of the notebook server. Because of these
 characteristics, the Notebook is already planned to become an
-important service on the European Open Science Cloud (EOSC), for
-example through the EOSC-04 funded PaNOSC project.
+important service on the European Open Science Cloud (EOSC) (for
+example in \cite{panosc}).
 
-\textbf{Project Jupyter}
+\medskip\noindent\textbf{Project Jupyter}
 
 \emph{Project Jupyter} \cite{Jupyter}, which has grown increasingly popular in the scientific
 computing community, has become the \emph{lingua franca} of interactive
@@ -125,14 +138,14 @@ base of the Jupyter notebook to be in the millions. Users range from data
 scientists to researchers, educators, and students from many fields,
 including journalists and librarians. In 2017, the Jupyter
 team was awarded the \emph{ACM Software System Award}, an annual award that
-honors people or an organization "for developing a software system that had a
-lasting influence". Prior recipients include \emph{Unix}, \emph{TCP/IP}, and
+honors people or an organization \emph{"for developing a software system that had a
+lasting influence"}. Prior recipients include \emph{Unix}, \emph{TCP/IP}, and
 the \emph{World Wide Web} \cite{acm-award}.
 
 A large number of discrete software components make up Project Jupyter.
 While these interact with one another, many can be installed separately
 to serve various use cases. For this proposal, we loosely divide the
-software involved into \emph{core} components developed under the guidance
+software involved into \emph{Jupyter core} developed under the guidance
 of the developers who started the project, and the broader \emph{Jupyter
 ecosystem} including software developed by third parties. Some of the
 important components and concepts are detailed below.
@@ -143,6 +156,7 @@ important components and concepts are detailed below.
   \caption{A notebook document in the Jupyter Notebook interface.}\label{fig:notebook-screenshot}
 \end{figure}
 
+\medskip\noindent\emph{Jupyter core}
 \begin{itemize}
   \item The \textbf{Jupyter Notebook} is the flagship application of Project Jupyter.
   It allows the creation of notebook documents, containing a mixture of text and
@@ -174,9 +188,6 @@ important components and concepts are detailed below.
 
 \end{itemize}
 
-\textbf{Jupyter ecosystem}
-\label{jupyter-ecosystem}
-
 While Jupyter is a large, distributed, coordinated project,
 the wider community of Jupyter users develops a great deal of
 software with Jupyter integration,
@@ -184,11 +195,12 @@ providing increased or domain-specific functionality,
 building on top of Jupyter, or integrating core Jupyter components in some aspect.
 We call this the \textbf{Jupyter ecosystem}.
 The broader Jupyter ecosystem includes many more projects than we will describe
-here, but a selection of projects which may be relevant to
+here, but a selection of projects which are relevant to
 \TheProject includes:
 
-\begin{itemize}
+\medskip\noindent\emph{Jupyter ecosystem}\label{jupyter-ecosystem}
 
+\begin{itemize}
   \item \textbf{Binder} builds on JupyterHub to allow sharing executable
   environments along with data files and a description of the libraries
   required to run the notebooks. When someone accesses a Binder repository,
@@ -209,8 +221,8 @@ here, but a selection of projects which may be relevant to
   test suite, it's valuable for documentation with code examples in notebooks.
   If changes to the underlying tools mean the example no longer
   works, testing with nbval will quickly show this, so that either the software
-  or the example can be corrected. This ensures that example code doesn't
-  get outdated.
+  or the example can be corrected. This ensures that example code and
+  documentation don't get outdated.
 
   \item \textbf{nbdime} \cite{nbdime} provides tools for comparing and merging notebooks.
   These integrate with version control systems such as \emph{git}, which
@@ -244,7 +256,8 @@ here, but a selection of projects which may be relevant to
   \label{fig:ipywidgets-example}
 \end{figure}
 
-\textbf{Jupyter as a basis for web services}
+\medskip
+\noindent\textbf{Jupyter as a basis for web services}\\
 Because the Jupyter notebook is a web-based application, it can be
 deployed at computational facilities or in the cloud, and can function
 as the basis for services exposing computational resources of all
@@ -255,7 +268,8 @@ audience can follow their own initiative and ask their own questions
 of published data without needing support from the publishing author,
 greatly facilitating the \textbf{practicality of Open Science}.
 
-\textbf{Jupyter is generic}
+\medskip
+\noindent\textbf{Jupyter is generic}\\
 \TheProject chose Jupyter because it is
 Generic.  Jupyter makes no domain-specific or even language-specific
 assumptions.  Any application where mixing description, code, and
@@ -269,44 +283,42 @@ software, but a description of how such software can be built.  The
 result is the ability for a variety of communities and applications to
 use components of Jupyter for their purposes, and/or reimplement pieces to
 meet their needs.
-
+%
 For example:
-
 \begin{enumerate}
 \item The notebook file format is a well-specified JSON document,
   which can be interpreted by many systems.  This has facilitated the
   development of different services rendering notebooks, e.g. the code
   hosting website GitHub, which renders notebooks for easy viewing by
   anyone, without Jupyter software.
-\item the Jupyter protocol describes how execution is performed, which
+\item The Jupyter protocol describes how execution is performed, which
   has enabled the development of over one hundred kernel
-  implementations in dozens of languages.
-\item output in the Jupyter protocol uses web-standard MIME types,
+  implementations in dozens of languages. \TODO{Would be nice to add
+    reference that points to the relevant webpage listing the kernels.}
+\item Output in the Jupyter protocol uses web-standard MIME types,
   enabling any possible format to be an output in a Jupyter notebook.
-\item the JupyterLab extension system provides a system for building
-  applications from Jupyter components and others
-\item the Jupyter Widgets provide a system for customizing and
-  extending interactivity in Jupyter-based environments
+\item The JupyterLab extension system provides a system for building
+  applications from Jupyter components and others.
+\item The Jupyter Widgets provide a system for customizing and
+  extending interactivity in Jupyter-based environments.
 \end{enumerate}
 
 The popularity of Jupyter, with millions of users and hundreds of open
 source contributors, indicates the value and impact of this approach.
 
 \medskip
-\textbf{Improvement to the Jupyter ecosystem}
-
+\noindent\textbf{Improvement to the Jupyter ecosystem}\\
 The benefits of focusing our work on a mature system like Jupyter are
-
 \begin{itemize}
-\item vibrant community ensures health and sustainability
-\item large existing user base maximises impact of contributions
-\item mature software ecosystem maintains quality software through
+\item vibrant community ensures health and sustainability,
+\item large existing user base maximises impact of contributions,
+\item mature software ecosystem maintains quality software through,
   industry standards such as version control, tests, continuous
-  integration, stable release cycles, roadmaps, and user support
+  integration, stable release cycles, roadmaps, and user support.
 \end{itemize}
 
-The Jupyter community aims to be inclusive, and \TheProject will
-continue this effort.  Jupyter is inclusive across a number of axes.
+The Jupyter community aims to be inclusive, and \TheProject fully
+embraces and supports that approach.  Jupyter is inclusive across a number of axes.
 By being applicable across numerous domains, Jupyter and \TheProject
 encourage participation from individuals of various interests and
 backgrounds, and has taken action to improve diversity in the project
@@ -913,4 +925,3 @@ Figure
   for publications will be preserved for longer, and it would be
   highly desirable to keep the data analysis re-executable for the
   same period of time, potentially well exceeding 10 years.
-
