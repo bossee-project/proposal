@@ -138,14 +138,14 @@ base of the Jupyter notebook to be in the millions. Users range from data
 scientists to researchers, educators, and students from many fields,
 including journalists and librarians. In 2017, the Jupyter
 team was awarded the \emph{ACM Software System Award}, an annual award that
-honors people or an organization "for developing a software system that had a
-lasting influence". Prior recipients include \emph{Unix}, \emph{TCP/IP}, and
+honors people or an organization \emph{"for developing a software system that had a
+lasting influence"}. Prior recipients include \emph{Unix}, \emph{TCP/IP}, and
 the \emph{World Wide Web} \cite{acm-award}.
 
 A large number of discrete software components make up Project Jupyter.
 While these interact with one another, many can be installed separately
 to serve various use cases. For this proposal, we loosely divide the
-software involved into \emph{core} components developed under the guidance
+software involved into \emph{Jupyter core} developed under the guidance
 of the developers who started the project, and the broader \emph{Jupyter
 ecosystem} including software developed by third parties. Some of the
 important components and concepts are detailed below.
@@ -156,6 +156,7 @@ important components and concepts are detailed below.
   \caption{A notebook document in the Jupyter Notebook interface.}\label{fig:notebook-screenshot}
 \end{figure}
 
+\medskip\noindent\emph{Jupyter core}
 \begin{itemize}
   \item The \textbf{Jupyter Notebook} is the flagship application of Project Jupyter.
   It allows the creation of notebook documents, containing a mixture of text and
@@ -187,9 +188,6 @@ important components and concepts are detailed below.
 
 \end{itemize}
 
-\textbf{Jupyter ecosystem}
-\label{jupyter-ecosystem}
-
 While Jupyter is a large, distributed, coordinated project,
 the wider community of Jupyter users develops a great deal of
 software with Jupyter integration,
@@ -197,11 +195,12 @@ providing increased or domain-specific functionality,
 building on top of Jupyter, or integrating core Jupyter components in some aspect.
 We call this the \textbf{Jupyter ecosystem}.
 The broader Jupyter ecosystem includes many more projects than we will describe
-here, but a selection of projects which may be relevant to
+here, but a selection of projects which are relevant to
 \TheProject includes:
 
-\begin{itemize}
+\medskip\noindent\emph{Jupyter ecosystem}\label{jupyter-ecosystem}
 
+\begin{itemize}
   \item \textbf{Binder} builds on JupyterHub to allow sharing executable
   environments along with data files and a description of the libraries
   required to run the notebooks. When someone accesses a Binder repository,
@@ -222,8 +221,8 @@ here, but a selection of projects which may be relevant to
   test suite, it's valuable for documentation with code examples in notebooks.
   If changes to the underlying tools mean the example no longer
   works, testing with nbval will quickly show this, so that either the software
-  or the example can be corrected. This ensures that example code doesn't
-  get outdated.
+  or the example can be corrected. This ensures that example code and
+  documentation don't get outdated.
 
   \item \textbf{nbdime} \cite{nbdime} provides tools for comparing and merging notebooks.
   These integrate with version control systems such as \emph{git}, which
