@@ -5,7 +5,6 @@
 
 \section{Impact}
 \label{sec:impact}
-\TOWRITE{ALL}{Describe impact}
 
 The central impact of the \TheProject project will be a significant improvement
 and extension of the Jupyter tools and ecosystem described in section \ref{sec:project-jupyter}
@@ -31,6 +30,14 @@ The result will be innovative new prototype services that will provide
 direct benefits to the early adopters in various research fields.
 Moreover it will serve as a demonstration of a strategy for open science
 using notebooks that will be applicable across many domains.
+
+EGI supports the e-Infrastructure uptake of several ESFRIs in the EOSC-hub project.
+Several of these already experiment with Jupyter (either using the EGI's JupyterHub
+service, or community specific installations). These communities will
+be reached out to by
+EGI directly in the EOSC-hub project, and through the annual events organized by EGI
+around EOSC: EOSC-hub weeks, the DI4R conferences and EGI conferences. During these
+events EGI will contribute to promote the adoption of the project results.
 
 \subsection{Expected Impacts}
 
@@ -75,7 +82,7 @@ work program is detailed in the table below.
   collaboration.
 
   The improvements and extensions of the core parts of the Jupyter system are
-  being ``co-designed'' by technical, industrial and scientific experts in the
+  being co-designed by technical, industrial and scientific experts in the
   BOSSEE project, so that they will be widely applicable in new innovative
   services across many scientific disciplines.
   The impact of this approach for enabling scientific use of notebooks is expected
@@ -84,7 +91,6 @@ work program is detailed in the table below.
   The notebook approach is being embraced in many scientific disciplines, so the
   proposed services to be developed in BOSSEE are strongly oriented to the user needs.
 
-  \TOWRITE{ALL}{More about impact of Jupyter ecosystem improvements...}
   \\\hline
 
   Supporting the objectives of Open Science by
@@ -99,9 +105,8 @@ work program is detailed in the table below.
   mechanism to reproduce results in publications, and collaborative
   sharing of not just scientific results, but of the code that produced them.
 
-  We expect the use of notebooks in EOSC to improve access to scientific code,
-  and the data which it handles. By combining code and explanation in a convenient
-  digital document, notebooks encourage publishing workflows, whereas code in
+  We expect the use of notebooks in EOSC to improve access to scientific code:
+  digital documents and notebooks encourage publishing workflows, whereas code in
   scripts or manual interactive workflows are often kept by the researchers who
   performed them. The focus on clarity and reproducibility also helps to ensure
   that data is meaningfully accessible, by preserving essential understanding to
@@ -115,11 +120,11 @@ work program is detailed in the table below.
   studied these notebooks and improved the signal processing.
   In this proposal, we want to provide this ability to a wider audience through
   EOSC, including for disciplines which rely on processing much larger volumes of
-  data. \TOWRITE{ALL}{Citation for the LIGO story?}
+  data \cite{ligo-open-science}.
 
   The astronomy application in \TheProject (\taskref{applications}{astro})
   is designed to provide a new level of interoperability of
-  reference astronomy data within jupyter notebooks.
+  reference astronomy data within Jupyter notebooks.
   By connecting new notebook capabilities to existing and highly used services,
   we expect to have impacts for the users and also for the service provider.
   The scientific users will have access to new capabilities,
@@ -160,14 +165,26 @@ work program is detailed in the table below.
 \end{center}
 
 
-\subsection{Measuring impact}
+\subsubsection{Measuring impact}
 
-\TOWRITE{ALL}{Communicating the results, all deliverables
+We will measure our progress toward aims and objectives in \ref{sect:objectives}
+via the following
+Key Performance Indicators (KPIs):
 
-Performance indicators
-Monitoring use of prototype services… counting numbers of notebooks created/used/sessions ?? }
+\begin{compactenum}[\textbf{KPI} 1:]
+  \item \label{kpi:workshop-attendees}
+    Attendees at Open Science workshops organised by \TheProject participants.
+  \item \label{kpi:binder-publications}
+    Open publications available on \TheProject services.
+  \item \label{kpi:binder-visits}
+    Visitors to \TheProject services, engaging with open, interactive communications.
+  \item \label{kpi:dissemination}
+    Publications and presentations by \TheProject documenting the use of \TheProject services for Open Science.
+  \item \label{kpi:contributions}
+    Contributions by \TheProject and the wider community to Jupyter software and others.
+\end{compactenum}
 
-\subsection{Barriers, Obstacles and Framework conditions}
+\subsubsection{Barriers, Obstacles and Framework conditions}
 
 The BOSSEE project will certainly face a number of challenges as it undertakes
 the ambitious program of work described by this proposal.
@@ -175,18 +192,98 @@ We can identify a number of potential barriers and obstacles but overall
 these are assessed to be minor and planning is in place to mitigate the
 identified risks.
 
-\TOWRITE{ALL}{Identify a few potential barriers and mitigating activities...}
-
 While a number of the partners have worked closely together in previous projects,
 the integration of new partners from different disciplines will require
 dedicated efforts for communication within the project.
 
-\subsection{Socially important impacts}
+A detailed assessment of risks and mitigations can be found in \ref{sec:risks}.
 
-\TOWRITE{ALL}{...}
+\subsection{Measures to maximise impact}
 
-\subsection{Exploitation and Dissemination plans}
+\TheProject is contributing to tools for Open Science and for building and operating Open Science services.
+Tools only have impact if and when they are used,
+so it is important that we disseminate our work
+and reach and support user communities for our software and services.
 
-\TOWRITE{ALL}{
-  table on exploitation plan and dissemination plan (general and per partners). Develop impact at european level and add a business plan to place BOSSEE in the european economic context.
+\subsubsection{Dissemination and exploitation of results}
+
+\WPref{education} is focused on dissemination of \TheProject work.
+Our goal is to facilitate Open Science through the development and use of tools.
+All \TheProject software will be made publicly and freely available under open source licenses, and hosted on public code hosting sites such as GitHub.
+All Project Jupyter software is licensed under the permissive BSD license,
+which specifically allows commercial exploitation,
+as has proven successful in enabling collaborations with industrial partners
+such as Google, Microsoft, IBM, and more.
+This means that all \TheProject software will be available and accessible to all who find it,
+at no cost to \TheProject,
+enabling long-term access beyond the funding of \TheProject.
+As a result, the primary dissemination effort is to:
+
+\begin{enumerate}
+  \item make sure that prospective users are aware of the work, and
+  \item enable them to use the tools through learning resources, training, and services
+\end{enumerate}
+
+Our focus for dissemination will be on \taskref{education}{workshops},
+operating workshops, training various communities in the availability,
+purpose, development, and use of \TheProject software and services.
+We will make a particular effort to use these workshops as an opportunity
+to support diversity in the Open Science community,
+by running workshops for under-served and under-represented communities.
+Additionally, for long-term resources available to the wider community
+who will not be able to attend workshops,
+we will produce free, online materials for training in the use of \TheProject
+software and services.
+These resources will be hosted on free, public hosting service,
+such as GitHub Pages,
+enabling long-term access to the work of \TheProject,
+even after the end of funding.
+
+The operation of services in \WPref{eosc} is also a dissemination activity,
+as services like Binder not only enable Open Science by facilitating interactive publications,
+they also enable interactive demonstration of tools and functionality
+developed in \TheProject, e.g. \taskref{ecosystem}{xeus-cpp}.
+We have set aside \euro 5000 per month for the operation of services in \WPref{eosc},
+to be spent by \site{EGI} on cloud computing resources for service hosting.
+This cost estimate is based on the operation costs of mybinder.org.
+\TheProject in collaboration with the operators of mybinder.org,
+will explore sustainability plans for covering long-term costs of operating such services,
+including institutional subscription models, donations, and others.
+
+\noindent \textbf{Data management plan}
+\label{sec:data-management-plan}
+Unless specifically listed below,
+sites will not generate or collect data as part of \TheProject.
+\TheProject is mostly about building and operating services
+for enabling interaction with data,
+not the generation of collection of data ourselves.
+
+\noindent \textbf{Binder service usage data}
+Any data collected through the operation of public services such as Binder
+(e.g. popularity data for public open science repositories)
+will be fully anonymised to the satisfaction of GDPR
+and made publicly available in the standard JSON Lines format,
+as is done already for mybinder.org \cite{mybinder-archive}.
+This is very small data and easily archived on free hosting services such as GitHub,
+and will be made available under the Creative-Commons Universal Public Domain (CC0)public domain license.
+
+\TOWRITE{demonstrators}{
+  Every site that will generate or collect data needs to answer:
+
+  - What types of data will the project generate/collect?
+  - What standards will be used?
+  - How will this data be exploited and/or shared/made accessible for verification and re-use? If data cannot be made available, explain why.
+  - How will this data be curated and preserved?
+  -  How will the costs for data curation and preservation be covered?
 }
+
+\subsubsection{Communication activities}
+
+The main remaining goal for dissemination is making sure that potential users are aware of the tools and services developed by \TheProject.
+In addition to \TheProject-organised workshops in \taskref{education}{workshops},
+the primary mechanism by which we will communicate our results is through publications and conferences.
+All publications funded by \TheProject will be \textbf{Open Access},
+and sites expecting publications have budgeted funds for paying Open Access fees.
+We will identify and attend appropriate conferences for sharing our work,
+including running tutorials at conferences in historically interested communities such as PyData and SciPy. In addition, we will operate a website (\taskref{education}{website})
+for collecting and sharing information about \TheProject and its progress.

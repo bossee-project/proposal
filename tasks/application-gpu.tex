@@ -1,72 +1,34 @@
 \begin{task}[
-  title=Application: Visualisation and control of fluid dynamics in Jupyter notebook,
+  title=Demonstrator: Visualisation and control of fluid dynamics in Jupyter notebook,
   id=application-gpu,
   lead=SIL,
-  PM=13,
+  PM=12,
   wphases={4-36},
   % don't include lead here
   partners={EGI}
 ]
 
-\textbf{Context}
 
-In recent years, the lattice Boltzmann method (LBM) emerged as an
-interesting alternative to more established methods for fluid flow
-simulations. Sailfish-cfd \cite{januszewski2014sailfish} is an open
-source implementation of the LBM on General Purpose Graphical Processing
-Unit (GPGPU) devices. It is written in Python with real-time
-generation of CUDA-C code.  In order to harvest capabilities of GPGPUs
-one needs to access the specialized hardware, which usually is
-available to researchers as remote HPC resources.  The typical fluid
-dynamics research workflow consists of three stages: preparing
-boundary conditions, running a simulation, and data analysis. The
-first and last stage require capable and responsive user interface for
-maniputation and inspection of 3d data.  The Jupyter 3d visualisation
-widgets developed in \taskref{ecosystem}{jupyter-widgets} can fulfil
-such needs.
-
-Based on previous experience with K3D-jupyter\cite{K3D}
-widgets we know that web browser based software can display moderate
-dataset during the simulation. As the dataset is becoming larger the
-visualisation in the browser turns out to be nontrivial due to
-limitations of the browser itself and required large data transfers. It is
-an open question how much of data processing should be performed on
-server-side and what can be done on the client hardware (i.e. in the
-widget in the browser side of the user). Our
-experience suggests that there is no clear answer and it depends on
-the size of the data and its nature. For example, volume rendering
-technique can be very effective on the browser side but infers large data
-transfers. One can perform it the server-side, in a distributed way if
-the simulation uses many nodes, but the interactivity is limited by
-network latency. We will attempt to provide practical
-solutions to this issue.
-%
-
-
-\textbf{This task}
-
-
-In this task, we will contruct tools for editing and inspecting
-boundary conditions. Having such tools as Jupyter widgets will allow
-to complete the workflow without leaving Jupyter notebook. We plan the
-following activities
+In this task (see page \pageref{sec:concept-demonstrator-gpu}), we will construct tools for editing and inspecting boundary conditions in fluid dynamics simulation as well as capable and optimized visualization utilities. 
+Having such tools available as Jupyter widgets will allow to complete the typical CFD workflow without leaving Jupyter notebook. We plan the following activities
 \begin{compactitem}
-\item Development of Jupyter notebooks using fluid
-  simulation based on the high-performance Sailfish-cfd solver.
-\item Implementing advanced widgets for data visualisation of large
+
+\item Implement advanced widgets for data visualisation of large
   fluid dynamics simulations.
-\item Implementing widgets for inspection and editing boundary
+\item Implement widgets for inspection and editing boundary
   conditions in LBM.
+\item Develop Jupyter notebooks demonstrating the full workflow of  fluid
+  dynamics simulation based on the high-performance Sailfish-cfd solver.
+  \item Publish selected demonstration notebooks for interactive use on
+    GPU-enabled \TheProject's EOSC services (\delivref{applications}{demonstrators}).
 \end{compactitem}
 
 This work will closely interact in with the task
-\taskref{ecosystem}{jupyter-widgets}: it will both provide guidelines
+\taskref{ecosystem}{jupyter-widgets}: it will both provide guidelines and inspirations
 for the development to \taskref{ecosystem}{jupyter-widgets} and serve
 as test case for implemented features in
 \taskref{ecosystem}{jupyter-widgets}.
-
-The deliverable of this part will be a demonstrator
-(\localdelivref{lbm-jupyter}) available via the EOSC hub, and
-contributions to report \localdelivref{applications-report}.
-
+%
+  It will be reported on in
+  \delivref{applications}{applications-report}.
 \end{task}

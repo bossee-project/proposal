@@ -1,4 +1,4 @@
-\begin{sitedescription}{SIL}
+\begin{sitedescription}{SIL}\label{desc:SIL}
 
 The University of Silesia in Katowice was established in 1968. Now,
 with 12 faculties and several interdisciplinary schools and centres,
@@ -22,43 +22,67 @@ Master`s and Doctoral. The Faculty is entitled to grant doctoral
 degrees in the natural sciences. The Faculty staff consists of 243
 academics who are both teachers and researchers.
 
-% PIC:
-% see: http://ec.europa.eu/research/participants/portal/desktop/en/organisations/
-%
-% See ../proposal.tex, section Members of the Consortium for a
-% complete description of what should go there
 
-\subsubsection*{Curriculum vitae}
-\TODO{AK - rules say "CV or description of the profile of the persons"
-  can we name it "Track record" instead of CV?}
+In the context of this project, University of Silesia has started offering notebook based resources for teaching and research since 2011, based on \Sage system. Now it offers courses in science and programming based on Jupyter notebook as well as collaborates with local high schools in this matter. 
 
-% Curriculum of the personnel at this institution. This includes
-% to-be-hired people for which there is a tentative candidate.
 
-%\input{CVs/First.Last.tex}
-%\input{CVs/First.Last.tex}
-%\input{CVs/First.Last.tex}
+\subsubsection*{Curriculum vitae of the investigators}
 
-% For other to-be-hired person, please include here something like:
-% \begin{participant}[type=res,PM=3,salary=5900]{NN}
-%  <a _short_ description of the qualifications of whom you want to hire>
-% \end{participant}
+\input{CVs/Marcin.Kostur.tex}
+\input{CVs/Jerzy.Luczka.tex}
+
+\begin{participant}[type=R,PM=16,salary=2500]{Research Engineer}
+    We will hire a part time researcher with strong programming skills to work on task~\taskref{applications}{application-gpu} under leadership of Marcin Kostur. 
+The fellow will have a strong knowledge of GPU comuting as well as 3d data visualisation. 
+We further require good communication and team working skills, in particular to work in tight collaboration with international open-source developer communities.
+\end{participant}
 
 \subsubsection*{Publications, products, achievements}
 
 \begin{compactenum}
-\item \TOWRITE{XXX}{...}
+\item Leadership on development K3D-jupyter project which is an 3d visualisation Juypyter widget, (\url{https://github.com/K3D-tools/K3D-jupyter})
+\item Leadership on development Sailfish-cfd which is an GPU implementation of the lattice Boltzmann method. (\url{https://github.com/sailfish-team/sailfish})\cite{januszewski2014sailfish}
+\item Marcin Kostur has received the Award of the Minister of Science and Higher Education for implementing "Computers in Science Education" programme.
+\item The project  Computing in high school science education - iCSE4schools, has received an award of Foundation for the Development of the Education System.
+
+
 \end{compactenum}
 
-\subsubsection*{Previous projects or activities}
+\subsubsection*{Relevant projects or activities}
 
 \begin{compactenum}
-\item \TOWRITE{XXX}{...}
+\item OpenDreamKit (GA No. 676541) Open Digital Research Environment
+  Toolkit for the Advancement of Mathematics, (site leader)
+  \item Infrastructure for cloud-based system education: scalable 
+  implementation of Jupyter notebook system for scientific explorations, project funded by Erasmus+, Key Action 2 - ``Strategic Partnership'', (budget: \euro{160}k, 2017-2019)
+  \item Computing in high school science education - iCSE4schools,
+    project funded by Erasmus+, Key Action 2 - ``Strategic Partnerships'',
+    (budget: \euro{263}k, 2014-2017)
+  \item ``Computers in Science Education: iCSE'' http://icse.us.edu.pl
+    (budget: \euro{1}m, funded by EFS, 2011-2014)
+  \item 2011-2014 - iCSE (innovative Computing in Science Education) -
+      \euro 1m grant from European Social Fund, incorporating
+      computational perspective in teaching of mathematics, physics and
+      chemistry using cloud based \Sage system and \Python language.
+    \item 2014-30.11.2015 PAAD (Platform for data analysis and archiving) 
+    \euro 3.8m, funded is mostly HPC centre for research with
+      interactive access based on web based notebook UI.
+    \item 2014-30.11.2015 CNS: Centre of Applied Science - 2nd stage,
+      Infrastructure grant includes \euro 0.5m funding for small HPC and
+      cloud infrastructure for education. 
+
 \end{compactenum}
 
 \subsubsection*{Significant infrastructure}
 
-\TOWRITE{XXX}{...}
+The University of Silesia has finished or currently implements ESF grants
+totalling to about \euro 120m for infrastructure, laboratories and
+computing centres. New HPC centres created as a part of PAAD and
+CNS projects provide necessary hardware for development
+and implementation of cloud based research and teaching. In particular 
+\site{SIL} hosts a local cloud infrastructure for education avaiable to student of the Faculty of Mathematics, Physics and Chemistry. It contains 320 cores system containing 8 GPU. Moreover there is small heteregenous HPC cluster dedicated to research, containing GPU, high-memory and Xeon Phi nodes. It is now available via Jupyterhub interface. 
+
+
 \end{sitedescription}
 %%% Local Variables:
 %%% mode: latex

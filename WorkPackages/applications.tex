@@ -34,74 +34,74 @@ once completed)}
    \item to guide the development of core tools by simultaneously
      developing and using applications in diverse fields with active
      scientists from these fields, and
-   \item demonstrate that the tools we develop are valuable to diverse
+   \item to demonstrate that the tools we develop are valuable to diverse
      fields of science, thus ensuring we develop e-infrastructure and
      services which can cater for a broad customer base of EOSC.
- \end{compactitem}
+   \end{compactitem}
 \end{wpobjectives}
 
 \begin{wpdescription}
 
-  In order to ensure that the work we do is beneficial to science and
-  society, we will develop applications as EOSC services in diverse domains, using the
-  components developed in work packages \WPref{core} and
-  \WPref{ecosystem}.
+  Whilst the components issued from work packages  \WPref{core} and \WPref{ecosystem} will be
+  made available as generic building blocks for EOSC services, this
+  work package aims at building and deploying bespoke EOSC services
+  targeting real-world cases.
 
-  By developing applications simultaneously with the core
-  infrastructure and services, we ensure that we are serving
-  real-world use cases with our development.  Feedback from
-  applications development can guide development of core features.  In
-  addition to helping ensure that our work is useful to the chosen
-  application domains, the showcases serve as demonstrations of
-  this utility.
-
-  One of the key aspects of Jupyter that make it the choice for
-  \TheProject, is that it is generic, based on open protocols and
-  widely useful in diverse domains, from physics to life sciences to
-  education and the global community working with public and private
-  data. We have selected a number of applications in a variety of domains
+  We have selected a number of applications in a variety of domains
   to demonstrate the broad impact of \TheProject, in particular in the
-  areas of education (\localtaskref{teaching}), photon science and
-  imaging (\localtaskref{reproducibility-xfel}), astronomy
-  (\localtaskref{astro}), geosciences (\localtaskref{geoscience}), 
-  fluid dynamics (\localtaskref{application-gpu}), 
-  mathematics (\localtaskref{math}) and health (\localtaskref{opendose-analysis}).
+  areas of astronomy
+  (\localtaskref{astro}), education
+  (\localtaskref{teaching}), fluid dynamics
+  (\localtaskref{application-gpu}), geosciences
+  (\localtaskref{geoscience}), health
+  (\localtaskref{opendose-analysis}), mathematics
+  (\localtaskref{math}) and photon science and imaging
+  (\localtaskref{reproducibility-xfel}).
+  The context and vision for each of the demonstrators is described in
+  section \ref{sec:science-demonstrators-in-concept} on page
+  \pageref{sec:science-demonstrators-in-concept}.
+
+  Working closely with the core developers of the Jupyter ecosystem will make it possible to
+  go way beyond what is normally available "out-of-the-box" and to offer better solutions,
+  thereby guiding further development of the core features.
 
   \medskip
-  Our demonstrators will typically follow a two-stage design: (i)
-  development and testing of the functionality in Jupyter Notebook
-  with local execution of the services at the developing partner
+  Our demonstrators will typically undergo two-stages: (i)
+  development and testing of the services locally at the developing partner
   site. (ii) Making the service available through the European Open
   Science Cloud (EOSC).
 
-  For step (ii), we will deliver base-line services by making the
-  relevant notebooks executable in the MyBinder instance that this
-  project will contribute to EOSC. This is sufficient to demonstrate
-  the Jupyter service features such as reproducibility, interactive
-  widget use and visualisation, and to demonstrate how these can
+  All demonstrators will deliver base-line services by making the
+  relevant notebooks executable in the \emph{European Binder Service} instance that this
+  project will deployed on EOSC. This will demonstrate
+  the Jupyter service capabilities such as reproducibility, interactive
+  widget use and visualisation, and show how these can
   enable new open science on EOSC.
 
   The particular workflows, data infrastructures and data policies for
-  FAIR sharing of data vary a lot from one community and use-case to
+  FAIR\footnote{Findable, Accessible, Interoperable and Reusable} sharing of data vary from one community and use-case to
   the other, or may not be fully defined yet. Therefore, this proposal
-  does not enforce a specific way of handling with data. Instead we
+  does not enforce a specific way of handling data. Instead we
   will explore in the demonstrator tasks how existing data policies,
   infrastructure and workflows can be respected and integrated with
   authentication and authorisation, data management, and
-  JupyterHub/Binder services on EOSC in the future. EGI is a partner
-  for all the tasks in this work packages and will work with us to
-  find the best integration opportunities in the evolving EOSC
+  JupyterHub/Binder services on EOSC. EGI is a partner
+  for all the tasks in this work package and will work with us to find the
+  best integration solutions in the evolving EOSC
   infrastructure.
 
-  For some of the demonstrators, such as the photon science and
-  astronomy demonstrators, we will collaborate with other projects
-  such as PaNOSC and ESCAPE in which authentication and authorisation
-  and data management are addressed for those domains already.
+  For some of the demonstrators, authentication and authorization and/or
+  data management are being addressed outside \TheProject.
+  This is for instance the case for the photon science and astronomy
+  demonstrators via \href{https://panosc-eu.github.io/}{PaNOSC} and
+  \href{https://www.eso.org/public/announcements/ann18084/}{ESCAPE} projects, respectively.
+
 \end{wpdescription}
 
 \begin{tasklist}
 % add tasks from task directory here
 % \input{tasks/template}
+\input{tasks/codesign-support}
 \input{tasks/application-astro}
 \input{tasks/teaching}
 \input{tasks/application-gpu}
@@ -117,40 +117,22 @@ once completed)}
 %\TODO{update due date and startup!}
 %\TODO{update milestone!}
 
-  \begin{wpdeliv}[due=42,miles=community,id=application-astro,dissem=PU,nature=DEM,lead=CDS]
-    {Demonstrator of astronomical data services based on on reference astronomy
-    data from CDS in Jupyter notebooks is made available for use by the
-  astronomy research community.}
+  \begin{wpdeliv}[due=12,miles=startup,id=codesign-support,dissem=PU,nature=R,lead=SRL]
+    {Initial requirements for the demonstrators.}
   \end{wpdeliv}
 
-  \begin{wpdeliv}[due=48,miles=final,id=teaching,dissem=PU,nature=R,lead=EP]
-    {How Jupyter ecosystem can enrich the teaching experience: a case study at
-    \'Ecole polytechnique and Université Paris-Sud.}
+  \begin{wpdeliv}[due=24,miles=prototype,id=local-services,dissem=PU,nature=R,lead=EP]
+    {Report on the developments of the demonstrator services deployed locally.}
   \end{wpdeliv}
 
-  \begin{wpdeliv}[due=24,miles=final,id=lbm-jupyter,dissem=PU,nature=DEM,lead=SIL]
-    { Demonstrator of LBM simulation in in Jupyter notebook using GPU solver
-      sailfish-cfd. It will include setting boudary conditions, monitoring the
-      simulation and visualisation of the data. It will be based on K3D-Jupyter
-    widget for 3d interactive input and output.}
-  \end{wpdeliv}
-
-  \begin{wpdeliv}[due=36,miles=community,id=opendose-analysis,dissem=PU,nature=DEM,lead=INSERM]
-    {Jupyter services for nuclear medicine dosimetry with the OpenDose project.}
-  \end{wpdeliv}
-
-  \begin{wpdeliv}[due=36,miles=final,id=math,dissem=PU,nature=R,lead=UPSUD]
-    {Report on Interactive Mathematics with Jupyter Widgets}
-  \end{wpdeliv}
-
-  \begin{wpdeliv}[due=45,miles=final,id=xfel-workflows,dissem=PU,nature=DEM,lead=XFEL]
-    {Demonstrator reproducible photon science}
+  \begin{wpdeliv}[due=36,miles=community,id=demonstrators,dissem=PU,nature=DEM,lead=EGI]
+    {Demonstrators based on locally developed services made accessible
+      through EOSC. Demonstrators may be developed further subsequently.}
   \end{wpdeliv}
 
   \begin{wpdeliv}[due=48,miles=final,id=applications-report,dissem=PU,nature=R,lead=XFEL]
-    {Evaluation of demonstrators and case studies. Report on feasibility, user
-      feedback, potential shortcomings and improvement, to guide EOSC service
-    design.}
+    {Evaluation of demonstrators and case studies. Report on
+      feasibility and user to guide EOSC service design.}
   \end{wpdeliv}
 
 \end{wpdelivs}

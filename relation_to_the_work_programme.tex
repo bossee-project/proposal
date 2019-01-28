@@ -20,11 +20,12 @@ tools for the EOSC.
 
 There is evidence that the Jupyter Notebook is an e-infrastructure
 that is useful across many domains: is is already widely adopted in
-numerous communities and used by millions of researchers worldwide:
-\TODO{Check claim, Thomas Kluyver?}
+numerous communities and used by millions of researchers worldwide
+\cite{jupyter-grant}.
+
 \begin{itemize}
 \item \emph{Journalists} and practitioners of \emph{data-driven
-    journalism},
+    journalism} at the LA Times, BuzzFeed News, Columbia Journalism School \cite{latimes-datadesk} \cite{columbia-nytimes} \cite{data-journalism},
 \item \emph{Research institutions} such as CERN, JRC, and many more,
   operating institution-wide Jupyter deployment,
 \item \emph{Universities} using Jupyter as a teaching platform,
@@ -37,8 +38,25 @@ numerous communities and used by millions of researchers worldwide:
 \item \emph{Data scientists}: some argue that the Jupyter Notebook is
   \emph{the} tool of choice for data scientists across domains
   \cite{Perkel2018}.
-\item Over 3 million notebooks are deposited on Github \cite{notebookcount}.
+\item Over 3 million notebooks are deposited on GitHub \cite{notebookcount}.
 \end{itemize}
+%
+\begin{figure}[tb]
+  \centering\includegraphics[height=0.2\textheight]{images/jeodpp.png}
+  \centering\includegraphics[height=0.2\textheight]{images/jeodpp-demo.jpg}
+  \caption{\emph{Left}: The Joint Research Centre (JRC) Earth Observation
+    Data and Processing Platform (JEODPP) is a heavy user of the
+    Jupyter Notebook (source:
+    \url{https://cidportal.jrc.ec.europa.eu/home/}), where it features
+    at the top of the pyramid to help users with interactive data
+    visualisation and analysis. \emph{Right}: An example
+    service in which an interactive visualisation is provided through
+    the Jupyter notebook rendering of the density map of the ships
+    detected from Sentinel-1 images over the Mediterranean sea during
+    the period October 2014 to September 2016. \cite[Figure
+    6]{Soille2018}. \label{fig:jeodpp}}
+\end{figure}
+%
 A particular example is the Joint Research Centre Earth Observation
 Data and Processing Platform (JEODPP) shown in Fig.~\ref{fig:jeodpp},
 illustrating the interactive data exploration within an environment
@@ -62,8 +80,12 @@ scientific communities.
 \item We believe this is realistic as a multitude of (non-EOSC) services and
   use cases based on Jupyter have been developed, as sketched above.
 
+\item We co-design the framework and the service demonstrators with
+  core Jupyter developers, EGI and domain specialists from the
+  scientific communities.
+
 \item We will provide some particular services as part of the project
-  (in the domains of astronomy, geosciences, health and photon
+  (in the domains of astronomy, geosciences, health, mathematics, education, and photon
   science) to stimulate the design of other novel innovative services
   to address the evolving needs of the scientific community.
 \end{itemize}
@@ -108,19 +130,3 @@ scientific communities.
 % %   show how we address those [to provide easily accessible evidence
 % %   that we are addressing the call].}
 % %
-
-\begin{figure}[tbh]
-  \centering\includegraphics[height=0.2\textheight]{images/jeodpp.png}
-  \centering\includegraphics[height=0.2\textheight]{images/jeodpp-demo.jpg}
-  \caption{\emph{Left}: The Joint Research Centre (JRC) Earth Observation
-    Data and Processing Platform (JEODPP) is a heavy user of the
-    Jupyter Notebook (source:
-    \url{https://cidportal.jrc.ec.europa.eu/home/}), where it features
-    at the top of the pyramid to help users with interactive data
-    visualisation and analysis. \emph{Right}: An example
-    service in which an interactive visualisation is provided through
-    the Jupyter notebook rendering of the density map of the ships
-    detected from Sentinel-1 images over the Mediterranean sea during
-    the period October 2014 to September 2016. \cite[Figure
-    6]{Soille2018}. \label{fig:jeodpp}}
-\end{figure}
