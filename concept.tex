@@ -31,21 +31,21 @@ project's content.}
 \subsubsection{Concept}\label{sec:concept}
 
 Open Science is the principle that science, in order to be most
-impactful and socially responsible, should be done publicly, with as
-much of the scientific process and products accessible, reviewable,
-and reusable by as many members of the global community as possible.
+\textbf{impactful} and \textbf{socially responsible}, should be done \textbf{publicly}, with as
+much of the scientific process and products \textbf{accessible, reviewable,
+and reusable} by as many members of the global community as possible.
 In the modern age of computational science, almost all academic
 fields, from humanities to social sciences to biology and astronomy
 are faced with exciting opportunities for Open Science.  As more and
 more research takes the form of code and/or data, the opportunity to
 share, reproduce, and reuse scientific work is greater than ever, even
-enabling new forms of interdisciplinary collaboration.
+enabling new forms of \textbf{interdisciplinary collaboration}.
 
 At the same time as we share in these exciting opportunities, there
 are corresponding challenges, technical and social, to making Open
 Science a practical reality.  We face big questions: If a researcher
 has code and/or data to publicise, how is that best done?  How do
-researchers learn best Open Science practices in their field?  How do
+researchers learn \textbf{best Open Science practices} in their field?  How do
 previously disconnected fields benefit from each other's work as the
 same computational challenges are faced again and again by different
 communities?
@@ -55,21 +55,21 @@ With so much research being done that wants to be Open,
 how can we make Open Science
 
 \begin{enumerate}
-    \item as easy as possible to share?
-    \item as useful as possible to other researchers and the public?
+    \item as \textbf{easy} as possible to share?
+    \item as \textbf{useful} as possible to other researchers and the public?
 \end{enumerate}
 
-\noindent Our plan for improving access and effectiveness of Open Science can be summarised as:
+\noindent Our plan for \textbf{improving access and effectiveness of Open Science} can be summarised as:
 
 \begin{enumerate}
-\item improve and maintain common software infrastructure used for
+\item improve and maintain \textbf{common software infrastructure} used for
   Open Science,
-\item develop the Jupyter ecosystem to improve capabilities to better
-  serve Open Science,
-\item guide, validate, and demonstrate our developments through
+\item develop the Jupyter ecosystem to improve capabilities to \textbf{better
+  serve Open Science},
+\item \textbf{guide, validate, and demonstrate} our developments through
   collaboration with a wide variety of application domains,
 \item enable students and researchers to perform Open Science through
-  training and education, and improving inclusiveness by focusing
+  \textbf{training and education}, and improving inclusiveness by focusing
   these on under-served and under-represented communities, and
 \item operate services to facilitate Open Science collaborations with
   Jupyter software.
@@ -97,7 +97,7 @@ below.
 
 The Jupyter notebook and Jupyter ecosystem are of increasing
 importance in computational science and data science, in academia,
-industry and services. In addition to supporting high productivity of
+industry, and services. In addition to supporting high productivity of
 researchers, they have great potential to push open science forward:
 the notebook provides a complete description of a computational and
 data science study (Step 1 in figure~\ref{fig:use-cases-binder}), and the notebook can -- in principle -- be turned
@@ -109,19 +109,23 @@ in figure~\ref{fig:use-cases-binder}), the study is completely
 reproducible by anyone (Step 4 in figure~\ref{fig:use-cases-binder}).
 
 In this way, the notebook enables reproducibility of complex tasks
-with hardly any additional effort on the user side (if used
-appropriately). The Binder project allows to execute such notebooks in
+with hardly any additional effort on the user side.
+The Binder project allows to execute such notebooks in
 tailored computational environments; an aspect of reproducibility that
-is not widely supported yet.
+is not widely supported yet,
+and a great opportunity for improving best practices in Open Science.
 
 Furthermore, for users wanting to connect
 to a local Jupyter notebook server on their machine, or to connect to
 a server somewhere else on the Internet, the users only need a
 web-browser to display and use the notebook regardless of the location
-of the notebook server. Because of these
-characteristics, the Notebook is already planned to become an
+of the notebook server,
+allowing computation to run anywhere from a local laptop to a remote supercomputer or in the cloud.
+Because of these characteristics,
+the Notebook is already planned to become an
 important service on the European Open Science Cloud (EOSC) (for
-example in \cite{panosc}).
+example in \cite{panosc}),
+and is an ideal component to use when building Open Science Services.
 
 \medskip\noindent\textbf{Project Jupyter}
 
@@ -132,9 +136,9 @@ project is to provide a consistent set of tools to improve researchers'
 workflows from the exploratory phase of the analysis to the communication
 of the results \cite{Kluyver2016}.
 
-Started in 2014 from the \emph{IPython Project} \cite{IPython}, Jupyter has grown rapidly in
+Split in 2014 from the \emph{IPython Project} \cite{IPython}, Jupyter has grown rapidly in
 popularity and adoption both in the industry and academia. We estimate the user
-base of the Jupyter notebook to be in the millions. Users range from data
+base of the Jupyter notebook to be in the millions \cite{jupyter-grant}. Users range from data
 scientists to researchers, educators, and students from many fields,
 including journalists and librarians. In 2017, the Jupyter
 team was awarded the \emph{ACM Software System Award}, an annual award that
@@ -147,8 +151,9 @@ While these interact with one another, many can be installed separately
 to serve various use cases. For this proposal, we loosely divide the
 software involved into \emph{Jupyter core} developed under the guidance
 of the developers who started the project, and the broader \emph{Jupyter
-ecosystem} including software developed by third parties. Some of the
-important components and concepts are detailed below.
+ecosystem} including software developed by third parties,
+which may interact or build upon core Jupyter components.
+Some of the components and concepts important to \TheProject are detailed below.
 
 \begin{figure}[ht]\centering
   \centering
@@ -166,13 +171,13 @@ important components and concepts are detailed below.
   providing a popular way to describe and illustrate computational methods and
   tools.
   \textbf{JupyterLab} is the new, modular, extensible client application
-  for Jupyter notebooks.
+  for Jupyter notebooks, but the document format, server, and user model are the same.
 
   \item \textbf{Jupyter kernels} are the backend software which allow Jupyter to execute
   code in many different programming languages. The \textbf{IPython} kernel is
   the reference kernel, supporting the Python programming language, and is
   developed by the Jupyter core team. Kernels for other languages are maintained
-  by third parties.
+  by third parties
 
   \item \textbf{nbconvert} converts notebook files to a variety of other file
   formats, including HTML and PDF, so that the content of a notebook can easily
@@ -303,11 +308,12 @@ For example:
 \end{enumerate}
 
 The popularity of Jupyter, with millions of users and hundreds of open
-source contributors, indicates the value and impact of this approach.
+source contributors, is an indicator of the value and impact of this approach.
 
 \medskip
 \noindent\textbf{Improvement to the Jupyter ecosystem}\\
-The benefits of focusing our work on a mature system like Jupyter are
+The benefits of focusing our work on a mature system like Jupyter include:
+
 \begin{itemize}
 \item vibrant community ensures health and sustainability,
 \item large existing user base maximises impact of contributions,
@@ -321,7 +327,7 @@ embraces and supports that approach.  Jupyter is inclusive across a number of ax
 By being applicable across numerous domains, Jupyter and \TheProject
 encourage participation from individuals of various interests and
 backgrounds, and has taken action to improve diversity in the project
-by participating in "Outreachy," a program of paid internships for
+by participating in ``Outreachy,'' a program of paid internships for
 individuals from groups that face under-representation, systemic bias,
 or discrimination.  Jupyter has also operated workshops focused on
 training contributors from under-represented groups.  In being free,
@@ -360,10 +366,14 @@ scientific service providers. The catalogue of services is expected to
 radically grow in the next years through national, regional and EU
 initiatives.
 
+Integrating Jupyter-based services into EOSC provides an excellent opportunity
+for facilitating interoperability of EOSC services,
+bringing data and computation together in a flexible environment.
+
 \subsubsection{Methodology}\label{sec:methodology}
 
 
-\textbf{Proposed improvements of core components of Jupyter (\WPref{core})}\\
+\textbf{Proposed improvements to core components of Jupyter (\WPref{core})}\\
 We plan to make technical changes to Jupyter software to better support
 real-time collaboration (\taskref{core}{collaboration}),
 so that two or more people in different places or working on different
@@ -383,10 +393,12 @@ Jupyter software, as well as new development (\taskref{core}{maintenance}).
 Maintenance is crucial to creating reliable, sustainable software,
 but its cost is often swept under the rug in funding applications
 because of the perceived pressure to focus on novelty.
+Being up front and explicit about this cost is critical to the sustainability
+of open source open science.
 
 \medskip
-\noindent\textbf{Proposed improvements of the Jupyter ecosystem (\WPref{ecosystem})}\\
-We further propose improvements of the wider Jupyter ecosystem for
+\noindent\textbf{Proposed improvements to the Jupyter ecosystem (\WPref{ecosystem})}\\
+We further propose improvements to the wider Jupyter ecosystem for
 better scientific workflows. In particular, we have identified
 possible improvements to:
 
@@ -414,7 +426,7 @@ We may create new open source software projects in these tasks,
 but we will carefully review existing software, both in the
 Jupyter ecosystem and beyond, to avoid unnecessary duplication of effort.
 
-\medskip\noindent\textbf{Beyond the improvement of the Jupyter Project
+\medskip\noindent\textbf{Beyond the improvement to the Jupyter Project
   (\WPref{applications}, \WPref{eosc}, \WPref{education})}\\
 Beyond the improvement to the Jupyter core and ecosystem software for EOSC, we plan on
 \begin{itemize}
@@ -513,7 +525,7 @@ of the data, with zero installation for the user.
   ecosystem offers a versatile environment which has been widely
   adopted in higher education in the recent years. École
   Polytechnique, Université Paris-Sud and other participants from this
-  project have been early adopters (see the description of \site{EP}
+  project have been early adopters of these tools (see the description of \site{EP}
   and \site{UPSUD}, and also task~\taskref{ecosystem}{teaching-tools}).
 
   \begin{figure}[ht!]\centering
@@ -531,13 +543,13 @@ of the data, with zero installation for the user.
   (DevOps, software development, ...) which impedes its adoption
   by the greatest number of people. High quality hosted solutions
   (e.g. cocalc, gryd) do exist but are not the final solution when it
-  is desired to get higher control on private data, integration with
+  is desired to exert greater control on private data, integration with
   the local infrastructure (authentication, shared drive, e-learning
   environment, dedicated hardware, ...), or to use local computing
   resources rather than paid services.
 
   Further improving the Jupyter environment for education, while
-  leveraging it to the greatest number, are therefore key motivations
+  leveraging it to the greatest degree, are therefore key motivations
   for the following tasks of this proposal:
   \begin{itemize}
   \item Tasks~\taskref{core}{jh-bh-conv}
@@ -617,7 +629,7 @@ solutions to this issue.
 \noindent\textbf{Demonstrator: Geosciences (\taskref{applications}{geoscience})}\label{sec:concept-demonstrators-geo}\\
 The amount of geospatial data from a variety of sources, including satellite observations, 4D simulations and in-situ observations, contributed by volunteers
 or state agencies keeps increasing. In many disciplines, managing this large volume
-has become a challenge, and the old approach of downloading datasets for a local
+has become a challenge, and the old approach of downloading datasets for local
 analysis has become intractable.
 
 The heterogeneity of the tools used in different institutions to deal with
@@ -919,7 +931,7 @@ The particular activities for this demonstrator are shown in
   computed.
 
   We are aiming for re-executability of the notebook for the lifetime
-  of the data. The life time of the archived data at European XFEL is
+  of the data. The lifetime of the archived data at European XFEL is
   currently guaranteed for 5 years and aimed to be 10 years
   \cite{EuXFEL-datapolicy-2017}. It is possible though, that data used
   for publications will be preserved for longer, and it would be
