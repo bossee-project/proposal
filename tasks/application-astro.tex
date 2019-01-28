@@ -8,15 +8,16 @@
 ]
 
   This task (see page \pageref{sec:concept-demonstrator-astronomy} for
-  context) will build on existing Python libraries to access CDS data
-  \TODO{Recall what the acronym CDS stands for?}
-  (\textit{astroquery.[cds/simbad/vizier/xmatch]}). For visualization, we will
+  context) will build on existing Python libraries (astroquery cds, simbad, 
+  vizier and xmatch packages) to access CDS -- Centre de Donn\'ees 
+  Astronomiques de Strasbourg -- data.
+  For visualization, we will
   use proven tools like \textit{GLUE} and \textit{ipyvolume}, which are now
   built upon the Jupyter stack.
   We will also make significant improvement to existing Jupyter widgets
   (\textit{ipyaladin}, interactive sky atlas running in the notebook) and
   develop a new widget to offer a tree-like view of available
-  datasets.\TODO{will this be specific to certain needs in astronomy or general purpose?}
+    astronomical datasets, making use of the existing IVOA \cite{ivoa} protocols.
 
   We will also develop Python libraries to allow integration and usage in
   notebook of existing CDS infrastructure services, namely CDSLogin (which
