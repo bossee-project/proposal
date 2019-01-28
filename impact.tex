@@ -13,7 +13,7 @@ and their wide availability on the European Open Science Cloud.
 While this will initially be developed alongside applications for our
 own institutions, we expect the tools we develop to be useful to a much larger
 group of researchers, as data analysis and simulation are now crucial parts
-of many scientific disciplines.
+of most academic disciplines.
 
 Jupyter-based technology will be especially valuable given the decentralised
 nature of EOSC. Large-scale experiments often produce so much data that it is
@@ -84,7 +84,7 @@ work program is detailed in the table below.
   The improvements and extensions of the core parts of the Jupyter system are
   being co-designed by technical, industrial and scientific experts in the
   BOSSEE project, so that they will be widely applicable in new innovative
-  services across many scientific disciplines.
+  services across most academic disciplines.
   The impact of this approach for enabling scientific use of notebooks is expected
   to be very high because it is a direct response to the strong demand from
   scientists for improving the productivity and reproducibility of their work.
@@ -100,7 +100,7 @@ work program is detailed in the table below.
   because they bring together the essential elements of the modern scientific
   computational workflow (from data collection to publication and open sharing)
   in the familiar format of a scientific notebook, with powerful functionality
-  for access to scientific content, for analysis and visualisation.
+  for access to scientific content for analysis and visualisation.
   Notebooks also embody the core concepts of open science by providing a
   mechanism to reproduce results in publications, and collaborative
   sharing of not just scientific results, but of the code that produced them.
@@ -153,12 +153,10 @@ work program is detailed in the table below.
   By bringing the diverse expertise of the BOSSEE partners together in this
   common project, we expect a high impact in terms of enabling a new level of
   integration of scientific, technical and industrial interests for the common
-  goal of open science.
+  goal of open science,
+  and building a toolkit from which others may build innovative services,
+  for commercial or public use.
 
-  \TOWRITE{ALL}{More on innovation, in particular interaction of participating
-  SMEs with scientific and technical partners… opening up EOSC ecosystem to new
-  actors who bring new expertise as necessary for enabling technical platforms
-  for open science.}
   \\\hline
 
 \end{tabular}
@@ -167,7 +165,17 @@ work program is detailed in the table below.
 
 \subsubsection{Measuring impact}
 
-We will measure our progress toward aims and objectives in \ref{sect:objectives}
+As we are building tools and services for Open Science,
+the best measure of our impact is in the adoption and use of these tools and services,
+which can be observed qualitatively (positive anecdotal feedback) and quantitatively
+(counting visitors to a service, for example).
+Much of our work will be in the form of contributions to existing public projects,
+such as Jupyter and Binder,
+which can be measured in our participation in those projects,
+such as code and documentation contributions,
+bug reports, roadmap contributions.
+
+We can measure our progress toward aims and objectives in \ref{sect:objectives}
 via the following
 Key Performance Indicators (KPIs):
 
@@ -181,7 +189,9 @@ Key Performance Indicators (KPIs):
   \item \label{kpi:dissemination}
     Publications and presentations by \TheProject documenting the use of \TheProject services for Open Science.
   \item \label{kpi:contributions}
-    Contributions by \TheProject and the wider community to Jupyter software and others.
+    Contributions by \TheProject and the wider community to Jupyter software and others,
+    including issues reported, bugs fixed,
+    features added, and roadmaps developed.
 \end{compactenum}
 
 \subsubsection{Barriers, Obstacles and Framework conditions}
@@ -203,7 +213,7 @@ A detailed assessment of risks and mitigations can be found in \ref{sec:risks}.
 \TheProject is contributing to tools for Open Science and for building and operating Open Science services.
 Tools only have impact if and when they are used,
 so it is important that we disseminate our work
-and reach and support user communities for our software and services.
+in order to reach and support user communities for our software and services.
 
 \subsubsection{Dissemination and exploitation of results}
 
@@ -220,62 +230,55 @@ enabling long-term access beyond the funding of \TheProject.
 As a result, the primary dissemination effort is to:
 
 \begin{enumerate}
-  \item make sure that prospective users are aware of the work, and
-  \item enable them to use the tools through learning resources, training, and services
+  \item make sure that prospective users are \textbf{aware of the work}, and
+  \item enable them to use the tools through \textbf{learning resources, training, and services}
 \end{enumerate}
 
 Our focus for dissemination will be on \taskref{education}{workshops},
 operating workshops, training various communities in the availability,
 purpose, development, and use of \TheProject software and services.
 We will make a particular effort to use these workshops as an opportunity
-to support diversity in the Open Science community,
+to \textbf{support diversity in the Open Science community},
 by running workshops for under-served and under-represented communities.
 Additionally, for long-term resources available to the wider community
 who will not be able to attend workshops,
-we will produce free, online materials for training in the use of \TheProject
+we will produce \textbf{free, online materials for training} in the use of \TheProject
 software and services.
-These resources will be hosted on free, public hosting service,
+These resources will be hosted on free, public hosting services,
 such as GitHub Pages,
 enabling long-term access to the work of \TheProject,
 even after the end of funding.
 
 The operation of services in \WPref{eosc} is also a dissemination activity,
 as services like Binder not only enable Open Science by facilitating interactive publications,
-they also enable interactive demonstration of tools and functionality
+they also enable \textbf{interactive demonstration of tools and functionality}
 developed in \TheProject, e.g. \taskref{ecosystem}{xeus-cpp}.
-We have set aside \euro 5000 per month for the operation of services in \WPref{eosc},
+We have budgeted \euro 5000 per month for the operation of services in \WPref{eosc},
 to be spent by \site{EGI} on cloud computing resources for service hosting.
 This cost estimate is based on the operation costs of mybinder.org.
-\TheProject in collaboration with the operators of mybinder.org,
+The involvement of hosting provided via EGI helps the project reach a sustainable setup, because we can negotiate hosting conditions with institutes that are dedicated for the support of open science and can co-fund the operational cost from their budget.
+\TheProject, in collaboration with the operators of mybinder.org,
 will explore sustainability plans for covering long-term costs of operating such services,
 including institutional subscription models, donations, and others.
 
-\noindent \textbf{Data management plan}
+\medskip
+\noindent \textbf{Data management plan} \\
 \label{sec:data-management-plan}
 Unless specifically listed below,
 sites will not generate or collect data as part of \TheProject.
-\TheProject is mostly about building and operating services
-for enabling interaction with data,
-not the generation of collection of data ourselves.
+While we have many demonstrators that interact with data, they do not generate or collect that data themselves, but rather provide analytical mechanisms or access to data governed by existing data management plans and data policies of project partners at each site,
+as well as publicly accessible open data.
 
-\noindent \textbf{Binder service usage data}
-Any data collected through the operation of public services such as Binder
+
+\noindent \textbf{Service usage data} \\
+Any data collected through the operation of public services such as Binder (\taskref{eosc}{eu-binder})
 (e.g. popularity data for public open science repositories)
-will be fully anonymised to the satisfaction of GDPR
+will be fully anonymised to the satisfaction of relevant best privacy practices and regulations, such as GDPR,
 and made publicly available in the standard JSON Lines format,
 as is done already for mybinder.org \cite{mybinder-archive}.
 This is very small data and easily archived on free hosting services such as GitHub,
-and will be made available under the Creative-Commons Universal Public Domain (CC0)public domain license.
-
-\TOWRITE{demonstrators}{
-  Every site that will generate or collect data needs to answer:
-
-  - What types of data will the project generate/collect?
-  - What standards will be used?
-  - How will this data be exploited and/or shared/made accessible for verification and re-use? If data cannot be made available, explain why.
-  - How will this data be curated and preserved?
-  -  How will the costs for data curation and preservation be covered?
-}
+and will be made available under the Creative-Commons Universal Public Domain Dedication (CC0).
+There is no cost to the project associated with archiving this data long-term.
 
 \subsubsection{Communication activities}
 
