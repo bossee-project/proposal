@@ -38,6 +38,16 @@ jobs:
           destination: draft.pdf
 
       - run:
+          name: build final
+          command: |
+            make final
+            test -f final.pdf
+
+      - store_artifacts:
+          path: final.pdf
+          destination: final.pdf
+
+      - run:
           name: check person-month data
           command: |
             make check
