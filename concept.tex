@@ -209,7 +209,7 @@ here, but a selection of projects which are relevant to
   \item \textbf{Binder} builds on JupyterHub to allow sharing executable
   environments along with data files and a description of the software components
   required to run the notebooks. When someone accesses a Binder repository,
-  the service builds the computational environment on-demand, allowing them to
+  the service builds the computational environment on demand, allowing them to
   execute and modify a copy of the notebooks.
   \textbf{repo2docker} \cite{repo2docker} and \textbf{BinderHub} \cite{binder} are components of the Binder
   software.
@@ -217,7 +217,7 @@ here, but a selection of projects which are relevant to
   \item \textbf{nbsphinx} \cite{Nbsphinx} integrates notebooks with the \emph{Sphinx}
   documentation system, which is widely used for software documentation,
   especially but not only for software written in Python.
-  This allows developers to write notebooks showing how to use a library,
+  This allows developers to write notebooks showing how to use their software,
   then seamlessly make those notebooks part of their main documentation.
 
   \item \textbf{nbval} \cite{nbval} is a plugin for the popular \emph{pytest} testing
@@ -249,7 +249,7 @@ here, but a selection of projects which are relevant to
   \item The \textbf{Xeus} instrastructure \cite{Corlay2017} supports writing kernels
   in C++. \textbf{xeus-cling} is one such kernel, running user code in C++,
   and built upon CERN's C++ interpreter, "cling" \cite{Vassilev2012},
-  which has a lot of adoption in the High-Energy-Physics community.
+  which has significant adoption in the High Energy Physics community.
   xeus-cling is already in use for teaching the C++ programming language.
 \end{itemize}
 
@@ -293,7 +293,7 @@ For example:
 \begin{enumerate}
 \item The notebook file format is a well-specified JSON document,
   which can be interpreted by many systems.  This has facilitated the
-  development of different services rendering notebooks, e.g. the code
+  development of different services providing rendering of notebooks, e.g. the code
   hosting website GitHub, which renders notebooks for easy viewing by
   anyone, without Jupyter software.
 \item The Jupyter protocol describes how execution is performed, which
