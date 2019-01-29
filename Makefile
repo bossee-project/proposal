@@ -35,9 +35,11 @@ PROPCLS = $(PROPCLS.clssty:%=$(PROPCLS.dir)/%) $(EUPROPCLS.clssty:%=$(EUPROPCLS.
 all: $(TBIB.pdf) $(TSIMP.pdf)
 
 check:
-	test -f draft.pdf
-	test -f draft.pdata
-	python3 ./check-pdata
+	test -f final.pdf
+	test -f final.pdata
+	python3 ./check-pdata final.pdata
+	if grep -C 3 'undefined' final.log; then echo "undefined references in final.pdf"; exit 1; fi
+
 
 final:
 	$(MAKE) $(MAKEFLAGS) -w PROPOSAL=final.tex all

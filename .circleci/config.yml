@@ -48,19 +48,9 @@ jobs:
           destination: final.pdf
 
       - run:
-          name: check person-month data
+          name: check person-month data, undefined references
           command: |
             make check
-
-      - run:
-          name: check for undefined references
-          command: |
-            for log in *.log; do
-              if grep -C 3 'undefined' ${log}; then
-                echo "undefined references in ${log}"
-                exit 1
-              fi
-            done
 
 workflows:
   version: 2
