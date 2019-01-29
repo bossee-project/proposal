@@ -521,9 +521,6 @@ of the data, with zero installation for the user.
 \medskip
 \noindent\textbf{Demonstrator: Enriched education with Jupyter (\taskref{applications}{teaching})}\label{sec:concept-demonstrator-teaching}
 
-  \TODO{List success stories: Data8 course @ Berkeley, OpenAI Gym,
-    QuantEcon book C++ Orsay, courses on Coursera}
-
   In the recent years, Jupyter technologies have been widely adopted
   worldwide in higher education -- and even in high schools -- for
   teaching in all areas of sciences. The Jupyter notebook indeed
@@ -549,8 +546,24 @@ of the data, with zero installation for the user.
     interactive slides for a graph theory course.}\label{fig:teaching-cling}
   \end{figure}
 
-  École
-  Polytechnique, Université Paris-Sud and other participants from this
+  Success stories include:
+  \begin{itemize}
+  \item Berkeley's ``Data 8: The foundations of Data Science'' open
+    course (\url{data8.org}) which is delivered yearly to thousands of
+    lower undergraduate students in all majors, scientific or not,
+  %\item OpenAI Gym (\url{https://gym.openai.com/}), 
+  \item QuantEcon' open interactive book ``Lectures in Quantitative
+    Economics'' (\url{https://lectures.quantecon.org/}), entirely
+    authored with Jupyter.
+  \item 100+ IPython/Jupyter based MOOC's (Massively Open Online
+    Courses) on Coursera
+    (\url{https://www.coursera.org/courses?query=ipython})
+  \item Paris Sud's first-year course ``Info 111: Introduction to
+    Computer Science'' where each year 400 students write their first
+    lines of code in C++ in a Jupyter notebook (see Figure~\ref{fig:teaching-cling}).
+  \end{itemize}
+
+  École Polytechnique, Université Paris-Sud, and other participants from this
   project have been early adopters of these tools (see the description of \site{EP}
   and \site{UPSUD}, and also task~\taskref{ecosystem}{teaching-tools}).
   We learned the hard way that deploying the Jupyter environment at a
@@ -560,7 +573,7 @@ of the data, with zero installation for the user.
   (e.g. CoCalc\cite{Cocalc}, Gryd\cite{Gryd}) do exist but are not the final solution when it
   is desired to exert greater control on private data, integration with
   the local infrastructure (authentication, shared drive, e-learning
-  environment, dedicated hardware, ...), or to use local computing
+  environment, dedicated hardware, ...), or to use available local computing
   resources rather than paid services.
 
   Further improving the Jupyter environment for education, while
@@ -719,6 +732,14 @@ The particular activities for this demonstrator are shown in
   development of tools ensuring traceability and reproducibility of generated
   results.
 
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{images/opendose_framework.pdf}
+    \caption{OpenDose project overall framework including the unified data
+    analysis to be developed in this demonstrator.}
+    \label{fig:opendose_framework}
+  \end{figure}
+
   % Technical description
   OpenDose data is produced using the five most represented Monte Carlo
   simulation software tools in medical applications: Geant4/GATE, MCNP, EGS, PENELOPE
@@ -754,14 +775,6 @@ The particular activities for this demonstrator are shown in
 
   Figure \ref{fig:opendose_framework} shows the overall framework of the
   project and how data will be managed.
-
-  \begin{figure}[ht!]
-    \centering
-    \includegraphics[width=1.0\textwidth]{images/opendose_framework.pdf}
-    \caption{OpenDose project overall framework including the unified data
-    analysis to be developed in this demonstrator.}
-    \label{fig:opendose_framework}
-  \end{figure}
 
   By building a set of tools to access and process data within the Jupyter
   ecosystem, we will ensure the production of traceable and reproducible
@@ -807,11 +820,35 @@ The particular activities for this demonstrator are shown in
   Jupyter services, including eased collaboration, sharing, archival,
   and reproducibility.
 
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[height=2.9cm]{images/partitions-of-5}
+    \includegraphics[height=2.9cm]{images/Wikipic}
+    \includegraphics[height=2.9cm]{images/hexominoes}
+    \includegraphics[height=2.9cm]{images/AztecDiamond}
+    \includegraphics[height=2.9cm]{images/619px-Tiling_Fibonacci_word_fractal}
+    \medskip
+
+    \includegraphics[height=2.5cm]{images/fractioncont}
+    \includegraphics[height=2.9cm]{images/elliptic-curve}
+    \includegraphics[height=2.9cm]{images/548px-Fermat's_spiral_01}
+    \includegraphics[height=2.9cm]{images/597px-E8Petrie}
+    \medskip
+
+    \includegraphics[height=2.9cm]{images/500px-McGee_graph}
+    \includegraphics[height=2.9cm]{images/nonominoes}
+    \includegraphics[height=2.9cm]{images/500px-Torus_with_seven_colours}
+    \includegraphics[height=2.9cm]{images/359px-F4HassePoset}
+  \end{center}
+  \caption{Graphical visualizations of a variety of mathematical objects}
+  \label{fig:math_viz}
+\end{figure}
+
   The next step to maximise attractivity and impact in the
   mathematical community, and this is the aim of this task, is to go
   beyond the REPL paradigm, and \textbf{leverage the real time
     interactivity and flexibility brought by Jupyter widgets for
-    Mathematical purposes}. This will make it straightforward for a teacher or
+    Mathematical purposes}. This will, for example, make it straightforward for a teacher or
   researcher to build and disseminate via the EOSC mini applications
   or dashboards enabling the graphical exploration of a whole range of
   mathematical inputs, with real-time visualization of the associated
@@ -819,7 +856,7 @@ The particular activities for this demonstrator are shown in
 
   The unique challenge comes from the huge variety of mathematical
   objects that the user may want to visualize and interact with, and
-  the variety of graphical representations. Co-design is central here,
+  the variety of graphical representations (see Figure~\ref{fig:math_viz}). Co-design is central here,
   as building a bespoke interactive visualization entails a
   combination of technology skills (e.g. javascript development) and
   business knowledge (designing the interaction and visualization).

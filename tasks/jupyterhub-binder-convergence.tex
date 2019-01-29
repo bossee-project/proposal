@@ -6,7 +6,7 @@
   id=jh-bh-conv,
   lead=EP,
   PM=16, % EP: 12PM, WTT: 2PM, PSUD: 2PM
-  wphases={0-36},
+  wphases={0-36!.5},
   partners={WTT}]
 
   \textbf{Scenario}
@@ -19,6 +19,14 @@
   The service lets user spawn and access personal or collaborative virtual
   environments: namely a web interface to a light weight virtual machine,
   in which they can use Jupyter notebooks, run calculations, etc.
+
+  \begin{figure}
+    \begin{center}
+      \includegraphics[width=.75\textwidth]{images/jupyterhub-binder-convergence.png}
+    \end{center}
+    \caption{A use case in education for the JupyterHub - Binder convergence}
+    \label{fig:jupyterhub-binder}
+  \end{figure}
 
   To cater for a large variety of use cases in teaching and research,
   the main aim of the upcoming specifications is to make the service as
