@@ -1,5 +1,11 @@
 # Notes for authors of the proposal
 
+## References
+
+- [Initial brainstorm notes](https://hackmd.io/fNJQFqgYQaCDGx-BFgz4XQ)
+- [More brainstorm notes](https://docs.google.com/document/d/1ZgTU96B7egtFti9pegf6fdzVs23qCEY8_QYMccGe1Sk/edit#)
+- [Slack channel](https://bossee.slack.com/)
+
 ## To compile document
 
 ### install latex class (only required once)
