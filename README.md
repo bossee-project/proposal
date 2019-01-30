@@ -7,7 +7,7 @@ BOSSEE is a [proposal](submitted.pdf) that was submitted on January
 Its mission is to promote Open Science (Open Source, Open
 Publications, Open Data, and
 [Open Proposal](https://opendreamkit.org/2015/01/31/open-proposal-writing/))
-by supporting the [Jupyter](jupyter.org) ecosystem, deploying generic
+by supporting the [Jupyter](https://jupyter.org) ecosystem, deploying generic
 Jupyter based services (binder federation and more), integrating them
 tightly in the
 [European Open Science Cloud](https://www.eosc-hub.eu/),
