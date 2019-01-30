@@ -9,19 +9,19 @@ Publications, Open Data, and
 [Open Proposals](https://opendreamkit.org/2015/01/31/open-proposal-writing/))
 by supporting the [Jupyter](jupyter.org) ecosystem, deploying generic
 Jupyter based services (binder federation and more), integrating them
-tightly in the [European Open Science
-Cloud](https://www.eosc-hub.eu/), and demonstrating their value
-through applications in astronomy, education, geosciences, health
-sciences, mathematics, and photon science.
-
-The proposers include core Jupyter developers (lead: Benjamin
-Ragan-Kelley) and long time Jupyter activists from many disciplines,
-in France, Germany, Poland, Norway, and Switzerland.
+tightly in the
+[European Open Science Cloud](https://www.eosc-hub.eu/),
+and demonstrating their value through applications in astronomy,
+education, fluid dynamics, geosciences, health sciences, mathematics,
+and photon science.
 
 The project was seeded as a follow-up to
 [OpenDreamKit](http://opendreamkit.org) (see the
 [brainstorm notes](https://hackmd.io/fNJQFqgYQaCDGx-BFgz4XQ)),
 and grown organically in the same open spirit.
+The proposers include core Jupyter developers (lead: Benjamin
+Ragan-Kelley) and long time Jupyter activists from many disciplines,
+in France, Germany, Poland, Norway, and Switzerland.
 
 ## Work Plan
 
